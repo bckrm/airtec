@@ -4,13 +4,20 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'brand-darkest-blue': '#12163B',
-                'brand-dark-blue': '#282768',
-                'brand-red': '#E81E25',
-                'brand-light-blue': '#6BABE5',
-                'brand-lightest-blue': '#ACC9E8',
-                'brand-purple': '#3F2B56',
-                'brand-light-purple': '#D4C0CD',
+                'brand-1': '#12163B',
+                // darkest-blue
+                'brand-2': '#282768',
+                // dark-blue
+                'brand-3': '#E81E25',
+                // red
+                'brand-4': '#6BABE5',
+                // light-blue
+                'brand-5': '#ACC9E8',
+                // lightest-blue
+                'brand-6': '#3F2B56',
+                // purple
+                'brand-7': '#D4C0CD',
+                // light-purple
             },
         },
     },
