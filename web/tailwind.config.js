@@ -19,6 +19,10 @@ module.exports = {
                 'brand-7': '#D4C0CD',
                 // light-purple
             },
+            fontFamily: {
+                display: 'Montserrat',
+                body: 'Montserrat',
+            },
             fontSize: {
                 'ts-h1': ['3.052rem'],
                 'ts-h2': ['2.441rem'],
