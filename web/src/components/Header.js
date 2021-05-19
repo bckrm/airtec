@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MainNav from './navigation/mainNav';
+
 const nav = [
     {
         name: 'about',
@@ -24,5 +26,9 @@ const nav = [
 ];
 
 export default function Header() {
-    return <nav>Header</nav>;
+    return (
+        <nav>
+            <MainNav navItems={nav} />
+        </nav>
+    );
 }
