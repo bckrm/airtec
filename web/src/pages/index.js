@@ -1,12 +1,11 @@
 import React from 'react';
 
-import Header from '../components/header';
+import Layout from '../components/layout';
 
 export default function IndexPage() {
     return (
-        <>
-            <Header />
+        <Layout>
             <h1>index page</h1>
-        </>
+        </Layout>
     );
 }
