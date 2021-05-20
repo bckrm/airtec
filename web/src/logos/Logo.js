@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function Group() {
+export default function Logo() {
     return (
         <svg width={157} height={43} fill="none">
             <path

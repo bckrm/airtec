@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import MainNav from './navigation/mainNav';
-import Group from '../logos/Group';
+import Logo from '../logos/Logo';
 
 const nav = [
     {
@@ -32,7 +32,7 @@ export default function Header() {
         <nav>
             <div className="container flex justify-between mx-24 text-white">
                 <Link to="/" className="pt-11">
-                    <Group />
+                    <Logo />
                 </Link>
                 <MainNav navItems={nav} />
             </div>
