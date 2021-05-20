@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import MainNav from './navigation/mainNav';
-import Logo from '../logos/Logo';
+import Logo from './svgs/Logo';
 
 const nav = [
     {
