@@ -44,10 +44,13 @@ export default function Footer() {
         },
     ];
     return (
-        <footer className="bg-brand-1 text-ts-body w-full h-96 text-white font-normal fixed bottom-0">
-            <div className="flex justify-between container pt-11">
+        <footer className="bg-brand-1 bottom-0 fixed h-96 text-white w-full">
+            <div className="container flex justify-between pt-11">
                 <div className="flex pl-20 space-x-16">
-                    <AIRtecAwhite />
+                    <Link to="/">
+                        <AIRtecAwhite />
+                    </Link>
+
                     <div className="grid grid-cols-2 gap-x-24 gap-y-5 mt-16">
                         {internalLinks.map((link) => {
                             return <Link to={link.link}>{link.text}</Link>;
