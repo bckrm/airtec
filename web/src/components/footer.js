@@ -60,7 +60,7 @@ export default function Footer() {
                     })}
                 </div>
             </div>
-            <div className=" mt-20 text-center ">
+            <div className="mt-20 text-center">
                 <p>Mission Driven. Future Focused.</p>
             </div>
         </footer>
