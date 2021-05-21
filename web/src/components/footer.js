@@ -1,11 +1,26 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 export default function Footer() {
+    const externalLinks = [
+        {
+            link: '/',
+            text: 'Link',
+        },
+        {
+            link: '/',
+            text: 'Link',
+        },
+        {
+            link: '/',
+            text: 'Link',
+        },
+    ];
     return (
         <footer className="text-white">
             <div>
-                <Link to="/" />
+                {externalLinks.map((link) => {
+                    return <a href={link.link}>{link.text}</a>;
+                })}
             </div>
         </footer>
     );
