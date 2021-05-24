@@ -34,9 +34,6 @@ module.exports = {
                 'ts-caption': ['0.8rem'],
                 'ts-attribution': ['0.512rem'],
             },
-            zIndex: {
-                '-2': '-2',
-            },
         },
     },
     variants: {
