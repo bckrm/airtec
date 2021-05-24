@@ -44,7 +44,7 @@ export default function Footer() {
         },
     ];
     return (
-        <footer className="bg-brand-1 bottom-0 fixed h-96 text-white w-full">
+        <footer className="bg-brand-1 bottom-0 h-96 text-white w-full">
             <div className="container flex justify-between pt-11">
                 <div className="flex pl-20 space-x-16">
                     <Link to="/">
