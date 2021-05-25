@@ -19,14 +19,14 @@ export default function IndexPage({ data }) {
 
 export const query = graphql`
     query IndexQuery {
-        plane: file(relativePath: { regex: "/plane/" }) {
-childImageSharp {
+        heroImage: file(relativePath: { regex: "/hero/" }) {
+            childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
                 }
             }
         }
-        heroImage: file(relativePath: { regex: "/hero/" }) {
+        plane: file(relativePath: { regex: "/plane/" }) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
