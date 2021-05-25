@@ -29,7 +29,7 @@ const nav = [
 
 export default function Header() {
     return (
-        <nav>
+        <nav className="fixed z-[1]">
             <div className="container flex justify-between mx-24 text-white">
                 <Link to="/" className="pt-11">
                     <Logo />
