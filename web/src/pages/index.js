@@ -8,11 +8,31 @@ import Hero from '../components/hero';
 
 export default function IndexPage({ data }) {
     const { heroImage } = data;
+
+    const news = [
+        {
+            image: heroImage,
+            title: 'Title of the thing',
+            description:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+        },
+        {
+            image: heroImage,
+            title: 'Title of the thing',
+            description:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+        },
+        {
+            image: heroImage,
+            title: 'Title of the thing',
+            description:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+        },
+    ];
     return (
         <Layout>
-            <h1>index page</h1>
             <Hero image={heroImage} />
-            <NewsList />
+            <NewsList news={news} />
         </Layout>
     );
 }
