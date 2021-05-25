@@ -8,8 +8,12 @@ export default function Hero({ image }) {
     } = image;
 
     return (
-        <BackgroundImage className="w-full min-h-screen" fluid={fluid}>
-            <h1 className="absolute left-2/4 top-2/4 transform -translate-y-2/4 -translate-x-2/4 text-ts-h1 text-white">
+        <BackgroundImage
+            tag="section"
+            className="w-full min-h-screen flex justify-center items-center "
+            fluid={fluid}
+        >
+            <h1 className="max-w-2xl text-center text-ts-h1 text-white">
                 Donec eleifend faucibus finibus maximus
             </h1>
         </BackgroundImage>
