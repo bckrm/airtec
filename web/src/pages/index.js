@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 import Hero from '../components/hero';
-import SubHero from '../components/subHero';
+import BgImagewithCard from '../components/bgImagewithCard';
 
 export default function IndexPage({ data }) {
     const { heroImage, plane } = data;
@@ -12,7 +12,7 @@ export default function IndexPage({ data }) {
         <Layout>
             <h1>index page</h1>
             <Hero image={heroImage} />
-            <SubHero image={plane} />
+            <BgImagewithCard image={plane} />
         </Layout>
     );
 }
