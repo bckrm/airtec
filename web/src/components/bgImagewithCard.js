@@ -12,7 +12,7 @@ export default function BgImagewithCard({ image }) {
     return (
         <BackgroundImage
             Tag="section"
-            className="w-full min-h-screen"
+            className="w-full min-h-screen flex items-center"
             fluid={fluid}
         >
             <Card />
