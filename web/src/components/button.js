@@ -9,15 +9,15 @@ export default function Button({
     isSecondaryDark,
 }) {
     const primaryStyle =
-        'bg-black text-white hover:bg-brand-1 active:bg-gray-300';
+        'bg-black text-white hover:bg-brand-1 focus:bg-gray-300';
     const primaryDarkStyle =
-        'bg-white text-black hover:bg-gray-300 active:bg-brand-1';
+        'bg-white text-black hover:bg-gray-300 focus:bg-brand-1';
     const secondaryStyle =
-        'bg-white text-black hover:bg-brand-1 hover:text-brand-1 active:text-gray-300';
+        'bg-white text-black hover:bg-brand-1 hover:text-brand-1 focus:text-gray-300';
     const secondaryDarkStyle =
-        'bg-brand-1 text-white hover:text-gray-300 active:text-brand-1';
+        'bg-brand-1 text-white hover:text-gray-300 focus:text-brand-1';
 
-    const finalStyles = `border-2 border-current font-semibold leading-10 px-8 py-3 rounded-bl-lg uppercase w-min ${
+    const finalStyles = `border-2 border-current font-semibold leading-10 px-8 py-3 rounded-bl-lg uppercase ${
         isPrimary ? primaryStyle : ''
     } ${isPrimaryDark ? primaryDarkStyle : ''} ${
         isSecondary ? secondaryStyle : ''
