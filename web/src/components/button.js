@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 export default function Button({
     isPrimary,
@@ -23,16 +24,9 @@ export default function Button({
     } ${isSecondaryDark ? secondaryDarkStyle : ''}`;
 
     return (
-        <button
-            isPrimary={isPrimary}
-            isPrimaryDark={isPrimaryDark}
-            isSecondary={isSecondary}
-            isSecondaryDark={isSecondaryDark}
-            type="button"
-            className={`${finalStyles}`}
-        >
+        <Link to="/" className={finalStyles}>
             Learn More
-        </button>
+        </Link>
     );
 }
 

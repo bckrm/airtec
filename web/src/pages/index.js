@@ -10,9 +10,8 @@ export default function IndexPage({ data }) {
     const { heroImage } = data;
     return (
         <Layout>
-            <h1>index page</h1>
-            <Button isSecondaryDark />
             <Hero image={heroImage} />
+            <Button isSecondaryDark />
         </Layout>
     );
 }
