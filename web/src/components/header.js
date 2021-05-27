@@ -8,6 +8,8 @@ const nav = [
     {
         name: 'about',
         link: '/#',
+        sublink: 'wee woo',
+        subnav: '/#',
     },
     {
         name: 'capabilities',

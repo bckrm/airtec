@@ -8,7 +8,12 @@ export default function MainNav({ navItems }) {
             {navItems.map((item) => {
                 return (
                     <li key={item.link}>
-                        <Link to={`${item.link}`}>{item.name}</Link>
+                        <Link to={`${item.link}`}>
+                            {item.name}
+                            <Link className="hidden" to={`${item.subnav}`}>
+                                {item.sublink}
+                            </Link>
+                        </Link>
                     </li>
                 );
             })}
