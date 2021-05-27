@@ -8,12 +8,12 @@ export default function MainNav({ navItems }) {
             {navItems.map((item) => {
                 return (
                     <li key={item.link}>
-                        <Link to={`${item.link}`}>
+                        <Link className="hover-list" to={`${item.link}`}>
                             {item.name}
-                            <Link className="hidden" to={`${item.subnav}`}>
-                                {item.sublink}
-                            </Link>
                         </Link>
+                        <div className="hidden hover-list-link">
+                            <Link to={`${item.subnav}`}>{item.sublink}</Link>
+                        </div>
                     </li>
                 );
             })}
