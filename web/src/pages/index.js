@@ -11,7 +11,7 @@ export default function IndexPage({ data }) {
     return (
         <Layout>
             <Hero image={heroImage} />
-            <Button isSecondaryDark />
+            <Button isPrimary />
         </Layout>
     );
 }

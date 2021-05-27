@@ -17,7 +17,7 @@ export default function Button({
     const secondaryDarkStyle =
         'bg-brand-1 text-white hover:text-gray-300 visited:text-brand-1';
 
-    const finalStyles = `border-2 border-current h-9 rounded-bl-lg uppercase w-48 ${
+    const finalStyles = `border-2 border-current font-semibold leading-10 px-8 py-3 rounded-bl-lg uppercase w-min ${
         isPrimary ? primaryStyle : ''
     } ${isPrimaryDark ? primaryDarkStyle : ''} ${
         isSecondary ? secondaryStyle : ''
@@ -31,7 +31,7 @@ export default function Button({
 }
 
 Button.defaultProps = {
-    isPrimary: false,
+    isPrimary: true,
     isPrimaryDark: false,
     isSecondary: false,
     isSecondaryDark: false,
