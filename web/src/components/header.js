@@ -8,24 +8,32 @@ const nav = [
     {
         name: 'about',
         link: '/#',
-        sublink: 'wee woo',
+        sublink: 'sublink',
         subnav: '/#',
     },
     {
         name: 'capabilities',
         link: '/#',
+        sublink: 'sublink',
+        subnav: '/#',
     },
     {
         name: 'news',
         link: '/#',
+        sublink: 'sublink',
+        subnav: '/#',
     },
     {
         name: 'careers',
         link: '/#',
+        sublink: 'sublink',
+        subnav: '/#',
     },
     {
         name: 'contact',
         link: '/#',
+        sublink: 'sublink',
+        subnav: '/#',
     },
 ];
 
