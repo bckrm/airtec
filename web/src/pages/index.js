@@ -7,7 +7,7 @@ export default function IndexPage() {
     return (
         <Layout>
             <h1>index page</h1>
-            <Button />
+            <Button isSecondaryDark />
         </Layout>
     );
 }
