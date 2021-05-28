@@ -15,27 +15,23 @@ const nav = [
     {
         name: 'capabilities',
         link: '/#',
-        sublink: 'sublink',
-        subnav: '/#',
-        sublinkcolor: 'brand-4',
     },
     {
         name: 'news',
         link: '/#',
-        sublink: 'sublink',
-        subnav: '/#',
-        sublinkcolor: 'brand-4',
     },
     {
         name: 'careers',
         link: '/#',
-        sublink: 'sublink',
-        subnav: '/#',
-        sublinkcolor: 'brand-4',
     },
     {
         name: 'contact',
         link: '/#',
+    },
+];
+
+const subnav = [
+    {
         sublink: 'sublink',
         subnav: '/hello',
         sublinkcolor: 'brand-4',
@@ -49,7 +45,7 @@ export default function Header() {
                 <Link to="/" className="pt-11">
                     <Logo />
                 </Link>
-                <MainNav navItems={nav} />
+                <MainNav navItems={nav} subNavItems={subnav} />
             </div>
         </nav>
     );
