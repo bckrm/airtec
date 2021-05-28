@@ -9,19 +9,19 @@ export default function Button({
     isSecondaryDark,
 }) {
     const primaryStyle =
-        'bg-black text-white hover:bg-brand-1 focus:bg-gray-300';
+        'bg-brand-1 text-white hover:bg-brand-2 focus:bg-brand-2';
     const primaryDarkStyle =
         'bg-white text-black hover:bg-gray-300 focus:bg-brand-1';
     const secondaryStyle =
-        'bg-white text-black hover:bg-brand-1 hover:text-brand-1 focus:text-gray-300';
+        'bg-white border-4 border-current text-brand-1 hover:text-brand-2 focus:';
     const secondaryDarkStyle =
         'bg-brand-1 text-white hover:text-gray-300 focus:text-brand-1';
 
-    const finalStyles = `border-2 border-current font-semibold leading-10 px-8 py-3 rounded-bl-lg uppercase ${
+    const finalStyles = `font-semibold inline-block leading-tight px-8 py-2 rounded-bl-2xl tracking-[.12rem] transition-colors uppercase ${
         isPrimary ? primaryStyle : ''
-    } ${isPrimaryDark ? primaryDarkStyle : ''} ${
+    }${isPrimaryDark ? primaryDarkStyle : ''}${
         isSecondary ? secondaryStyle : ''
-    } ${isSecondaryDark ? secondaryDarkStyle : ''}`;
+    }${isSecondaryDark ? secondaryDarkStyle : ''}`;
 
     return (
         <Link to="/" className={finalStyles}>
@@ -31,7 +31,7 @@ export default function Button({
 }
 
 Button.defaultProps = {
-    isPrimary: true,
+    isPrimary: false,
     isPrimaryDark: false,
     isSecondary: false,
     isSecondaryDark: false,
