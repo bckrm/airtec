@@ -4,16 +4,19 @@ import { Link } from 'gatsby';
 
 export default function MainNav({ navItems }) {
     return (
-        <ul className="flex gap-3 justify-end uppercase mt-16 mr-24">
+        <ul className="flex font-semibold gap-3 justify-end mt-16 mr-24 text-white uppercase">
             {navItems.map((item) => {
                 return (
                     <li key={item.link}>
                         <Link className="hover-list" to={`${item.link}`}>
                             {item.name}
                         </Link>
-                        <div className="hidden hover-list-link">
-                            <Link to={`${item.subnav}`}>{item.sublink}</Link>
-                        </div>
+                        <Link
+                            className="hover-list-link bg-brand-4 text-brand-1"
+                            to={`${item.subnav}`}
+                        >
+                            {item.sublink}
+                        </Link>
                     </li>
                 );
             })}

@@ -40,7 +40,7 @@ const nav = [
 export default function Header() {
     return (
         <nav>
-            <div className="container flex justify-between mx-24 text-white">
+            <div className="container flex justify-between mx-24">
                 <Link to="/" className="pt-11">
                     <Logo />
                 </Link>

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer utilities {
+    .hover-list-link {
+        display: none;
+    }
     .hover-list:hover + .hover-list-link {
         display: block;
     }
