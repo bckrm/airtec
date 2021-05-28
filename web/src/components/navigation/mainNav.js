@@ -20,7 +20,7 @@ export default function MainNav({ navItems }) {
                                       return (
                                           <li key={subitem.sublink}>
                                               <Link
-                                                  className="hover-list-link p-1 group-hover:block text-brand-1 bg-brand-5 hover:bg-brand-4"
+                                                  className="hover-list-link p-2 group-hover:block text-brand-1 bg-brand-5 hover:bg-brand-4"
                                                   to={`${subitem.subnav}`}
                                               >
                                                   {subitem.sublink}
