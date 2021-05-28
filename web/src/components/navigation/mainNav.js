@@ -5,15 +5,15 @@ import { Link } from 'gatsby';
 export default function MainNav({ navItems }) {
     return (
         <ul className="flex font-semibold gap-3 justify-end mt-16 mr-24 text-white uppercase">
-            {navItems.map((item, i) => {
+            {navItems.map((item) => {
                 return (
                     <li key={item.link} className="group relative">
                         <Link className="block" to={`${item.link}`}>
                             {item.name}
                         </Link>
                         <ul className="absolute">
-                            {navItems[i].subnav
-                                ? navItems[i].subnav.map((subitem) => {
+                            {item.subnav
+                                ? item.subnav.map((subitem) => {
                                       return (
                                           <li key={subitem.sublink}>
                                               <Link
