@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-export default function MainNav({ navItems, subNavItems }) {
+export default function MainNav({ navItems }) {
     return (
         <ul className="flex font-semibold gap-3 justify-end mt-16 mr-24 text-white uppercase">
             {navItems.map((item) => {
@@ -15,11 +15,11 @@ export default function MainNav({ navItems, subNavItems }) {
                             {item.name}
                         </Link>
                         <ul>
-                            {subNavItems.map((subitem) => {
+                            {navItems[0].subnav.map((subitem) => {
                                 return (
-                                    <li key={subitem.link}>
+                                    <li key={subitem.sublink}>
                                         <Link
-                                            className={`hover-list-link group-hover:block text-brand-1 group-hover:bg-${item.sublinkcolor}`}
+                                            className={`hover-list-link group-hover:block text-brand-1 bg-${subitem.sublinkcolor}`}
                                             to={`${subitem.subnav}`}
                                         >
                                             {subitem.sublink}
@@ -37,5 +37,4 @@ export default function MainNav({ navItems, subNavItems }) {
 
 MainNav.propTypes = {
     navItems: PropTypes.array.isRequired,
-    subNavItems: PropTypes.array.isRequired,
 };

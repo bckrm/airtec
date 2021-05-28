@@ -8,9 +8,13 @@ const nav = [
     {
         name: 'about',
         link: '/#',
-        sublink: 'sublink',
-        subnav: '/hello',
-        sublinkcolor: 'brand-4',
+        subnav: [
+            {
+                sublink: 'sublink',
+                subnav: '/hello',
+                sublinkcolor: 'brand-4',
+            },
+        ],
     },
     {
         name: 'capabilities',
