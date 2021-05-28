@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .hover-list-link {
-        display: none;
-    }
-    .hover-list:hover + .hover-list-link {
-        display: block;
-        padding: 5px;
-        color: 'red';
-    }
-}
-
 * {
     font-family: 'Montserrat', sans-serif;
 }
