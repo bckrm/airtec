@@ -8,10 +8,7 @@ export default function MainNav({ navItems }) {
             {navItems.map((item, i) => {
                 return (
                     <li key={item.link} className="group relative">
-                        <Link
-                            className="hover-list group-hover:block"
-                            to={`${item.link}`}
-                        >
+                        <Link className="block" to={`${item.link}`}>
                             {item.name}
                         </Link>
                         <ul className="absolute">
@@ -20,7 +17,7 @@ export default function MainNav({ navItems }) {
                                       return (
                                           <li key={subitem.sublink}>
                                               <Link
-                                                  className="hover-list-link p-2 group-hover:block text-brand-1 bg-brand-5 hover:bg-brand-4"
+                                                  className="block invisible p-2 pointer-events-none group-hover:pointer-events-auto group-hover:visible group-focus:visible text-brand-1 bg-brand-5 hover:bg-brand-4"
                                                   to={`${subitem.subnav}`}
                                               >
                                                   {subitem.sublink}
