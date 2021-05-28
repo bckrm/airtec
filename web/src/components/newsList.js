@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import NewsCard from './newsCard';
 
 export default function NewsList({ news }) {
+    // const [index, setIndex] = useState(0);
+
     return (
         <div className="bg-brand-1 h-screen">
             <h1 className="pt-12 text-center text-white text-4xl uppercase">
@@ -15,6 +17,10 @@ export default function NewsList({ news }) {
                     return <NewsCard data={newsItem} />;
                 })}
             </div>
+            {/* this button will be changed out */}
+            <button className="text-white" type="button">
+                More
+            </button>
         </div>
     );
 }
