@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 @layer utilities {
-    .header-accent {
+    .heading-accent {
         position: relative;
     }
-    .header-accent:after {
+    .heading-accent:after {
         content: '';
         height: 5px;
         width: 50px;
         background-color: #acc9e8;
         position: absolute;
-        top: 76px;
+        top: 86px;
         left: 25px;
     }
 }
