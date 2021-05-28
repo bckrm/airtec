@@ -16,11 +16,11 @@ export default function MainNav({ navItems }) {
                         </Link>
                         <ul>
                             {navItems[i].subnav
-                                ? navItems[0].subnav.map((subitem) => {
+                                ? navItems[i].subnav.map((subitem) => {
                                       return (
                                           <li key={subitem.sublink}>
                                               <Link
-                                                  className={`hover-list-link group-hover:block text-brand-1 bg-${subitem.sublinkcolor}`}
+                                                  className="hover-list-link p-1 group-hover:block text-brand-1 bg-brand-5 hover:bg-brand-4"
                                                   to={`${subitem.subnav}`}
                                               >
                                                   {subitem.sublink}
