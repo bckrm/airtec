@@ -12,7 +12,7 @@ export default function MainNav({ navItems }) {
                             {item.name}
                         </Link>
                         <Link
-                            className="hover-list-link bg-brand-4 text-brand-1"
+                            className={`hover-list-link text-brand-1 bg-${item.sublinkcolor}`}
                             to={`${item.subnav}`}
                         >
                             {item.sublink}

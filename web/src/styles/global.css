@@ -8,6 +8,7 @@
     }
     .hover-list:hover + .hover-list-link {
         display: block;
+        padding: 5px;
     }
 }
 
