@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Button from '../components/button';
 import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
 
@@ -10,9 +11,9 @@ export default function IndexPage({ data }) {
     const { heroImage, plane } = data;
     return (
         <Layout>
-            <h1>index page</h1>
             <Hero image={heroImage} />
             <BgImagewithCard image={plane} />
+            <Button isPrimary />
         </Layout>
     );
 }
