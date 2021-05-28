@@ -7,12 +7,15 @@ export default function MainNav({ navItems }) {
         <ul className="flex font-semibold gap-3 justify-end mt-16 mr-24 text-white uppercase">
             {navItems.map((item) => {
                 return (
-                    <li key={item.link}>
-                        <Link className="hover-list" to={`${item.link}`}>
+                    <li key={item.link} className="group">
+                        <Link
+                            className="hover-list group-hover:block"
+                            to={`${item.link}`}
+                        >
                             {item.name}
                         </Link>
                         <Link
-                            className={`hover-list-link text-brand-1 bg-${item.sublinkcolor}`}
+                            className={`hover-list-link group-hover:block text-brand-1 group-hover:bg-${item.sublinkcolor}`}
                             to={`${item.subnav}`}
                         >
                             {item.sublink}

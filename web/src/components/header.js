@@ -9,7 +9,7 @@ const nav = [
         name: 'about',
         link: '/#',
         sublink: 'sublink',
-        subnav: '/#',
+        subnav: '/hello',
         sublinkcolor: 'brand-4',
     },
     {
@@ -37,7 +37,7 @@ const nav = [
         name: 'contact',
         link: '/#',
         sublink: 'sublink',
-        subnav: '/#',
+        subnav: '/hello',
         sublinkcolor: 'brand-4',
     },
 ];
