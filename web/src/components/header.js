@@ -12,12 +12,10 @@ const nav = [
             {
                 sublink: 'History',
                 subnav: '/#history',
-                sublinkcolor: 'brand-4',
             },
             {
                 sublink: 'Leadership',
                 subnav: '/#leadership',
-                sublinkcolor: 'brand-5',
             },
         ],
     },
@@ -28,22 +26,18 @@ const nav = [
             {
                 sublink: 'Services',
                 subnav: '/#services',
-                sublinkcolor: 'brand-4',
             },
             {
                 sublink: 'Fleet',
                 subnav: '/#fleet',
-                sublinkcolor: 'brand-5',
             },
             {
                 sublink: 'Certifications',
                 subnav: '/#certifications',
-                sublinkcolor: 'brand-5',
             },
             {
                 sublink: 'Contracts',
                 subnav: '/#contracts',
-                sublinkcolor: 'brand-5',
             },
         ],
     },
