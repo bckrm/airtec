@@ -55,14 +55,6 @@ const nav = [
     },
 ];
 
-const subnav = [
-    {
-        sublink: 'sublink',
-        subnav: '/hello',
-        sublinkcolor: 'brand-4',
-    },
-];
-
 export default function Header() {
     return (
         <nav className="fixed z-[1]">
@@ -70,7 +62,7 @@ export default function Header() {
                 <Link to="/" className="pt-11">
                     <Logo />
                 </Link>
-                <MainNav navItems={nav} subNavItems={subnav} />
+                <MainNav navItems={nav} />
             </div>
         </nav>
     );
