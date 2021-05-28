@@ -28,7 +28,7 @@ export default function MainNav({ navItems }) {
                                           </li>
                                       );
                                   })
-                                : ' '}
+                                : ''}
                         </ul>
                     </li>
                 );
