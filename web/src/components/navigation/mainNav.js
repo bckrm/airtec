@@ -7,14 +7,14 @@ export default function MainNav({ navItems }) {
         <ul className="flex font-semibold gap-3 justify-end mt-16 mr-24 text-white uppercase">
             {navItems.map((item, i) => {
                 return (
-                    <li key={item.link} className="group">
+                    <li key={item.link} className="group relative">
                         <Link
                             className="hover-list group-hover:block"
                             to={`${item.link}`}
                         >
                             {item.name}
                         </Link>
-                        <ul>
+                        <ul className="absolute">
                             {navItems[i].subnav
                                 ? navItems[i].subnav.map((subitem) => {
                                       return (
