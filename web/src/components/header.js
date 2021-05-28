@@ -10,15 +10,42 @@ const nav = [
         link: '/#',
         subnav: [
             {
-                sublink: 'sublink',
-                subnav: '/hello',
+                sublink: 'History',
+                subnav: '/#history',
                 sublinkcolor: 'brand-4',
+            },
+            {
+                sublink: 'Leadership',
+                subnav: '/#leadership',
+                sublinkcolor: 'brand-5',
             },
         ],
     },
     {
         name: 'capabilities',
         link: '/#',
+        subnav: [
+            {
+                sublink: 'Services',
+                subnav: '/#services',
+                sublinkcolor: 'brand-4',
+            },
+            {
+                sublink: 'Fleet',
+                subnav: '/#fleet',
+                sublinkcolor: 'brand-5',
+            },
+            {
+                sublink: 'Certifications',
+                subnav: '/#certifications',
+                sublinkcolor: 'brand-5',
+            },
+            {
+                sublink: 'Contracts',
+                subnav: '/#contracts',
+                sublinkcolor: 'brand-5',
+            },
+        ],
     },
     {
         name: 'news',
