@@ -19,6 +19,10 @@ module.exports = {
                 'brand-7': '#D4C0CD',
                 // light-purple
             },
+            container: (theme) => ({
+                center: true,
+                padding: theme('spacing.5'),
+            }),
             fontFamily: {
                 display: 'Montserrat',
                 body: 'Montserrat',
