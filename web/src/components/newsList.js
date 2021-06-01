@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+import loadable from '@loadable/component';
+import { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 
 import NewsCard from './newsCard';
 
-export default function NewsList({ news }) {
-    // const [index, setIndex] = useState(0);
+const Carousel = loadable(() => import('./carouselWrapper'));
 
+export default function NewsList({ news }) {
     return (
         <div className="bg-brand-1 h-screen">
             <h1 className="pt-12 text-center text-white text-4xl uppercase">
