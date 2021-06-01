@@ -14,10 +14,9 @@ export default function NewsList({ news }) {
                 News
                 <span className="absolute bg-brand-4 h-1 left-[48%] text-brand-4 top-[119%] w-10" />
             </h1>
-            <div className="flex gap-9 m-auto mt-32">
+            <div className="flex gap-4 m-auto mt-32">
                 <Carousel
                     plugins={[
-                        'infinite',
                         'arrows',
                         {
                             resolve: slidesToShowPlugin,
