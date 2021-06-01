@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 import NewsList from '../components/newsList';
+import Button from '../components/button';
 import Hero from '../components/hero';
 
 export default function IndexPage({ data }) {
@@ -33,6 +34,7 @@ export default function IndexPage({ data }) {
         <Layout>
             <Hero image={heroImage} />
             <NewsList news={news} />
+            <Button isPrimary />
         </Layout>
     );
 }
