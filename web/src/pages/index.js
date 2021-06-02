@@ -6,7 +6,6 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import NewsList from '../components/newsList';
 import Button from '../components/button';
-import MoreButton from '../components/moreButton';
 
 export default function IndexPage({ data }) {
     const { heroImage } = data;
@@ -36,7 +35,6 @@ export default function IndexPage({ data }) {
             <Hero image={heroImage} />
             <NewsList news={news} />
             <Button isPrimary />
-            <MoreButton />
         </Layout>
     );
 }

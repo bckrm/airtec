@@ -1,14 +1,18 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
-export default function MoreButton() {
+export default function MoreButton({ text }) {
     return (
-        <Link
+        <div
             to="/"
             className=" bg-black border-2 border-current rounded-bl-lg text-white text-center w-24"
             type="button"
         >
-            More &#8250;
-        </Link>
+            {text}
+        </div>
     );
 }
+
+MoreButton.propTypes = {
+    text: PropTypes.string.isRequired,
+};
