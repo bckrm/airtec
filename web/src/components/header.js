@@ -8,10 +8,38 @@ const nav = [
     {
         name: 'about',
         link: '/#',
+        subnav: [
+            {
+                sublink: 'History',
+                subnav: '/#history',
+            },
+            {
+                sublink: 'Leadership',
+                subnav: '/#leadership',
+            },
+        ],
     },
     {
         name: 'capabilities',
         link: '/#',
+        subnav: [
+            {
+                sublink: 'Services',
+                subnav: '/#services',
+            },
+            {
+                sublink: 'Fleet',
+                subnav: '/#fleet',
+            },
+            {
+                sublink: 'Certifications',
+                subnav: '/#certifications',
+            },
+            {
+                sublink: 'Contracts',
+                subnav: '/#contracts',
+            },
+        ],
     },
     {
         name: 'news',
@@ -29,8 +57,8 @@ const nav = [
 
 export default function Header() {
     return (
-        <nav>
-            <div className="container flex justify-between mx-24 text-white">
+        <nav className="fixed z-[1]">
+            <div className="container flex justify-between mx-24">
                 <Link to="/" className="pt-11">
                     <Logo />
                 </Link>
