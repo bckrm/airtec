@@ -31,8 +31,11 @@ export default function NewsList({ news }) {
                                     </button>
                                 ),
                                 arrowLeftDisabled: (
-                                    <button type="button" className="hidden">
-                                        <MoreButton text={content.back} />
+                                    <button type="button">
+                                        <MoreButton
+                                            text={content.back}
+                                            isDisabled
+                                        />
                                     </button>
                                 ),
                                 arrowRight: (
@@ -41,8 +44,11 @@ export default function NewsList({ news }) {
                                     </button>
                                 ),
                                 arrowRightDisabled: (
-                                    <button type="button" className="hidden">
-                                        <MoreButton text={content.back} />
+                                    <button type="button">
+                                        <MoreButton
+                                            text={content.text}
+                                            isDisabled
+                                        />
                                     </button>
                                 ),
                                 addArrowClickHandler: true,
