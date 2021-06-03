@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .heading-accent {
+        position: relative;
+    }
+    .heading-accent:after {
+        content: '';
+        height: 5px;
+        width: 50px;
+        background-color: #acc9e8;
+        position: absolute;
+        top: 119%;
+        left: 25px;
+    }
+}
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
