@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function MoreButton({ text, isDisabled, isLeft, isRight }) {
     const disabledStyle = 'bg-brand-8';
-    const rightStyle = '-bottom-12 right-7';
+    const rightStyle = 'bottom-[-10%] right-8';
     const leftStyle = 'top-[104%] left-[30px]';
 
     const finalStyles = `absolute bg-black border-2 border-current rounded-bl-lg text-white text-center w-24 ${
