@@ -4,7 +4,12 @@ import BackgroundImage from 'gatsby-background-image';
 
 import Card from './card';
 
-export default function BgImagewithCard({ image }) {
+export default function BgImagewithCard({
+    data,
+    image,
+    isRight,
+    isTransparent,
+}) {
     const {
         childImageSharp: { fluid },
     } = image;
@@ -15,11 +20,14 @@ export default function BgImagewithCard({ image }) {
             className="w-full min-h-screen flex items-center"
             fluid={fluid}
         >
-            <Card />
+            <Card isTransparent={isTransparent} isRight={isRight} data={data} />
         </BackgroundImage>
     );
 }
 
 BgImagewithCard.propTypes = {
+    data: PropTypes.object.isRequired,
     image: PropTypes.object.isRequired,
+    isTransparent: PropTypes.bool.isRequired,
+    isRight: PropTypes.bool.isRequired,
 };

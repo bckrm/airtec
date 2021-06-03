@@ -9,10 +9,23 @@ import BgImagewithCard from '../components/bgImagewithCard';
 
 export default function IndexPage({ data }) {
     const { heroImage, plane } = data;
+
+    const content = {
+        info: {
+            heading: 'this is a heading',
+            description:
+                'Etiam felis mauris, dapibus commodo ex a, vestibulum consequat neque. Vestibulum id auctor sapien. Vestibulum tempor tortor eget purus lobortis pretium.',
+        },
+    };
     return (
         <Layout>
             <Hero image={heroImage} />
-            <BgImagewithCard image={plane} />
+            <BgImagewithCard
+                data={content.info}
+                image={plane}
+                isRight
+                isTransparent
+            />
             <Button isPrimary />
         </Layout>
     );
