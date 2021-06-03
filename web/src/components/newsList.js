@@ -10,8 +10,8 @@ const Carousel = loadable(() => import('./carouselWrapper'));
 
 export default function NewsList({ news }) {
     const content = {
-        text: 'More',
-        back: 'Back',
+        text: 'More ❯',
+        back: '❮ Back',
     };
     return (
         <div className="bg-brand-1 h-full mb-48 pb-48">
@@ -19,37 +19,31 @@ export default function NewsList({ news }) {
                 News
                 <span className="absolute bg-brand-4 h-1 left-[48%] text-brand-4 top-[119%] w-10" />
             </h1>
-            <div className="mt-32">
+            <div className="mt-32 relative">
                 <Carousel
                     plugins={[
                         {
                             resolve: arrowsPlugin,
                             options: {
                                 arrowLeft: (
-                                    <button type="button">
-                                        <MoreButton text={content.back} />
-                                    </button>
+                                    <MoreButton isLeft text={content.back} />
                                 ),
                                 arrowLeftDisabled: (
-                                    <button type="button">
-                                        <MoreButton
-                                            text={content.back}
-                                            isDisabled
-                                        />
-                                    </button>
+                                    <MoreButton
+                                        text={content.back}
+                                        isDisabled
+                                        isLeft
+                                    />
                                 ),
                                 arrowRight: (
-                                    <button type="button">
-                                        <MoreButton text={content.text} />
-                                    </button>
+                                    <MoreButton text={content.text} isRight />
                                 ),
                                 arrowRightDisabled: (
-                                    <button type="button">
-                                        <MoreButton
-                                            text={content.text}
-                                            isDisabled
-                                        />
-                                    </button>
+                                    <MoreButton
+                                        text={content.text}
+                                        isDisabled
+                                        isRight
+                                    />
                                 ),
                                 addArrowClickHandler: true,
                             },
