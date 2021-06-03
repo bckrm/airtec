@@ -18,9 +18,9 @@ module.exports = {
                 // purple
                 'brand-7': '#D4C0CD',
                 // light-purple
-                'brand-8': '#c4c4c4',
+                'brand-8': '#C4C4C4',
                 // darker grey
-                'brand-9': '#dddddd',
+                'brand-9': '#DDDDDD',
             },
             container: (theme) => ({
                 center: true,

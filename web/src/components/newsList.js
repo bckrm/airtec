@@ -31,8 +31,8 @@ export default function NewsList({ news }) {
                                 arrowLeftDisabled: (
                                     <MoreButton
                                         text={content.back}
-                                        isDisabled
                                         isLeft
+                                        isDisabled
                                     />
                                 ),
                                 arrowRight: (
