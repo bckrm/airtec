@@ -10,7 +10,7 @@ export default function Hero({ image }) {
     return (
         <BackgroundImage
             Tag="section"
-            className="w-full min-h-screen flex justify-center items-center "
+            className="w-full min-h-screen flex justify-center items-center"
             fluid={fluid}
         >
             <h1 className="max-w-2xl text-center text-ts-h1 text-white">
