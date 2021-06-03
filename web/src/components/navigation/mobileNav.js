@@ -9,7 +9,7 @@ export default function MobileNav({
 }) {
     const navActiveStyles = isMobileNavOpen
         ? '-translate-x-0'
-        : 'translate-x-full';
+        : 'translate-x-[176%]';
     const colorStyle = isMobileNavOpen ? 'bg-black' : 'bg-white';
 
     const firstSpanStyles = isMobileNavOpen ? '-rotate-45' : 'rotate-0';
