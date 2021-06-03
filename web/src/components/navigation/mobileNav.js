@@ -39,7 +39,7 @@ export default function MobileNav({
                 />
             </button>
             <ul
-                className={` bg-white text-black right-0 lg:hidden min-h-screen w-max flex flex-col items-end transform ${navActiveStyles} transition pr-4 pt-32 top-0 text-right w-1/2`}
+                className={` bg-white text-black right-0 md:hidden min-h-screen w-max flex flex-col items-end transform ${navActiveStyles} transition pr-4 pt-32 top-0 text-right w-1/2`}
             >
                 {navItems.map((item) => {
                     return (
