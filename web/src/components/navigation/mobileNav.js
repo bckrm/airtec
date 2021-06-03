@@ -21,20 +21,20 @@ export default function MobileNav({
     return (
         <>
             <button
-                className="flex flex-col justify-between md:hidden h-8 w-10 right-0 top-1/2 transform translate-y-1/2 z-10"
+                className="flex flex-col justify-between items-end md:hidden h-8 right-0 top-1/2 transform translate-y-1/2 z-10"
                 type="button"
                 onClick={handleNavToggle}
             >
                 <span
-                    className={` h-1 rounded-full transform-gpu transition transition-all duration-300 w-full origin-right ${firstSpanStyles} ${colorStyle}`}
+                    className={`h-1 rounded-full transform-gpu w-11 transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 w-full origin-right ${secondSpanStyles} ${colorStyle}`}
+                    className={`h-1 rounded-full transform-gpu w-8 transition transition-all duration-300 origin-right ${secondSpanStyles} ${colorStyle}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={` h-1 rounded-full transform-gpu transition transition-all duration-300 w-full origin-right ${thirdSpanStyles} ${colorStyle}`}
+                    className={`h-1 rounded-full transform-gpu w-5 transition transition-all duration-300 origin-right ${thirdSpanStyles} ${colorStyle}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
             </button>
