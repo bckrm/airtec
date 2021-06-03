@@ -8,7 +8,7 @@ export default function MobileNav({
     handleNavToggle,
 }) {
     const navActiveStyles = isMobileNavOpen
-        ? '-translate-x-64'
+        ? '-translate-x-16'
         : 'translate-x-full';
     const colorStyle = isMobileNavOpen ? 'bg-black' : 'bg-white';
 
