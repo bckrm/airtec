@@ -14,12 +14,13 @@ export default function NewsList({ news }) {
 
     return (
         <div className="bg-brand-1 h-full mb-48 pb-48">
-            <h1 className="h1-heading-accent pt-12 text-center text-white text-4xl uppercase">
+            <h2 className="h1-heading-accent pt-12 text-center text-white text-4xl uppercase">
                 News
-            </h1>
+            </h2>
             <div className="mt-32 relative">
                 <Carousel
                     plugins={[
+                        'centered',
                         {
                             resolve: arrowsPlugin,
                             options: {
@@ -37,7 +38,7 @@ export default function NewsList({ news }) {
                         {
                             resolve: slidesToShowPlugin,
                             options: {
-                                numberOfSlides: 3,
+                                numberOfSlides: 4,
                             },
                         },
                     ]}
