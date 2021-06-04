@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Vector({ data }) {
+export default function PlaneIconWithText({ data }) {
     const { text } = data;
     return (
         <div className="flex gap-3.5 mt-11">
@@ -16,6 +16,6 @@ export default function Vector({ data }) {
     );
 }
 
-Vector.propTypes = {
+PlaneIconWithText.propTypes = {
     data: PropTypes.object.isRequired,
 };

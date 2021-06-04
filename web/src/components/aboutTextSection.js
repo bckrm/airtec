@@ -1,5 +1,5 @@
 import React from 'react';
-import Vector from './svgs/Vector';
+import PlaneIconWithText from './svgs/PlaneIconWithText';
 
 export default function AboutText() {
     const content = {
@@ -8,7 +8,7 @@ export default function AboutText() {
         },
     };
     return (
-        <div className="container gap-11 grid grid-cols-2 my-14">
+        <div className="container gap-11 grid grid-cols-1 md:grid-cols-2 my-14">
             <p>
                 We maintain a fleet of specially modified fixed-wing and
                 rotary-wing aircraft to meet customers&apos; unique
@@ -25,12 +25,12 @@ export default function AboutText() {
                 meaningful flight operations and data as a service without
                 typical government contracting and procurement delays.
                 <div className="mt-4">
-                    <Vector data={content.service} />
-                    <Vector data={content.service} />
-                    <Vector data={content.service} />
-                    <Vector data={content.service} />
-                    <Vector data={content.service} />
-                    <Vector data={content.service} />
+                    <PlaneIconWithText data={content.service} />
+                    <PlaneIconWithText data={content.service} />
+                    <PlaneIconWithText data={content.service} />
+                    <PlaneIconWithText data={content.service} />
+                    <PlaneIconWithText data={content.service} />
+                    <PlaneIconWithText data={content.service} />
                 </div>
             </p>
             <p>
