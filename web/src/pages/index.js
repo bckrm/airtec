@@ -7,6 +7,8 @@ import Button from '../components/button';
 import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
 
+import AboutText from '../components/aboutTextSection';
+
 export default function IndexPage({ data }) {
     const { heroImage, plane } = data;
 
@@ -26,6 +28,7 @@ export default function IndexPage({ data }) {
                 isRight
                 isTransparent
             />
+            <AboutText />
             <Button isPrimary />
         </Layout>
     );
