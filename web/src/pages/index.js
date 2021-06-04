@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import Button from '../components/button';
 import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
+import HistorySection from '../components/historySection';
 
 export default function IndexPage({ data }) {
     const { heroImage, plane } = data;
@@ -17,6 +18,50 @@ export default function IndexPage({ data }) {
                 'Etiam felis mauris, dapibus commodo ex a, vestibulum consequat neque. Vestibulum id auctor sapien. Vestibulum tempor tortor eget purus lobortis pretium.',
         },
     };
+    const historyData = [
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '1995',
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '1999',
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2003',
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2007',
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2012',
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2017',
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2021',
+        },
+    ];
     return (
         <Layout>
             <Hero image={heroImage} />
@@ -26,6 +71,7 @@ export default function IndexPage({ data }) {
                 isRight
                 isTransparent
             />
+            <HistorySection history={historyData} />
             <Button isPrimary />
         </Layout>
     );
