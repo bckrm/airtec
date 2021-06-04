@@ -6,7 +6,7 @@ export default function MoreButton({ text, isDisabled, isLeft }) {
     const rightStyle = 'bottom-[-10%] right-8';
     const leftStyle = 'top-[104%] left-[30px]';
 
-    const finalStyles = `absolute border-2 border-current rounded-bl-lg text-white text-center w-24 ${
+    const finalStyles = `absolute border-2 border-current rounded-bl-lg text-white text-center w-24 focus:text-brand-9 ${
         isDisabled ? disabledStyle : 'bg-black'
     } ${isLeft ? leftStyle : rightStyle}`;
 
