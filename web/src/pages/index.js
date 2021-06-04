@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 import Hero from '../components/hero';
+import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
 import Button from '../components/button';
 
 export default function IndexPage({ data }) {
-    const { heroImage } = data;
+    const { heroImage, plane } = data;
 
     const news = [
         {
@@ -30,9 +31,22 @@ export default function IndexPage({ data }) {
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
         },
     ];
+    const content = {
+        info: {
+            heading: 'this is a heading',
+            description:
+                'Etiam felis mauris, dapibus commodo ex a, vestibulum consequat neque. Vestibulum id auctor sapien. Vestibulum tempor tortor eget purus lobortis pretium.',
+        },
+    };
     return (
         <Layout>
             <Hero image={heroImage} />
+            <BgImagewithCard
+                data={content.info}
+                image={plane}
+                isRight
+                isTransparent
+            />
             <NewsList news={news} />
             <Button isPrimary />
         </Layout>
@@ -48,11 +62,19 @@ export const query = graphql`
                 }
             }
         }
+        plane: file(relativePath: { regex: "/plane/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
 `;
 
 IndexPage.propTypes = {
     data: PropTypes.shape({
+        plane: PropTypes.object.isRequired,
         heroImage: PropTypes.object.isRequired,
     }).isRequired,
 };
