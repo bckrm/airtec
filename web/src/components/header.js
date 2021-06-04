@@ -64,9 +64,9 @@ export default function Header() {
     };
 
     return (
-        <nav className="fixed z-[1] w-full py-8 top-0">
-            <div className="container flex justify-between mx-auto">
-                <Link to="/" className="pt-11">
+        <nav className="fixed py-8 top-0 transition-colors w-full z-10">
+            <div className="container flex justify-between mx-auto text-white">
+                <Link href="/">
                     <Logo />
                 </Link>
                 <MobileNav

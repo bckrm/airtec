@@ -7,21 +7,24 @@ export default function MobileNav({
     isMobileNavOpen,
     handleNavToggle,
 }) {
-    const navActiveStyles = isMobileNavOpen
-        ? '-translate-x-0'
-        : 'translate-x-full';
     const colorStyle = isMobileNavOpen ? 'bg-black' : 'bg-white';
 
+    const navActiveStyles = isMobileNavOpen
+        ? 'translate-x-0'
+        : 'translate-x-full';
+
     const firstSpanStyles = isMobileNavOpen ? '-rotate-45' : 'rotate-0';
+
     const secondSpanStyles = isMobileNavOpen
         ? 'opacity-0 w-0'
         : 'opacity-100 w-full';
+
     const thirdSpanStyles = isMobileNavOpen ? 'rotate-45' : 'rotate-0';
 
     return (
         <>
             <button
-                className="flex flex-col justify-between items-end md:hidden h-8 right-0 top-1/2 transform translate-y-[150%] translate-x-full z-10"
+                className="absolute flex flex-col justify-between lg:hidden h-8 w-10 right-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10"
                 type="button"
                 onClick={handleNavToggle}
             >
