@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
 
-export default function Hero({ image, data }) {
+export default function Hero({ data }) {
     const {
-        childImageSharp: { fluid },
-    } = image;
-    const { text } = data;
-
+        image: {
+            childImageSharp: { fluid },
+        },
+        text,
+    } = data;
     return (
         <BackgroundImage
             Tag="section"
@@ -22,6 +23,5 @@ export default function Hero({ image, data }) {
 }
 
 Hero.propTypes = {
-    image: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
 };
