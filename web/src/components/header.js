@@ -7,7 +7,7 @@ import Logo from './svgs/Logo';
 const nav = [
     {
         name: 'about',
-        link: '/#',
+        link: '/about',
         subnav: [
             {
                 sublink: 'History',
