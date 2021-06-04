@@ -8,7 +8,7 @@ export default function AboutText() {
         },
     };
     return (
-        <div className="container gap-11 grid grid-cols-2 mt-14">
+        <div className="container gap-11 grid grid-cols-2 my-14">
             <p>
                 We maintain a fleet of specially modified fixed-wing and
                 rotary-wing aircraft to meet customers&apos; unique
