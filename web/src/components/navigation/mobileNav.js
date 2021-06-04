@@ -24,7 +24,7 @@ export default function MobileNav({
     return (
         <>
             <button
-                className="absolute flex flex-col justify-between lg:hidden h-8 w-10 right-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10"
+                className="absolute flex flex-col justify-between items-end lg:hidden h-8 w-10 right-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10"
                 type="button"
                 onClick={handleNavToggle}
             >
