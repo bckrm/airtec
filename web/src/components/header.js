@@ -64,7 +64,7 @@ export default function Header() {
     };
 
     return (
-        <nav className="fixed z-[1]">
+        <nav className="fixed z-[1] w-full">
             <div className="container flex justify-between mx-8 md:mx-24">
                 <Link to="/" className="pt-11">
                     <Logo />
