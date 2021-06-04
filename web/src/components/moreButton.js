@@ -6,12 +6,12 @@ export default function MoreButton({ text, isDisabled, isLeft, isRight }) {
     const rightStyle = 'bottom-[-10%] right-8';
     const leftStyle = 'top-[104%] left-[30px]';
 
-    const finalStyles = `absolute bg-black border-2 border-current rounded-bl-lg text-white text-center w-24 ${
-        isDisabled ? disabledStyle : ''
+    const finalStyles = `absolute border-2 border-current rounded-bl-lg text-white text-center w-24 ${
+        isDisabled ? disabledStyle : 'bg-black'
     } ${isLeft ? leftStyle : ''}${isRight ? rightStyle : ''}`;
 
     return (
-        <button className={finalStyles} type="button">
+        <button className={finalStyles} disabled={isDisabled} type="button">
             {text}
         </button>
     );
