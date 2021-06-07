@@ -16,10 +16,14 @@ export default function IndexPage({ data }) {
             description:
                 'Etiam felis mauris, dapibus commodo ex a, vestibulum consequat neque. Vestibulum id auctor sapien. Vestibulum tempor tortor eget purus lobortis pretium.',
         },
+        hero: {
+            image: heroImage,
+            text: 'Donec eleifend faucibus finibus maximus',
+        },
     };
     return (
         <Layout>
-            <Hero image={heroImage} />
+            <Hero data={content.hero} />
             <BgImagewithCard
                 data={content.info}
                 image={plane}
