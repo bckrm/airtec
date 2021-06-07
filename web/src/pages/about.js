@@ -11,7 +11,7 @@ export default function AboutPage({ data }) {
     const content = {
         hero: {
             image: aboutImage,
-            text: 'Donec eleifend faucibus finibus maximus',
+            text: 'about page',
         },
     };
 
