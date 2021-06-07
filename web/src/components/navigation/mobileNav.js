@@ -22,9 +22,6 @@ export default function MobileNav({
         : 'opacity-100 w-8';
 
     const thirdSpanStyles = isMobileNavOpen ? 'rotate-45 w-10' : 'rotate-0 w-5';
-    // const firstSpanLength = isMobileNavOpen ? 'w-10' : 'w-11';
-    // const secondSpanLength = isMobileNavOpen ? 'w-10' : 'w-8';
-    // const thirdSpanLength = isMobileNavOpen ? 'w-10' : 'w-5';
 
     return (
         <>
@@ -34,15 +31,15 @@ export default function MobileNav({
                 onClick={handleNavToggle}
             >
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle} `}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${secondSpanStyles} ${colorStyle} `}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${secondSpanStyles} ${colorStyle}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${thirdSpanStyles} ${colorStyle} `}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${thirdSpanStyles} ${colorStyle}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
             </button>
