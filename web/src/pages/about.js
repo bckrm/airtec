@@ -8,9 +8,16 @@ import Hero from '../components/hero';
 export default function AboutPage({ data }) {
     const { aboutImage } = data;
 
+    const content = {
+        hero: {
+            image: aboutImage,
+            text: 'Donec eleifend faucibus finibus maximus',
+        },
+    };
+
     return (
         <Layout>
-            <Hero image={aboutImage} />
+            <Hero data={content.info} image={aboutImage} />
         </Layout>
     );
 }
