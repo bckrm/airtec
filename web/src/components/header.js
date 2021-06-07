@@ -65,7 +65,7 @@ export default function Header() {
 
     return (
         <nav className="fixed py-8 top-0 transition-colors w-full z-10">
-            <div className="container flex justify-between mx-auto text-white">
+            <div className="container flex justify-between text-white">
                 <Link href="/">
                     <Logo />
                 </Link>
