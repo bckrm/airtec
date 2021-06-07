@@ -7,21 +7,21 @@ export default function MobileNav({
     isMobileNavOpen,
     handleNavToggle,
 }) {
-    const colorStyle = isMobileNavOpen ? 'bg-black' : 'bg-white';
-
     const navActiveStyles = isMobileNavOpen
         ? 'translate-x-0'
         : 'translate-x-full';
 
     const firstSpanStyles = isMobileNavOpen
-        ? '-rotate-45 w-10'
-        : 'rotate-0 w-11';
+        ? '-rotate-45 w-10 bg-black'
+        : 'rotate-0 w-11 bg-white';
 
     const secondSpanStyles = isMobileNavOpen
-        ? 'opacity-0 w-0'
-        : 'opacity-100 w-8';
+        ? 'opacity-0 w-0 bg-black'
+        : 'opacity-100 w-8 bg-white';
 
-    const thirdSpanStyles = isMobileNavOpen ? 'rotate-45 w-10' : 'rotate-0 w-5';
+    const thirdSpanStyles = isMobileNavOpen
+        ? 'rotate-45 w-10 bg-black'
+        : 'rotate-0 w-5 bg-white';
 
     return (
         <>
@@ -31,15 +31,15 @@ export default function MobileNav({
                 onClick={handleNavToggle}
             >
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle}`}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${firstSpanStyles}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${secondSpanStyles} ${colorStyle}`}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${secondSpanStyles}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${thirdSpanStyles} ${colorStyle}`}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${thirdSpanStyles}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
             </button>
