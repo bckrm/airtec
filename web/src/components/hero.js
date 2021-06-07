@@ -15,7 +15,7 @@ export default function Hero({ data }) {
             className="w-full min-h-screen flex justify-center items-center"
             fluid={fluid}
         >
-            <h1 className="max-w-2xl px-4 text-center text-ts-h1 text-white">
+            <h1 className="max-w-2xl px-4 text-center text-ts-h1 text-white uppercase">
                 {text}
             </h1>
         </BackgroundImage>
