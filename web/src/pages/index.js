@@ -80,7 +80,9 @@ export default function IndexPage({ data }) {
                 isRight
                 isTransparent
             />
-            <BgImagewithCard data={content.info} image={plane} isLeft />
+            <BgImagewithCard data={content.info} image={plane} />
+            <BgImagewithCard data={content.info} image={plane} isDark isRight />
+
             <NewsList news={news} />
             <Button isPrimary />
         </Layout>
