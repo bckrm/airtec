@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 export default function MoreButton({ text, isDisabled, isLeft }) {
     const disabledStyle = 'text-brand-2';
     const rightStyle = 'bottom-[-10%] right-8';
-    const leftStyle = 'top-[104%] left-[30px]';
+    const leftStyle = 'top-[104%] right-[147px]';
 
     const finalStyles = `absolute border-2 border-current rounded-bl-lg text-white text-center w-24 focus:text-brand-9 ${
-        isDisabled ? disabledStyle : 'bg-black'
+        isDisabled ? disabledStyle : 'bg-transparent'
     } ${isLeft ? leftStyle : rightStyle}`;
 
     return (
