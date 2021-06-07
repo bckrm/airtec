@@ -11,13 +11,13 @@ export default function AboutPage({ data }) {
     const content = {
         hero: {
             image: aboutImage,
-            text: 'about page',
+            text: 'ABOUT PAGE',
         },
     };
 
     return (
         <Layout>
-            <Hero data={content.info} image={aboutImage} />
+            <Hero data={content.hero} image={aboutImage} />
         </Layout>
     );
 }
