@@ -32,7 +32,7 @@ export default function MobileNav({
                 onClick={handleNavToggle}
             >
                 <span
-                    className={`h-1 rounded-full transform-gpu w-11 transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle} ${firstSpanLength}`}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle} ${firstSpanLength}`}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
