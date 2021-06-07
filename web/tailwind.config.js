@@ -21,6 +21,8 @@ module.exports = {
                 'brand-8': '#C4C4C4',
                 // darker grey
                 'brand-9': '#DDDDDD',
+                'brand-10': '#373f92',
+                // disabled
             },
             container: (theme) => ({
                 center: true,
