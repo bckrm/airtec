@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
 import MainNav from './navigation/mainNav';
 import Logo from './svgs/Logo';
+import MobileNav from './navigation/mobileNav';
 
 const nav = [
     {
@@ -56,12 +57,23 @@ const nav = [
 ];
 
 export default function Header() {
+    const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
+    const handleNavToggle = () => {
+        setIsMobileNavOpen(!isMobileNavOpen);
+    };
+
     return (
-        <nav className="fixed z-[1]">
-            <div className="container flex justify-between mx-24">
-                <Link to="/" className="pt-11">
+        <nav className="fixed py-8 top-0 transition-colors w-full z-10">
+            <div className="container flex justify-between text-white">
+                <Link href="/">
                     <Logo />
                 </Link>
+                <MobileNav
+                    handleNavToggle={handleNavToggle}
+                    isMobileNavOpen={isMobileNavOpen}
+                    navItems={nav}
+                />
                 <MainNav navItems={nav} />
             </div>
         </nav>
