@@ -13,16 +13,18 @@ export default function MobileNav({
         ? 'translate-x-0'
         : 'translate-x-full';
 
-    const firstSpanStyles = isMobileNavOpen ? '-rotate-45' : 'rotate-0';
+    const firstSpanStyles = isMobileNavOpen
+        ? '-rotate-45 w-10'
+        : 'rotate-0 w-11';
 
     const secondSpanStyles = isMobileNavOpen
         ? 'opacity-0 w-0'
-        : 'opacity-100 w-full';
+        : 'opacity-100 w-8';
 
-    const thirdSpanStyles = isMobileNavOpen ? 'rotate-45' : 'rotate-0';
-    const firstSpanLength = isMobileNavOpen ? 'w-10' : 'w-11';
-    const secondSpanLength = isMobileNavOpen ? 'w-10' : 'w-8';
-    const thirdSpanLength = isMobileNavOpen ? 'w-10' : 'w-5';
+    const thirdSpanStyles = isMobileNavOpen ? 'rotate-45 w-10' : 'rotate-0 w-5';
+    // const firstSpanLength = isMobileNavOpen ? 'w-10' : 'w-11';
+    // const secondSpanLength = isMobileNavOpen ? 'w-10' : 'w-8';
+    // const thirdSpanLength = isMobileNavOpen ? 'w-10' : 'w-5';
 
     return (
         <>
@@ -32,15 +34,15 @@ export default function MobileNav({
                 onClick={handleNavToggle}
             >
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle} ${firstSpanLength}`}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${firstSpanStyles} ${colorStyle} `}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${secondSpanStyles} ${colorStyle} ${secondSpanLength}`}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${secondSpanStyles} ${colorStyle} `}
                     isMobileNavOpen={isMobileNavOpen}
                 />
                 <span
-                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${thirdSpanStyles} ${colorStyle} ${thirdSpanLength}`}
+                    className={`h-1 rounded-full transform-gpu transition transition-all duration-300 origin-right ${thirdSpanStyles} ${colorStyle} `}
                     isMobileNavOpen={isMobileNavOpen}
                 />
             </button>
