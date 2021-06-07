@@ -17,7 +17,7 @@ export default function AboutPage({ data }) {
 
     return (
         <Layout>
-            <Hero data={content.hero} image={aboutImage} />
+            <Hero data={content.hero} />
         </Layout>
     );
 }
