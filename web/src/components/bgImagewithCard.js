@@ -7,6 +7,7 @@ import Card from './card';
 export default function BgImagewithCard({
     data,
     image,
+    isDark,
     isRight,
     isTransparent,
 }) {
@@ -20,7 +21,12 @@ export default function BgImagewithCard({
             className="w-full min-h-screen flex items-center"
             fluid={fluid}
         >
-            <Card isTransparent={isTransparent} isRight={isRight} data={data} />
+            <Card
+                isDark={isDark}
+                isTransparent={isTransparent}
+                isRight={isRight}
+                data={data}
+            />
         </BackgroundImage>
     );
 }
@@ -30,4 +36,5 @@ BgImagewithCard.propTypes = {
     image: PropTypes.object.isRequired,
     isTransparent: PropTypes.bool.isRequired,
     isRight: PropTypes.bool.isRequired,
+    isDark: PropTypes.bool.isRequired,
 };
