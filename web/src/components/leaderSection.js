@@ -7,7 +7,7 @@ export default function LeaderSection({ leaders }) {
     return (
         <div className="bg-brand-1">
             <div className="container py-20">
-                <h2 className="heading-accent mb-6 text-white text-ts-h2 uppercase">
+                <h2 className="leadership-accent mb-6 text-white text-ts-h2 uppercase">
                     Leadership
                 </h2>
                 <div className=" flex flex-wrap gap-8">
