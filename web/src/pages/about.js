@@ -19,7 +19,32 @@ export default function AboutPage({ data }) {
     const leaders = [
         {
             image: aboutImage,
-            firstname: 'Katie',
+            firstname: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            firstname: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            firstname: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            firstname: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            firstname: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            firstname: 'Katie Breuil',
             title: 'Web Dev',
         },
     ];
