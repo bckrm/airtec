@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 import Hero from '../components/hero';
+import LeaderSection from '../components/leaderSection';
 
 export default function AboutPage({ data }) {
     const { aboutImage } = data;
@@ -15,9 +16,18 @@ export default function AboutPage({ data }) {
         },
     };
 
+    const leaders = [
+        {
+            image: aboutImage,
+            firstname: 'Katie',
+            title: 'Web Dev',
+        },
+    ];
+
     return (
         <Layout>
             <Hero data={content.hero} />
+            <LeaderSection leaders={leaders} />
         </Layout>
     );
 }
