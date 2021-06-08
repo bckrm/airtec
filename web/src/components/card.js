@@ -16,7 +16,7 @@ export default function Card({ data, isRight, isTransparent, isDark }) {
     return (
         <div className="container">
             <div className={cardStyle}>
-                <h1 className="heading-accent pl-6 pt-7 mb-12 text-4xl uppercase">
+                <h1 className="card-accent pl-6 pt-7 mb-12 text-4xl uppercase">
                     {heading}
                 </h1>
                 <p className="px-6 pb-7">{description}</p>
