@@ -4,11 +4,14 @@ import { Link } from 'gatsby';
 
 export default function MainNav({ navItems }) {
     return (
-        <ul className="flex font-semibold gap-3 justify-end mt-16 mr-24 text-white uppercase">
+        <ul className="hidden lg:flex flex-row items-center font-semibold leading-5 justify-between self-center uppercase">
             {navItems.map((item) => {
                 return (
                     <li key={item.link} className="group relative">
-                        <Link className="block" to={`${item.link}`}>
+                        <Link
+                            className="block ml-8 text-xl"
+                            to={`${item.link}`}
+                        >
                             {item.name}
                         </Link>
                         <ul className="absolute">
