@@ -9,7 +9,7 @@ export default function Card({ data, isRight, isTransparent, isDark }) {
         : 'bg-white text-brand-1';
     const transparentStyle = isTransparent ? 'bg-transparent text-black' : '';
 
-    const cardStyle = `rounded-bl-lg w-11/12 md:w-7/12 
+    const cardStyle = `rounded-bl-[2.5rem] w-11/12 md:w-7/12 
    ${darkStyle} ${transparentStyle}
     ${isRight ? 'md:transform md:translate-x-3/4' : ''}`;
 
