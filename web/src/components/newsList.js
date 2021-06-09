@@ -19,6 +19,7 @@ export default function NewsList({ news }) {
             </h2>
             <div className="mt-32 relative">
                 <Carousel
+                    itemWidth="18rem"
                     plugins={[
                         'centered',
                         {
