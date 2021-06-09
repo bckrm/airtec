@@ -6,6 +6,7 @@ import Card from './card';
 
 export default function BgImagewithCard({
     data,
+    hasButton,
     image,
     isDark,
     isRight,
@@ -34,6 +35,7 @@ export default function BgImagewithCard({
                 isSecondary={isSecondary}
                 isPrimary={isPrimary}
                 isSecondaryDark={isSecondaryDark}
+                hasButton={hasButton}
             />
         </BackgroundImage>
     );
@@ -41,6 +43,7 @@ export default function BgImagewithCard({
 
 BgImagewithCard.propTypes = {
     data: PropTypes.object.isRequired,
+    hasButton: PropTypes.bool.isRequired,
     image: PropTypes.object.isRequired,
     isTransparent: PropTypes.bool.isRequired,
     isRight: PropTypes.bool.isRequired,

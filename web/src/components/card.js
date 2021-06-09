@@ -5,6 +5,7 @@ import Button from './button';
 
 export default function Card({
     data,
+    hasButton,
     isRight,
     isTransparent,
     isDark,
@@ -31,13 +32,15 @@ export default function Card({
                     {heading}
                 </h1>
                 <p className="pr-6 pb-7">{description}</p>
-                <Button
-                    isPrimaryDark={isPrimaryDark}
-                    isSecondary={isSecondary}
-                    isPrimary={isPrimary}
-                    isSecondaryDark={isSecondaryDark}
-                    isTransparent={isTransparent}
-                />
+                {hasButton && (
+                    <Button
+                        isPrimaryDark={isPrimaryDark}
+                        isSecondary={isSecondary}
+                        isPrimary={isPrimary}
+                        isSecondaryDark={isSecondaryDark}
+                        isTransparent={isTransparent}
+                    />
+                )}
             </div>
         </div>
     );
@@ -45,6 +48,7 @@ export default function Card({
 
 Card.propTypes = {
     data: PropTypes.object.isRequired,
+    hasButton: PropTypes.object.isRequired,
     isTransparent: PropTypes.bool.isRequired,
     isDark: PropTypes.bool.isRequired,
     isRight: PropTypes.bool.isRequired,
