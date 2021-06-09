@@ -11,7 +11,7 @@ export default function MoreButton({ text, isDisabled, isLeft }) {
     } ${isLeft ? leftStyle : rightStyle}`;
 
     return (
-        <button className={finalStyles} disabled={isDisabled} type="button">
+        <button className={finalStyles} isDisabled={isDisabled} type="button">
             {text}
         </button>
     );

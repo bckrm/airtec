@@ -78,9 +78,16 @@ export default function IndexPage({ data }) {
                 image={plane}
                 isRight
                 isTransparent
+                isSecondaryDark
             />
-            <BgImagewithCard data={content.info} image={plane} />
-            <BgImagewithCard data={content.info} image={plane} isDark isRight />
+            <BgImagewithCard data={content.info} image={plane} isPrimary />
+            <BgImagewithCard
+                data={content.info}
+                image={plane}
+                isDark
+                isRight
+                isPrimaryDark
+            />
 
             <NewsList news={news} />
         </Layout>
