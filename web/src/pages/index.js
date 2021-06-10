@@ -76,29 +76,9 @@ export default function IndexPage({ data }) {
     return (
         <Layout>
             <Hero data={content.hero} />
-            <BgImagewithCard
-                data={content.info}
-                image={plane}
-                isRight
-                isTransparent
-                isSecondaryDark
-                hasButton
-            />
-            <BgImagewithCard
-                data={content.info}
-                image={plane}
-                hasButton
-                isPrimary
-            />
-            <BgImagewithCard
-                data={content.info}
-                image={plane}
-                isDark
-                isRight
-                isPrimaryDark
-                hasButton
-            />
-
+            <BgImagewithCard data={content.info} image={plane} />
+            <BgImagewithCard data={content.info} image={plane} isDark isRight />
+            <BgImagewithCard data={content.info} image={plane} isTransparent />
             <NewsList news={news} />
         </Layout>
     );
