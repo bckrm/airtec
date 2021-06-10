@@ -40,17 +40,19 @@
         top: 125%;
         left: 0;
     }
-    .card-accent {
-        position: relative;
+    .BrainhubCarousel__container {
+        overflow: visible !important;
     }
-    .card-accent:after {
-        content: '';
-        height: 5px;
-        width: 50px;
-        background-color: #acc9e8;
-        position: absolute;
-        top: 125%;
-        left: 0;
+    .BrainhubCarousel {
+        overflow: visible !important;
+    }
+    .BrainhubCarousel .BrainhubCarousel__trackContainer {
+        overflow: visible !important;
+    }
+    .BrainhubCarousel
+        .BrainhubCarousel__trackContainer
+        .BrainhubCarousel__track {
+        overflow: visible !important;
     }
 }
 
