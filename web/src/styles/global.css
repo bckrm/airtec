@@ -40,20 +40,6 @@
         top: 125%;
         left: 0;
     }
-    .BrainhubCarousel__container {
-        overflow: visible !important;
-    }
-    .BrainhubCarousel {
-        overflow: visible !important;
-    }
-    .BrainhubCarousel .BrainhubCarousel__trackContainer {
-        overflow: visible !important;
-    }
-    .BrainhubCarousel
-        .BrainhubCarousel__trackContainer
-        .BrainhubCarousel__track {
-        overflow: visible !important;
-    }
 }
 
 * {
@@ -62,4 +48,18 @@
 
 body {
     font-size: 16px;
+}
+
+.BrainhubCarousel__container {
+    overflow: visible !important;
+}
+.BrainhubCarousel {
+    overflow: visible !important;
+}
+.BrainhubCarousel .BrainhubCarousel__trackContainer {
+    overflow: clip visible !important;
+}
+
+.BrainhubCarousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track {
+    overflow: visible !important;
 }
