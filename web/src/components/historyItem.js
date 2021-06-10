@@ -24,7 +24,7 @@ export default function HistoryItem({ data, isOpen, isActive }) {
                 >
                     <div
                         isActive={isActive}
-                        className="flex flex-row-reverse gap-11 pt-9"
+                        className="flex flex-col-reverse md:flex-row-reverse gap-11 pt-6 md:pt-9"
                     >
                         <Img className="w-1/2" fluid={fluid} />
                         <p className="w-1/2">{text}</p>

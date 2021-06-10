@@ -70,7 +70,7 @@ export default function AboutPage({ data }) {
     return (
         <Layout>
             <Hero data={content.hero} />
-            <HistorySection history={historyData} />
+            <HistorySection years={historyData} />
         </Layout>
     );
 }
