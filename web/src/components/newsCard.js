@@ -17,7 +17,7 @@ export default function NewsCard({ data }) {
             to="/"
             className="bg-white h-[34rem] mr-9 transform focus:scale-110 md:hover:scale-110 w-80"
         >
-            <Img className="rounded-bl-4xl" fluid={fluid} />
+            <Img className="rounded-bl-[2.5rem]" fluid={fluid} />
             <h3 className="heading-accent font-bold mt-4 pb-10 px-4 text-brand-1 text-ts-h4">
                 {title}
             </h3>
