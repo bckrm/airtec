@@ -937,7 +937,7 @@
   "resolved" "https://registry.npmjs.org/@sanity/asset-utils/-/asset-utils-1.1.4.tgz"
   "version" "1.1.4"
 
-"@sanity/base@^2.10.2", "@sanity/base@2.10.2":
+"@sanity/base@^2.0.0", "@sanity/base@^2.10.2", "@sanity/base@2.10.2":
   "resolved" "https://registry.npmjs.org/@sanity/base/-/base-2.10.2.tgz"
   "version" "2.10.2"
   dependencies:
@@ -6830,6 +6830,11 @@
 "react-icon-base@^2.1.2":
   "resolved" "https://registry.npmjs.org/react-icon-base/-/react-icon-base-2.1.2.tgz"
   "version" "2.1.2"
+
+"react-icons@^4.2.0":
+  "integrity" "sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ=="
+  "resolved" "https://registry.npmjs.org/react-icons/-/react-icons-4.2.0.tgz"
+  "version" "4.2.0"
 
 "react-is@^16.7.0", "react-is@^16.8.1", "react-is@>= 16.8.0":
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
