@@ -21,7 +21,7 @@ export default function Card({
         : 'bg-white text-brand-1';
     const transparentStyle = isTransparent ? 'bg-transparent text-black' : '';
 
-    const cardStyle = `pl-6 rounded-bl-4xl w-11/12 md:w-7/12 
+    const cardStyle = `pl-6 rounded-bl-4xl w-11/12 md:w-6/12 
    ${darkStyle} ${transparentStyle}
     ${isRight ? 'md:transform md:translate-x-3/4' : ''}`;
 
