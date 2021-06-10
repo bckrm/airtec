@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import HistoryItem from './historyItem';
 import Button from './button';
 
+const isBrowser = typeof window !== 'undefined';
+
 export default function History({ years }) {
     const [activeTab, setActiveTab] = useState(years[0].id);
 
@@ -12,7 +14,7 @@ export default function History({ years }) {
             <div>
                 <div className="flex gap-20">
                     {years.map((year) => {
-                        return window.innerWidth > 600 ? (
+                        return isBrowser && window.innerWidth > 600 ? (
                             <button
                                 type="button"
                                 onClick={() => setActiveTab(year.id)}
