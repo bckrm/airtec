@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import HistoryItem from './historyItem';
-import Button from './button';
+import loadable from '@loadable/component';
+// import { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 
-const isBrowser = typeof window !== 'undefined';
+import HistoryItem from './historyItem';
+
+const Carousel = loadable(() => import('./carouselWrapper'));
+
+// const isBrowser = typeof window !== 'undefined';
 
 export default function History({ years }) {
     const [activeTab, setActiveTab] = useState(years[0].id);
+    const [buttonComponentLogic, setButtonComponentLogic] = useState(false);
+
+    const setHistoryTimeline = () => {
+        if (window.innerWidth < 600) {
+            setButtonComponentLogic(true);
+        }
+    };
+
+    useEffect(() => {
+        setHistoryTimeline();
+    });
 
     return (
         <section className="container my-24">
@@ -14,7 +29,23 @@ export default function History({ years }) {
             <div>
                 <div className="flex gap-20">
                     {years.map((year) => {
-                        return isBrowser && window.innerWidth > 600 ? (
+                        return buttonComponentLogic ? (
+                            <Carousel>
+                                <button
+                                    type="button"
+                                    onClick={() => setActiveTab(year.id)}
+                                    key={year.id}
+                                    isActive={activeTab === year.id}
+                                    className={
+                                        year.id === activeTab
+                                            ? 'underline font-bold'
+                                            : ''
+                                    }
+                                >
+                                    {year.year}
+                                </button>
+                            </Carousel>
+                        ) : (
                             <button
                                 type="button"
                                 onClick={() => setActiveTab(year.id)}
@@ -28,8 +59,6 @@ export default function History({ years }) {
                             >
                                 {year.year}
                             </button>
-                        ) : (
-                            <Button />
                         );
                     })}
                 </div>
