@@ -23,7 +23,7 @@ export default function Card({
 
     const cardStyle = `pl-6 rounded-bl-[2.5rem] w-11/12 md:w-6/12 
    ${darkStyle} ${transparentStyle}
-    ${isRight ? 'md:transform md:translate-x-3/4' : ''}`;
+    ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`;
 
     return (
         <div className="container">
