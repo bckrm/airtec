@@ -26,8 +26,8 @@ export default function HistoryItem({ data, isOpen, isActive }) {
                         isActive={isActive}
                         className="flex flex-col-reverse md:flex-row-reverse gap-11 pt-6 md:pt-9"
                     >
-                        <Img className="w-1/2" fluid={fluid} />
-                        <p className="w-1/2">{text}</p>
+                        <Img className="w-full md:w-1/2" fluid={fluid} />
+                        <p className="w-full md:w-1/2">{text}</p>
                     </div>
                 </motion.div>
             )}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import HistoryItem from './historyItem';
+import Button from './button';
 
 export default function History({ years }) {
     const [activeTab, setActiveTab] = useState(years[0].id);
@@ -11,7 +12,7 @@ export default function History({ years }) {
             <div>
                 <div className="flex gap-20">
                     {years.map((year) => {
-                        return (
+                        return window.innerWidth > 600 ? (
                             <button
                                 type="button"
                                 onClick={() => setActiveTab(year.id)}
@@ -25,6 +26,8 @@ export default function History({ years }) {
                             >
                                 {year.year}
                             </button>
+                        ) : (
+                            <Button />
                         );
                     })}
                 </div>
