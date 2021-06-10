@@ -70,7 +70,6 @@ export default function IndexPage({ data }) {
             text: 'Donec eleifend faucibus finibus maximus',
         },
     };
-
     return (
         <Layout>
             <Hero data={content.hero} />
