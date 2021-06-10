@@ -7,8 +7,11 @@
   "author": "Asa Smith <smith.asa.la@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
+    "start": "npx @sanity/cli start",
+    "build": "npx @sanity/cli build",
+    "deploy": "npx @sanity/cli deploy",
+    "graphql-deploy": "npx @sanity/cli graphql deploy --playground",
+    "test": "npx @sanity/cli check"
   },
   "keywords": [
     "sanity"
@@ -23,7 +26,8 @@
     "@sanity/vision": "^2.10.0",
     "prop-types": "^15.7",
     "react": "^17.0",
-    "react-dom": "^17.0"
+    "react-dom": "^17.0",
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {},
   "repository": {
