@@ -21,7 +21,6 @@ export default function NewsList({ news }) {
                 <Carousel
                     itemWidth="18rem"
                     plugins={[
-                        'centered',
                         {
                             resolve: arrowsPlugin,
                             options: {
