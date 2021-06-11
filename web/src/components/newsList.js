@@ -17,7 +17,7 @@ export default function NewsList({ news }) {
     const back = '❮ Back';
 
     return (
-        <div className="bg-brand-1 h-full overflow-visible pl-10 pb-48">
+        <div className="bg-brand-1 h-full overflow-visible pl-6 md:pl-9 pb-48">
             <h2 className="h1-heading-accent pt-12 text-center text-white text-4xl uppercase">
                 News
             </h2>
@@ -53,8 +53,10 @@ export default function NewsList({ news }) {
                         },
                     ]}
                     breakpoints={{
-                        600: {
+                        500: {
                             plugins: [
+                                'centered',
+                                'fastSwipe',
                                 {
                                     resolve: arrowsPlugin,
                                     options: {
