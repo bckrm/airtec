@@ -48,7 +48,7 @@ export default function NewsList({ news }) {
                         {
                             resolve: slidesToScrollPlugin,
                             options: {
-                                numberOfSlides: 1,
+                                numberOfSlides: 2,
                             },
                         },
                     ]}
