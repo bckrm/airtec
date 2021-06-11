@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
-import { slidesToShowPlugin, arrowsPlugin } from '@brainhubeu/react-carousel';
+import {
+    slidesToShowPlugin,
+    arrowsPlugin,
+    slidesToScrollPlugin,
+} from '@brainhubeu/react-carousel';
 
 import NewsCard from './newsCard';
 import MoreButton from './moreButton';
@@ -39,6 +43,12 @@ export default function NewsList({ news }) {
                             resolve: slidesToShowPlugin,
                             options: {
                                 numberOfSlides: 4,
+                            },
+                        },
+                        {
+                            resolve: slidesToScrollPlugin,
+                            options: {
+                                numberOfSlides: 1,
                             },
                         },
                     ]}
