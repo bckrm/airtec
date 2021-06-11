@@ -52,6 +52,47 @@ export default function NewsList({ news }) {
                             },
                         },
                     ]}
+                    breakpoints={{
+                        600: {
+                            plugins: [
+                                {
+                                    resolve: arrowsPlugin,
+                                    options: {
+                                        arrowLeft: (
+                                            <MoreButton isLeft text={back} />
+                                        ),
+                                        arrowLeftDisabled: (
+                                            <MoreButton
+                                                text={back}
+                                                isLeft
+                                                isDisabled
+                                            />
+                                        ),
+                                        arrowRight: <MoreButton text={text} />,
+                                        arrowRightDisabled: (
+                                            <MoreButton
+                                                text={text}
+                                                isDisabled
+                                            />
+                                        ),
+                                        addArrowClickHandler: true,
+                                    },
+                                },
+                                {
+                                    resolve: slidesToShowPlugin,
+                                    options: {
+                                        numberOfSlides: 1,
+                                    },
+                                },
+                                {
+                                    resolve: slidesToScrollPlugin,
+                                    options: {
+                                        numberOfSlides: 1,
+                                    },
+                                },
+                            ],
+                        },
+                    }}
                 >
                     {news.map((newsItem) => {
                         return <NewsCard data={newsItem} />;
