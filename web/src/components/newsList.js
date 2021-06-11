@@ -56,7 +56,6 @@ export default function NewsList({ news }) {
                         500: {
                             plugins: [
                                 'centered',
-                                'fastSwipe',
                                 {
                                     resolve: arrowsPlugin,
                                     options: {
