@@ -48,14 +48,13 @@ export default function NewsList({ news }) {
                         {
                             resolve: slidesToScrollPlugin,
                             options: {
-                                numberOfSlides: 2,
+                                numberOfSlides: 1,
                             },
                         },
                     ]}
                     breakpoints={{
                         500: {
                             plugins: [
-                                'centered',
                                 {
                                     resolve: arrowsPlugin,
                                     options: {
