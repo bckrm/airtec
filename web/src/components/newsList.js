@@ -52,6 +52,24 @@ export default function NewsList({ news }) {
                             },
                         },
                     ]}
+                    breakpoints={{
+                        500: {
+                            plugins: [
+                                {
+                                    resolve: slidesToShowPlugin,
+                                    options: {
+                                        numberOfSlides: 1,
+                                    },
+                                },
+                                {
+                                    resolve: slidesToScrollPlugin,
+                                    options: {
+                                        numberOfSlides: 1,
+                                    },
+                                },
+                            ],
+                        },
+                    }}
                 >
                     {news.map((newsItem) => {
                         return <NewsCard data={newsItem} />;
