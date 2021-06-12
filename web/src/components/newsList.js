@@ -17,11 +17,11 @@ export default function NewsList({ news }) {
     const back = '❮ Back';
 
     return (
-        <div className="bg-brand-1 h-full overflow-visible pl-6 md:pl-9 pb-48">
+        <div className="bg-brand-1 h-full overflow-visible pl-5 md:pl-9 pb-48">
             <h2 className="h1-heading-accent pt-12 text-center text-white text-4xl uppercase">
                 News
             </h2>
-            <div className="mt-32 relative">
+            <div className="mt-32 pl-2 relative">
                 <Carousel
                     itemWidth="18rem"
                     plugins={[
