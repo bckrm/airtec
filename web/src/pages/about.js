@@ -60,8 +60,8 @@ export default function AboutPage({ data }) {
     return (
         <Layout>
             <Hero data={content.hero} />
-            <LeaderSection leaders={leaders} />
             <AboutText data={content.about} />
+            <LeaderSection leaders={leaders} />
         </Layout>
     );
 }
