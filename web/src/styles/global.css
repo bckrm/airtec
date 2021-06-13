@@ -27,7 +27,6 @@
         top: 119%;
         left: 48%;
     }
-<<<<<<< HEAD
     .card-accent {
         position: relative;
     }
@@ -40,8 +39,6 @@
         top: 125%;
         left: 0;
     }
-=======
->>>>>>> 064c8665e090fb06e0163bbc68edfba2fd04c9d7
     .leadership-accent {
         position: relative;
     }
@@ -51,23 +48,7 @@
         width: 50px;
         background-color: #acc9e8;
         position: absolute;
-<<<<<<< HEAD
         top: 130%;
-=======
-        top: 100%;
-        left: 0;
-    }
-     .card-accent {
-        position: relative;
-    }
-    .card-accent:after {
-        content: '';
-        height: 5px;
-        width: 50px;
-        background-color: #acc9e8;
-        position: absolute;
-        top: 125%;
->>>>>>> 064c8665e090fb06e0163bbc68edfba2fd04c9d7
         left: 0;
     }
 }
