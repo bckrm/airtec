@@ -26,7 +26,7 @@ export default function History({ years }) {
         return () => {
             window.removeEventListener('resize', setHistoryTimeline);
         };
-    });
+    }, []);
 
     return (
         <section className="container my-24">
