@@ -42,7 +42,7 @@ export default function NewsList({ news }) {
                         {
                             resolve: slidesToShowPlugin,
                             options: {
-                                numberOfSlides: 4,
+                                numberOfSlides: 1,
                             },
                         },
                         {
@@ -52,47 +52,6 @@ export default function NewsList({ news }) {
                             },
                         },
                     ]}
-                    breakpoints={{
-                        500: {
-                            plugins: [
-                                {
-                                    resolve: arrowsPlugin,
-                                    options: {
-                                        arrowLeft: (
-                                            <MoreButton isLeft text={back} />
-                                        ),
-                                        arrowLeftDisabled: (
-                                            <MoreButton
-                                                text={back}
-                                                isLeft
-                                                isDisabled
-                                            />
-                                        ),
-                                        arrowRight: <MoreButton text={text} />,
-                                        arrowRightDisabled: (
-                                            <MoreButton
-                                                text={text}
-                                                isDisabled
-                                            />
-                                        ),
-                                        addArrowClickHandler: true,
-                                    },
-                                },
-                                {
-                                    resolve: slidesToShowPlugin,
-                                    options: {
-                                        numberOfSlides: 1,
-                                    },
-                                },
-                                {
-                                    resolve: slidesToScrollPlugin,
-                                    options: {
-                                        numberOfSlides: 1,
-                                    },
-                                },
-                            ],
-                        },
-                    }}
                 >
                     {news.map((newsItem) => {
                         return <NewsCard data={newsItem} />;
