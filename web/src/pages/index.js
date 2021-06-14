@@ -69,6 +69,9 @@ export default function IndexPage({ data }) {
             image: heroImage,
             text: 'Donec eleifend faucibus finibus maximus',
         },
+        button: {
+            text: 'Learn More',
+        },
     };
     return (
         <Layout>
