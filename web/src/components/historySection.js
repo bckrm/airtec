@@ -7,33 +7,33 @@ import HistoryItem from './historyItem';
 
 const Carousel = loadable(() => import('./carouselWrapper'));
 
-// const isBrowser = typeof window !== 'undefined';
-
 export default function History({ years }) {
     const [activeTab, setActiveTab] = useState(years[0].id);
-    const [buttonComponentLogic, setButtonComponentLogic] = useState(false);
+    const [shouldHaveCarouselNav, setshouldHaveCarouselNav] = useState(false);
 
-    const setHistoryTimeline = () => {
+    const resizeHandler = () => {
         if (window.innerWidth < 600) {
-            setButtonComponentLogic(true);
+            setshouldHaveCarouselNav(true);
+        } else {
+            setshouldHaveCarouselNav(false);
         }
     };
 
     useEffect(() => {
-        setHistoryTimeline();
-        window.addEventListener('resize', setHistoryTimeline);
+        resizeHandler();
+        window.addEventListener('resize', resizeHandler);
 
         return () => {
-            window.removeEventListener('resize', setHistoryTimeline);
+            window.removeEventListener('resize', resizeHandler);
         };
     }, []);
 
     return (
-        <section className="container my-24">
+        <section id="history" className="container my-24">
             <h2 className="uppercase text-ts-h2 mb-4">History</h2>
             <div>
                 <div className="flex gap-20">
-                    {buttonComponentLogic ? (
+                    {shouldHaveCarouselNav ? (
                         <Carousel
                             plugins={[
                                 'fastSwipe',

@@ -12,7 +12,7 @@ const nav = [
         subnav: [
             {
                 sublink: 'History',
-                subnav: '/#history',
+                subnav: '/about#history',
             },
             {
                 sublink: 'Leadership',
