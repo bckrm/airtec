@@ -21,6 +21,11 @@ export default function History({ years }) {
 
     useEffect(() => {
         setHistoryTimeline();
+        window.addEventListener('resize', setHistoryTimeline);
+
+        return () => {
+            window.removeEventListener('resize', setHistoryTimeline);
+        };
     });
 
     return (
