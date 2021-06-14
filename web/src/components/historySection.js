@@ -59,7 +59,7 @@ export default function History({ years }) {
                             })}
                         </Carousel>
                     ) : (
-                        <div>
+                        <>
                             {years.map((year) => {
                                 return (
                                     <button
@@ -77,7 +77,7 @@ export default function History({ years }) {
                                     </button>
                                 );
                             })}
-                        </div>
+                        </>
                     )}
                 </div>
                 {years.map((year) => {
