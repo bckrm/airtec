@@ -36,7 +36,6 @@ export default function History({ years }) {
                     {shouldHaveCarouselNav ? (
                         <Carousel
                             plugins={[
-                                'fastSwipe',
                                 {
                                     resolve: slidesToShowPlugin,
                                     options: {
@@ -64,25 +63,23 @@ export default function History({ years }) {
                             })}
                         </Carousel>
                     ) : (
-                        <>
-                            {years.map((year) => {
-                                return (
-                                    <button
-                                        type="button"
-                                        onClick={() => setActiveTab(year.id)}
-                                        key={year.id}
-                                        isActive={activeTab === year.id}
-                                        className={
-                                            year.id === activeTab
-                                                ? 'underline font-bold'
-                                                : ''
-                                        }
-                                    >
-                                        {year.year}
-                                    </button>
-                                );
-                            })}
-                        </>
+                        years.map((year) => {
+                            return (
+                                <button
+                                    type="button"
+                                    onClick={() => setActiveTab(year.id)}
+                                    key={year.id}
+                                    isActive={activeTab === year.id}
+                                    className={
+                                        year.id === activeTab
+                                            ? 'underline font-bold'
+                                            : ''
+                                    }
+                                >
+                                    {year.year}
+                                </button>
+                            );
+                        })
                     )}
                 </div>
                 {years.map((year) => {
