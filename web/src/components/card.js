@@ -21,14 +21,14 @@ export default function Card({
         : 'bg-white text-brand-1';
     const transparentStyle = isTransparent ? 'bg-transparent text-black' : '';
 
-    const cardStyle = `rounded-bl-lg w-11/12 md:w-7/12 pl-6
+    const cardStyle = `pl-6 rounded-bl-[2.5rem] w-11/12 md:w-6/12 
    ${darkStyle} ${transparentStyle}
-    ${isRight ? 'md:transform md:translate-x-3/4' : ''}`;
+    ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`;
 
     return (
         <div className="container">
             <div className={cardStyle}>
-                <h1 className="card-accent pt-7 mb-12 text-4xl uppercase">
+                <h1 className="card-accent font-semibold pt-7 mb-12 text-4xl uppercase">
                     {heading}
                 </h1>
                 <p className="pr-6 pb-7">{description}</p>
