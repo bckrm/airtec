@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
-import { slidesToShowPlugin, arrowsPlugin } from '@brainhubeu/react-carousel';
+import {
+    slidesToShowPlugin,
+    arrowsPlugin,
+    slidesToScrollPlugin,
+} from '@brainhubeu/react-carousel';
 
 import NewsCard from './newsCard';
 import MoreButton from './moreButton';
@@ -13,14 +17,14 @@ export default function NewsList({ news }) {
     const back = '❮ Back';
 
     return (
-        <div className="bg-brand-1 h-full mb-48 pb-48">
+        <div className="bg-brand-1 h-full overflow-visible pl-5 md:pl-9 pb-48">
             <h2 className="h1-heading-accent pt-12 text-center text-white text-4xl uppercase">
                 News
             </h2>
-            <div className="mt-32 relative">
+            <div className="mt-32 pl-2 relative">
                 <Carousel
+                    itemWidth="18rem"
                     plugins={[
-                        'centered',
                         {
                             resolve: arrowsPlugin,
                             options: {
@@ -38,7 +42,13 @@ export default function NewsList({ news }) {
                         {
                             resolve: slidesToShowPlugin,
                             options: {
-                                numberOfSlides: 4,
+                                numberOfSlides: 1,
+                            },
+                        },
+                        {
+                            resolve: slidesToScrollPlugin,
+                            options: {
+                                numberOfSlides: 1,
                             },
                         },
                     ]}
