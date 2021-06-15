@@ -15,6 +15,7 @@ export default function CapabilitiesPage({ data }) {
             text: 'Capabilities',
         },
         subHero: {
+            id: 'services',
             image: plane,
             heading: 'Capabilities & Services',
             text:

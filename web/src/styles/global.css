@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-   .heading-accent {
+    .heading-accent {
         position: relative;
     }
     .heading-accent:after {
@@ -61,7 +61,21 @@
         background-color: #acc9e8;
         position: absolute;
         top: 20%;
+        /*  67%  */
         left: 2%;
+        /* 4% */
+    }
+    .text-card-mobile-accent {
+        position: relative;
+    }
+    .text-card-mobile-accent:after {
+        content: '';
+        height: 5px;
+        width: 50px;
+        background-color: #acc9e8;
+        position: absolute;
+        top: 67%;
+        left: 4%;
     }
 }
 

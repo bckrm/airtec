@@ -9,9 +9,13 @@ export default function ImageWithText({ data }) {
         image: {
             childImageSharp: { fluid },
         },
+        id,
     } = data;
     return (
-        <div className="container flex flex-col gap-8 md:flex-row-reverse my-24 text-card-accent">
+        <div
+            id={id}
+            className="container flex flex-col gap-8 md:flex-row-reverse my-24 text-card-mobile-accent md:text-card-accent"
+        >
             <Img className="w-full md:w-1/2" fluid={fluid} />
             <div className="flex flex-col w-full md:w-1/2">
                 <h2 className="font-bold text-brand-1 text-3xl">{heading}</h2>
