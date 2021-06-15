@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-    .heading-accent {
+   .heading-accent {
         position: relative;
     }
     .heading-accent:after {
@@ -25,8 +25,7 @@
         background-color: #acc9e8;
         position: absolute;
         top: 119%;
-        left: 50%;
-        transform: translate(-50%);
+        left: 48%;
     }
     .card-accent {
         position: relative;
