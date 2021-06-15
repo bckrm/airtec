@@ -40,6 +40,18 @@
         top: 125%;
         left: 0;
     }
+    .leadership-accent {
+        position: relative;
+    }
+    .leadership-accent:after {
+        content: '';
+        height: 5px;
+        width: 50px;
+        background-color: #acc9e8;
+        position: absolute;
+        top: 130%;
+        left: 0;
+    }
 }
 
 * {

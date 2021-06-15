@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 import Hero from '../components/hero';
+import LeaderSection from '../components/leaderSection';
 import AboutText from '../components/aboutTextSection';
 import HistorySection from '../components/historySection';
 
@@ -75,11 +76,46 @@ export default function AboutPage({ data }) {
         },
     ];
 
+    const leaders = [
+        {
+            image: aboutImage,
+            name: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            name: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            name: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            name: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            name: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+        {
+            image: aboutImage,
+            name: 'Katie Breuil',
+            title: 'Web Dev',
+        },
+    ];
+
     return (
         <Layout>
             <Hero data={content.hero} />
             <AboutText data={content.about} />
             <HistorySection years={historyData} />
+            <LeaderSection leaders={leaders} />
+
         </Layout>
     );
 }
