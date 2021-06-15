@@ -45,6 +45,16 @@ export default function CapabilitiesPage({ data }) {
                 hasButton
                 isSecondaryDark
             />
+            {/* text with image component to be added here */}
+            <BgImagewithCard data={content.info} image={plane} />
+            <BgImagewithCard
+                data={content.info}
+                image={plane}
+                isRight
+                hasButton
+                isSecondaryDark
+            />
+            {/* text with image component to be added here */}
         </Layout>
     );
 }
