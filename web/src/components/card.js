@@ -28,9 +28,9 @@ export default function Card({
     return (
         <div className="container">
             <div className={cardStyle}>
-                <h1 className="card-accent font-semibold pt-7 mb-12 text-4xl uppercase">
+                <h2 className="card-accent font-semibold pt-7 mb-12 text-4xl uppercase">
                     {heading}
-                </h1>
+                </h2>
                 <p className="pr-6 pb-7">{description}</p>
                 {hasButton && (
                     <Button
