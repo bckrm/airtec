@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function MoreButton({ text, isDisabled, isLeft }) {
-    const disabledStyle = 'text-brand-10';
+    const disabledStyle = 'opacity-20';
     const rightStyle = 'bottom-[-10.2%] right-8';
     const leftStyle = 'top-[105%] right-[147px]';
 

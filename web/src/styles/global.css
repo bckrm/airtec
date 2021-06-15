@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-    .heading-accent {
+   .heading-accent {
         position: relative;
     }
     .heading-accent:after {
@@ -39,6 +39,18 @@
         top: 125%;
         left: 0;
     }
+    .leadership-accent {
+        position: relative;
+    }
+    .leadership-accent:after {
+        content: '';
+        height: 5px;
+        width: 50px;
+        background-color: #acc9e8;
+        position: absolute;
+        top: 130%;
+        left: 0;
+    }
     .text-card-accent {
         position: relative;
     }
@@ -59,4 +71,18 @@
 
 body {
     font-size: 16px;
+}
+
+.BrainhubCarousel__container {
+    overflow: visible !important;
+}
+.BrainhubCarousel {
+    overflow: visible !important;
+}
+.BrainhubCarousel .BrainhubCarousel__trackContainer {
+    overflow: clip visible !important;
+}
+
+.BrainhubCarousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track {
+    overflow: visible !important;
 }
