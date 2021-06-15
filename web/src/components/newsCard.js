@@ -13,8 +13,11 @@ export default function NewsCard({ data }) {
     } = data;
 
     return (
-        <Link to="/" className="bg-white h-[34rem] w-80">
-            <Img className="rounded-bl-lg" fluid={fluid} />
+        <Link
+            to="/"
+            className="bg-white h-[34rem] mx-3 md:mr-9 transform transition	focus:scale-110 md:hover:scale-110 overflow-hidden w-80"
+        >
+            <Img className="rounded-bl-[2.5rem]" fluid={fluid} />
             <h3 className="heading-accent font-bold mt-4 pb-10 px-4 text-brand-1 text-ts-h4">
                 {title}
             </h3>

@@ -25,7 +25,8 @@
         background-color: #acc9e8;
         position: absolute;
         top: 119%;
-        left: 48%;
+        left: 50%;
+        transform: translate(-50%);
     }
     .card-accent {
         position: relative;
@@ -71,4 +72,18 @@
 
 body {
     font-size: 16px;
+}
+
+.BrainhubCarousel__container {
+    overflow: visible !important;
+}
+.BrainhubCarousel {
+    overflow: visible !important;
+}
+.BrainhubCarousel .BrainhubCarousel__trackContainer {
+    overflow: clip visible !important;
+}
+
+.BrainhubCarousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track {
+    overflow: visible !important;
 }
