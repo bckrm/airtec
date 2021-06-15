@@ -11,11 +11,11 @@ export default function ImageWithText({ data }) {
         },
     } = data;
     return (
-        <div className="heading-accent container flex flex-col md:flex-row-reverse my-24">
+        <div className="container flex flex-col gap-8 md:flex-row-reverse my-24 text-card-accent">
             <Img className="w-full md:w-1/2" fluid={fluid} />
-            <div className="flex flex-col w-full md:w-1/2 ">
-                <h2 className="text-ts-h2">{heading}</h2>
-                <p className="pt-12">{text}</p>
+            <div className="flex flex-col w-full md:w-1/2">
+                <h2 className="text-brand-1 text-ts-h2">{heading}</h2>
+                <p className="pt-8">{text}</p>
             </div>
         </div>
     );
