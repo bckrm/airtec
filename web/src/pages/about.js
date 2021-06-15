@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import LeaderSection from '../components/leaderSection';
 import AboutText from '../components/aboutTextSection';
+import CertificationSection from '../components/certificationSection';
 
 export default function AboutPage({ data }) {
     const { aboutImage } = data;
@@ -57,11 +58,25 @@ export default function AboutPage({ data }) {
         },
     ];
 
+    const certifications = [
+        {
+            title: 'Nulla fermentum massa',
+            description:
+                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
+        },
+        {
+            title: 'Nulla fermentum massa',
+            description:
+                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
+        },
+    ];
+
     return (
         <Layout>
             <Hero data={content.hero} />
             <AboutText data={content.about} />
             <LeaderSection leaders={leaders} />
+            <CertificationSection certifications={certifications} />
         </Layout>
     );
 }
