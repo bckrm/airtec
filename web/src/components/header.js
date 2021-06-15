@@ -12,7 +12,8 @@ const nav = [
         subnav: [
             {
                 sublink: 'History',
-                subnav: '/about/#history',
+                subnav: '/about#history',
+
             },
             {
                 sublink: 'Leadership',

@@ -7,9 +7,11 @@ import Hero from '../components/hero';
 import LeaderSection from '../components/leaderSection';
 import AboutText from '../components/aboutTextSection';
 import CertificationSection from '../components/certificationSection';
+import HistorySection from '../components/historySection';
+
 
 export default function AboutPage({ data }) {
-    const { aboutImage } = data;
+    const { aboutImage, heroImage } = data;
 
     const content = {
         hero: {
@@ -24,6 +26,57 @@ export default function AboutPage({ data }) {
             text: 'Airborne ISR training',
         },
     };
+    const historyData = [
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '1995',
+            id: 1,
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '1999',
+            id: 2,
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2003',
+            id: 3,
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2007',
+            id: 4,
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2012',
+            id: 5,
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2017',
+            id: 6,
+        },
+        {
+            image: heroImage,
+            text:
+                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
+            year: '2021',
+            id: 7,
+        },
+    ];
 
     const leaders = [
         {
@@ -75,6 +128,7 @@ export default function AboutPage({ data }) {
         <Layout>
             <Hero data={content.hero} />
             <AboutText data={content.about} />
+            <HistorySection years={historyData} />
             <LeaderSection leaders={leaders} />
             <CertificationSection certifications={certifications} />
         </Layout>
@@ -90,11 +144,19 @@ export const query = graphql`
                 }
             }
         }
+        heroImage: file(relativePath: { regex: "/hero/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
 `;
 
 AboutPage.propTypes = {
     data: PropTypes.shape({
         aboutImage: PropTypes.object.isRequired,
+        heroImage: PropTypes.object.isRequired,
     }).isRequired,
 };
