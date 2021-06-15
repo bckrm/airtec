@@ -61,19 +61,7 @@
         background-color: #acc9e8;
         position: absolute;
         top: 20%;
-        left: 2%;
-    }
-    .text-card-mobile-accent {
-        position: relative;
-    }
-    .text-card-mobile-accent:after {
-        content: '';
-        height: 5px;
-        width: 50px;
-        background-color: #acc9e8;
-        position: absolute;
-        top: 67%;
-        left: 4%;
+        left: 0%;
     }
 }
 
