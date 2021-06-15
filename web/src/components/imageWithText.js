@@ -12,7 +12,7 @@ export default function ImageWithText({ data }) {
         id,
     } = data;
     return (
-        <div
+        <section
             id={id}
             className="container flex flex-col gap-8 md:flex-row-reverse my-24 text-card-mobile-accent md:text-card-accent"
         >
@@ -21,7 +21,7 @@ export default function ImageWithText({ data }) {
                 <h2 className="font-bold text-brand-1 text-3xl">{heading}</h2>
                 <p className="pt-10">{text}</p>
             </div>
-        </div>
+        </section>
     );
 }
 
