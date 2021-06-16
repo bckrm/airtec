@@ -115,7 +115,6 @@ export default function AboutPage({ data }) {
             <AboutText data={content.about} />
             <HistorySection years={historyData} />
             <LeaderSection leaders={leaders} />
-
         </Layout>
     );
 }
