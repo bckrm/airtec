@@ -25,7 +25,8 @@
         background-color: #acc9e8;
         position: absolute;
         top: 119%;
-        left: 48%;
+        left: 50%;
+        transform: translate(-50%);
     }
     .card-accent {
         position: relative;
@@ -50,18 +51,6 @@
         position: absolute;
         top: 130%;
         left: 0;
-    }
-    .text-card-accent {
-        position: relative;
-    }
-    .text-card-accent:after {
-        content: '';
-        height: 5px;
-        width: 50px;
-        background-color: #acc9e8;
-        position: absolute;
-        top: 20%;
-        left: 0%;
     }
 }
 
