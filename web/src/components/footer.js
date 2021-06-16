@@ -44,7 +44,7 @@ export default function Footer() {
         },
     ];
     return (
-        <footer className="bg-brand-1 bottom-0 md:h-96 text-white w-full">
+        <footer className="bg-brand-1 bottom-0 text-white w-full">
             <div className="container flex flex-col md:flex-row md:justify-between py-11">
                 <div className="flex flex-col md:flex-row md:pl-20 md:space-x-16">
                     <Link to="/">
@@ -63,7 +63,7 @@ export default function Footer() {
                     })}
                 </div>
             </div>
-            <div className="pb-10 md:mt-20 text-center">
+            <div className="pb-10 md:pb-8 md:mt-20 text-center">
                 <p>Mission Driven. Future Focused.</p>
             </div>
         </footer>
