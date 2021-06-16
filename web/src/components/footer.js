@@ -46,7 +46,7 @@ export default function Footer() {
     return (
         <footer className="bg-brand-1 bottom-0 md:h-96 text-white w-full">
             <div className="container flex flex-col md:flex-row md:justify-between py-11">
-                <div className="flex flex-col md:pl-20 md:space-x-16">
+                <div className="flex flex-col md:flex-row md:pl-20 md:space-x-16">
                     <Link to="/">
                         <AIRtecAwhite />
                     </Link>
