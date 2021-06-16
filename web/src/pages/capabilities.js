@@ -45,7 +45,7 @@ export default function CapabilitiesPage({ data }) {
                 hasButton
                 isSecondaryDark
             />
-            {/* text with image component to be added here */}
+            {/* certifications component to be added here */}
             <BgImagewithCard data={content.info} image={plane} />
             <BgImagewithCard
                 data={content.info}
@@ -54,7 +54,7 @@ export default function CapabilitiesPage({ data }) {
                 hasButton
                 isSecondaryDark
             />
-            {/* text with image component to be added here */}
+            <ImageWithText data={content.subHero} />
         </Layout>
     );
 }
