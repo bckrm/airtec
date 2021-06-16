@@ -6,7 +6,7 @@ export default function Certification({ data }) {
 
     return (
         <div className="odd:bg-white odd:bg-opacity-10 p-4 text-2xl">
-            <h3 className="font-semibold">{title}</h3>
+            <h3 className="font-bold">{title}</h3>
             <p>{description}</p>
         </div>
     );
