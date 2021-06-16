@@ -45,7 +45,7 @@ const nav = [
     },
     {
         name: 'news',
-        link: '/#',
+        link: '/news',
     },
     {
         name: 'careers',
