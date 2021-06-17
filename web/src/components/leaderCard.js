@@ -12,7 +12,7 @@ export default function LeaderCard({ data }) {
     } = data;
     return (
         <div className="bg-white text-brand-1">
-            <Img className="h-96 rounded-bl-lg" fluid={fluid} />
+            <Img className="h-96 rounded-bl-[2.5rem]" fluid={fluid} />
             <h2 className="font-bold pl-5 mt-6">{name}</h2>
             <p className="pl-5 mb-6 mt-1">{title}</p>
         </div>

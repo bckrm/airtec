@@ -44,26 +44,26 @@ export default function Footer() {
         },
     ];
     return (
-        <footer className="bg-brand-1 bottom-0 h-96 text-white w-full">
-            <div className="container flex justify-between pt-11">
-                <div className="flex pl-20 space-x-16">
+        <footer className="bg-brand-1 bottom-0 text-white w-full">
+            <div className="container flex flex-col md:flex-row md:justify-between py-11">
+                <div className="flex flex-col md:flex-row md:pl-20 md:space-x-16">
                     <Link to="/">
                         <AIRtecAwhite />
                     </Link>
 
-                    <div className="grid grid-cols-2 gap-x-24 gap-y-5 mt-16">
+                    <div className="grid grid-cols-2 md:gap-x-24 gap-y-5 pt-10 md:mt-16">
                         {internalLinks.map((link) => {
                             return <Link to={link.link}>{link.text}</Link>;
                         })}
                     </div>
                 </div>
-                <div className="flex flex-col gap-5 mt-16">
+                <div className="flex flex-col gap-5 pt-10 md:mt-16">
                     {externalLinks.map((link) => {
                         return <a href={link.link}>{link.text}</a>;
                     })}
                 </div>
             </div>
-            <div className="mt-20 text-center">
+            <div className="pb-10 md:pb-8 md:mt-20 text-center">
                 <p>Mission Driven. Future Focused.</p>
             </div>
         </footer>
