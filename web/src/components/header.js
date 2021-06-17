@@ -22,11 +22,11 @@ const nav = [
     },
     {
         name: 'capabilities',
-        link: '/#',
+        link: '/capabilities',
         subnav: [
             {
                 sublink: 'Services',
-                subnav: '/#services',
+                subnav: '/capabilities/#services',
             },
             {
                 sublink: 'Fleet',
