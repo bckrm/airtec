@@ -19,28 +19,24 @@ export default function ServiceFleetTemplate({ data }) {
 
     const fleet = [
         {
-            id: 1,
             image: heroImage,
             title: 'Nulla fermentum massa',
             description:
                 'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
         },
         {
-            id: 2,
             image: heroImage,
             title: 'Nulla fermentum massa',
             description:
                 'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
         },
         {
-            id: 3,
             image: heroImage,
             title: 'Nulla fermentum massa',
             description:
                 'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
         },
         {
-            id: 4,
             image: heroImage,
             title: 'Nulla fermentum massa',
             description:

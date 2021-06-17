@@ -5,7 +5,6 @@ import { Link } from 'gatsby';
 
 export default function ServiceFleetCard({ data }) {
     const {
-        id,
         title,
         description,
         image: {
@@ -15,7 +14,6 @@ export default function ServiceFleetCard({ data }) {
 
     return (
         <Link
-            id={id}
             to="/"
             className="bg-white h-[34rem] transform transition focus:scale-110 md:hover:scale-110 shadow-2xl w-80"
         >
