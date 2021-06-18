@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import ImageWithText from '../components/imageWithText';
+import IconGrid from '../components/iconGrid';
 
 export default function Careers({ data }) {
     const { heroImage, plane } = data;
@@ -22,12 +23,21 @@ export default function Careers({ data }) {
                 'Cras ut hendrerit lorem. Nunc tempus, est eu finibus porta, ante nisl molestie nunc, at gravida purus lectus a tellus. Aenean quis massa nulla. Mauris at leo quis diam finibus maximus. Donec cursus a metus id varius. Morbi feugiat, nisl vitae porttitor condimentum, tellus felis scelerisque leo, in cursus lacus augue nec justo.',
         },
     };
+    const text = 'Schedule Flexibility';
     return (
         <Layout>
             <Hero data={content.hero} />
             <ImageWithText data={content.subHero} />
-            {/* this is where the icon grid will go  */}
-            <ImageWithText data={content.subHero} />
+            <IconGrid text={text} />
+            <ImageWithText
+                data={content.subHero}
+                isLeft
+                hasButton
+                isSecondaryDark
+            />
+            <h2 className="font-bold text-4xl text-center text-brand-1 my-20">
+                Mission Driven. Future Focused.
+            </h2>
         </Layout>
     );
 }
