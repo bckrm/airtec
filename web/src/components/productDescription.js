@@ -1,30 +1,45 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 
-export default function ProductDescription() {
+export default function ProductDescription({ data }) {
+    const {
+        image: {
+            childImageSharp: { fluid },
+        },
+        productDescription,
+        productName,
+    } = data;
     return (
-        <div className="container my-24">
-            <h2 className="leadership-accent mb-12 text-3xl font-bold text-brand-1">
-                Service/Plane
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum auctor erat pretium ligula dignissim cursus eleifend
-                quis sapien. Pellentesque pellentesque aliquet tortor ut
-                hendrerit. Etiam imperdiet orci rutrum consequat cursus. Fusce
-                tincidunt lobortis mauris, a condimentum sapien rutrum ac.
-                Phasellus tempor augue nec enim hendrerit, id pretium quam
-                efficitur. Aenean nec malesuada dolor, vitae gravida dui. Donec
-                non vulputate diam. Nulla fermentum massa sit amet suscipit
-                posuere. Maecenas in lorem commodo, varius neque vitae, vehicula
-                dolor. Sed ut viverra eros. Orci varius natoque penatibus et
-                magnis dis parturient montes, nascetur ridiculus mus. Nam
-                convallis arcu a quam tristique placerat. Maecenas egestas, nibh
-                et ultricies tristique, purus magna sodales nisi, sit amet
-                efficitur justo massa accumsan augue. Proin condimentum dolor
-                elementum augue fermentum pretium. Phasellus consequat diam vel
-                ante placerat fermentum sit amet vitae velit. Quisque vel ante
-                ac erat accumsan tincidunt.
-            </p>
+        <div className="container gap-x-20 grid grid-cols-1 md:grid-cols-2 my-24">
+            <div className="md:col-start-1">
+                <h2 className="leadership-accent mb-12 text-3xl font-bold text-brand-1 my-1">
+                    {productName}
+                </h2>
+                <p className="leading-relaxed mb-4">{productDescription}</p>
+            </div>
+            <div className="md:col-start-2">
+                <Img fluid={fluid} />
+                <ul className="list-disc mt-4 p-4">
+                    <li>Aenean ut libero nec est auctor rhoncus.</li>
+                    <li>
+                        Etiam rutrum leo et orci pharetra, et condimentum orci
+                        consectetur.
+                    </li>
+                    <li>
+                        Phasellus et augue eget turpis sodales placerat
+                        consectetur et tortor.
+                    </li>
+                    <li>
+                        Aenean congue ligula vel velit accumsan, vel lacinia
+                        augue tincidunt.
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }
+
+ProductDescription.propTypes = {
+    data: PropTypes.object.isRequired,
+};
