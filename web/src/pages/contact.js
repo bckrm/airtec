@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import ContactSection from '../components/contactSection';
+// import LogoSection from '../components/logoSection';
 
 export default function Contact({ data }) {
     const { heroImage } = data;
@@ -18,6 +19,7 @@ export default function Contact({ data }) {
         <Layout>
             <Hero data={content.hero} />
             <ContactSection />
+            {/* <LogoSection /> */}
         </Layout>
     );
 }
