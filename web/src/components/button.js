@@ -13,7 +13,7 @@ export default function Button({
     const primaryDarkStyle =
         'bg-white border-2 border-brand-1 text-brand-1 hover:bg-gray-300 hover:border-gray-300 focus:bg-gray-300 focus:border-gray-300';
     const secondaryStyle =
-        'bg-white border-2 border-current text-brand-1 hover:text-brand-2 focus:';
+        'bg-white border-2 border-current text-brand-1 hover:text-brand-2 focus:text-brand-2';
     const secondaryDarkStyle =
         'bg-brand-1 border-2 border-white text-white hover:text-gray-300 hover:border-gray-300 focus:text-gray-300 focue:border-gray-300';
     const finalStyles = `font-semibold inline-block leading-tight px-8 py-2 mb-6 rounded-bl-2xl tracking-[.12rem] transition-colors uppercase ${
