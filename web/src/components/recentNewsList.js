@@ -25,22 +25,15 @@ export default function RecentNewsList({ news }) {
                         {
                             resolve: arrowsPlugin,
                             options: {
-                                arrowLeft: <MoreButton isLeft text={back} />,
-                                arrowLeftDisabled: (
-                                    <MoreButton
-                                        text={back}
-                                        isLeft
-                                        isDisabled
-                                        isLight
-                                    />
+                                arrowLeft: (
+                                    <MoreButton isLeft text={back} isLight />
                                 ),
-                                arrowRight: <MoreButton text={text} />,
+                                arrowLeftDisabled: (
+                                    <MoreButton text={back} isLeft isDisabled />
+                                ),
+                                arrowRight: <MoreButton text={text} isLight />,
                                 arrowRightDisabled: (
-                                    <MoreButton
-                                        text={text}
-                                        isDisabled
-                                        isLight
-                                    />
+                                    <MoreButton text={text} isDisabled />
                                 ),
                                 addArrowClickHandler: true,
                             },
