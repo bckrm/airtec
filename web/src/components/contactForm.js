@@ -90,7 +90,7 @@ export default function ContactForm() {
                         required
                     />
                     <button
-                        className="bg-white border-2 border-brand-1 text-brand-1 hover:bg-gray-300 hover:border-gray-300 focus:bg-gray-300 focus:border-gray-300 font-semibold leading-tight px-8 py-2 mb-6 rounded-bl-2xl tracking-[.12rem] transition-colors place-self-end justify-self-end uppercase w-[135px]"
+                        className="bg-white border-2 border-brand-1 text-brand-1 hover:bg-gray-300 hover:border-gray-300 focus:bg-gray-300 focus:border-gray-300 font-semibold leading-tight px-8 py-2 mb-6 rounded-bl-2xl tracking-[.12rem] transition-colors uppercase w-[135px]"
                         type="submit"
                     >
                         Submit
