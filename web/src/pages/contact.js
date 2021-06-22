@@ -17,10 +17,10 @@ export default function Contact({ data }) {
     };
     const images = [
         {
-            image: kieyos,
+            image: priority,
         },
         {
-            image: priority,
+            image: kieyos,
         },
     ];
     return (
@@ -43,15 +43,15 @@ export const query = graphql`
         }
         kieyos: file(relativePath: { regex: "/kieyos/" }) {
             childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
+                fixed {
+                    ...GatsbyImageSharpFixed
                 }
             }
         }
         priority: file(relativePath: { regex: "/priority/" }) {
             childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
+                fixed {
+                    ...GatsbyImageSharpFixed
                 }
             }
         }
