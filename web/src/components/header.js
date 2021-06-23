@@ -52,7 +52,7 @@ const nav = [
     },
     {
         name: 'contact',
-        link: '/#',
+        link: '/contact',
     },
 ];
 
