@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import ImageWithText from '../components/imageWithText';
 import BgImagewithCard from '../components/bgImagewithCard';
+import CertificationSection from '../components/certificationSection';
 
 export default function CapabilitiesPage({ data }) {
     const { heroImage, plane } = data;
@@ -28,6 +29,24 @@ export default function CapabilitiesPage({ data }) {
                 'Etiam felis mauris, dapibus commodo ex a, vestibulum consequat neque. Vestibulum id auctor sapien. Vestibulum tempor tortor eget purus lobortis pretium.',
         },
     };
+
+    const certifications = [
+        {
+            title: 'Nulla fermentum massa',
+            description:
+                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
+        },
+        {
+            title: 'Nulla fermentum massa',
+            description:
+                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
+        },
+        {
+            title: 'Nulla fermentum massa',
+            description:
+                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
+        },
+    ];
     return (
         <Layout>
             <Hero data={content.hero} />
@@ -45,7 +64,7 @@ export default function CapabilitiesPage({ data }) {
                 hasButton
                 isSecondaryDark
             />
-            {/* certifications component to be added here */}
+            <CertificationSection certifications={certifications} />
             <BgImagewithCard data={content.info} image={plane} />
             <BgImagewithCard
                 data={content.info}
