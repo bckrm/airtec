@@ -35,7 +35,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="bg-brand-1 text-white w-full md:w-11/12 p-8 place-self-center rounded-bl-[2.5rem]">
+        <div className="bg-brand-1 text-white w-full md:w-11/12 p-8 place-self-center md:place-self-end rounded-bl-[2.5rem]">
             <h2 className="leadership-accent text-3xl mb-8">Contact Us</h2>
             {isSubmitFormSuccessful ? (
                 <h3 className="text-2xl">
