@@ -9,6 +9,8 @@ export default function HealthcareBenefits({ text }) {
                 x={0}
                 y={0}
                 viewBox="0 0 72 72"
+                width="350"
+                height="350"
                 xmlSpace="preserve"
             >
                 <style>{'.prefix__st0{fill:#232656}'}</style>
@@ -21,7 +23,7 @@ export default function HealthcareBenefits({ text }) {
                     d="M39.8 49.1h-7c-.6 0-1-.4-1-1v-7.6h-7.6c-.6 0-1-.4-1-1v-7c0-.6.4-1 1-1h7.6v-7.6c0-.6.4-1 1-1h7c.6 0 1 .4 1 1v7.6h7.6c.6 0 1 .4 1 1v7c0 .6-.4 1-1 1h-7.6v7.6c0 .6-.5 1-1 1zm-6-2h5v-7.6c0-.6.4-1 1-1h7.6v-5h-7.6c-.6 0-1-.4-1-1v-7.6h-5v7.6c0 .6-.4 1-1 1h-7.6v5h7.6c.6 0 1 .4 1 1v7.6z"
                 />
             </svg>
-            <p className="font-bold text-brand-1 text-2xl text-center">
+            <p className="font-bold text-brand-1 text-2xl text-center transform -translate-y-10">
                 {text}
             </p>
         </div>

@@ -9,6 +9,8 @@ export default function FourOhOneK({ text }) {
                 x={0}
                 y={0}
                 viewBox="0 0 72 72"
+                width="350"
+                height="350"
                 xmlSpace="preserve"
             >
                 <style>{'.prefix__st0{fill:#232656}'}</style>
@@ -21,7 +23,7 @@ export default function FourOhOneK({ text }) {
                     d="M30.4 32.3c-.9 0-1.7.8-1.7 1.7 0 .9.8 1.7 1.7 1.7.9 0 1.7-.8 1.7-1.7 0-1-.7-1.7-1.7-1.7zM44.8 29.5c-.4-.1-.7-.3-1-.5l-.6 1.4c.3.2.7.4 1.2.6.5.2 1 .3 1.6.3v1.2h1.1v-1.3c.9-.1 1.5-.4 2-.8s.7-1 .7-1.6c0-.5-.1-.9-.4-1.2-.2-.3-.6-.5-.9-.7-.4-.2-.8-.3-1.3-.4v-1.9c.6.1 1.2.3 1.7.6l.6-1.4c-.6-.4-1.4-.6-2.3-.7v-1.2H46v1.3c-.9.1-1.5.4-2 .8s-.7 1-.7 1.6c0 .5.1.9.4 1.2.2.3.6.5.9.7.4.2.8.3 1.4.4v1.9l-1.2-.3zm2.4-1.3c.3.1.5.2.6.3s.2.3.2.5-.1.4-.2.5c-.1.1-.3.2-.6.3v-1.6zm-1.8-2.3c-.1-.1-.2-.3-.2-.5s.1-.4.2-.5c.1-.1.3-.3.6-.3v1.6c-.2-.1-.5-.2-.6-.3z"
                 />
             </svg>
-            <p className="font-bold text-brand-1 text-2xl text-center">
+            <p className="font-bold text-brand-1 text-2xl text-center transform -translate-y-10">
                 {text}
             </p>
         </div>
