@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function CompetitivePay({ text }) {
     return (
-        <div>
+        <div className="flex flex-col items-center">
             <svg
                 id="prefix__Layer_1"
                 x={0}
@@ -22,7 +22,7 @@ export default function CompetitivePay({ text }) {
                     d="M37.2 35.7c-.4-.2-.8-.3-1.1-.6l-.7 1.5c.3.3.8.5 1.3.6.5.2 1.1.3 1.7.3v1.3h1.2v-1.3c.9-.1 1.6-.4 2.1-.9s.7-1 .7-1.7c0-.5-.1-1-.4-1.3-.3-.3-.6-.6-1-.7-.4-.2-.9-.3-1.4-.4v-2c.6.1 1.2.3 1.8.6l.6-1.5c-.6-.4-1.5-.7-2.4-.7v-1.3h-1.2v1.3c-.9.1-1.6.4-2.1.9s-.7 1-.7 1.7c0 .5.1 1 .4 1.3.3.3.6.6 1 .7s.9.3 1.4.5v2l-1.2-.3zm2.4-1.5c.3.1.5.2.6.3s.2.3.2.5-.1.4-.2.5-.4.2-.6.3v-1.6zm-1.8-2.3c-.2-.1-.2-.3-.2-.5s.1-.4.2-.5c.1-.2.4-.3.7-.3v1.7c-.4-.2-.6-.3-.7-.4z"
                 />
             </svg>
-            <p className="font-bold max-w-6xl text-brand-1 text-2xl text-center transform -translate-y-10">
+            <p className="font-bold text-brand-1 text-2xl text-center transform -translate-y-10">
                 {text}
             </p>
         </div>

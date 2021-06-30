@@ -23,7 +23,7 @@ export default function Careers({ data }) {
                 'Cras ut hendrerit lorem. Nunc tempus, est eu finibus porta, ante nisl molestie nunc, at gravida purus lectus a tellus. Aenean quis massa nulla. Mauris at leo quis diam finibus maximus. Donec cursus a metus id varius. Morbi feugiat, nisl vitae porttitor condimentum, tellus felis scelerisque leo, in cursus lacus augue nec justo.',
         },
     };
-    const text = 'Schedule Flexibility';
+    const text = 'Training & Tuition Reimbursement';
     return (
         <Layout>
             <Hero data={content.hero} />

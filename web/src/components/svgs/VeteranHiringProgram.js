@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function VeteranHiringProgram({ text }) {
     return (
-        <div>
+        <div className="flex flex-col items-center">
             <svg
                 id="prefix__Layer_1"
                 x={0}
@@ -26,7 +26,7 @@ export default function VeteranHiringProgram({ text }) {
                     d="M36.3 56.1c-.1 0-.3 0-.4-.1L20 48.4c-.3-.2-.6-.5-.6-.9v-5.8c0-.3.2-.7.5-.8.3-.2.7-.2 1-.1l15.4 7.4 15.4-7.4c.3-.1.7-.1 1 .1.3.2.5.5.5.8v5.8c0 .4-.2.7-.6.9L36.7 56c-.1 0-.3.1-.4.1zm-14.8-9.3L36.3 54l14.8-7.1v-3.6l-14.4 6.9c-.3.1-.6.1-.9 0l-14.4-6.9v3.5z"
                 />
             </svg>
-            <p className="font-bold max-w-6xl text-brand-1 text-2xl text-center transform -translate-y-10">
+            <p className="font-bold text-brand-1 text-2xl text-center transform -translate-y-10">
                 {text}
             </p>
         </div>

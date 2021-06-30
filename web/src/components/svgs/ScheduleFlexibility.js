@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function ScheduleFlexibility({ text }) {
     return (
-        <div>
+        <div className="flex flex-col items-center">
             <svg
                 id="prefix__Layer_1"
                 x={0}
@@ -22,7 +22,7 @@ export default function ScheduleFlexibility({ text }) {
                     d="M48.6 45.8v-6.1c0-.6-.4-1-1-1s-1 .4-1 1v6.5c0 .3.1.5.3.7l3 3c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4l-2.7-2.7zM22.4 25.5h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1h4.2c.6 0 1-.4 1-1v-4.2c0-.5-.4-1-1-1zm-1 4.2h-2.2v-2.2h2.2v2.2zM29.6 25.5h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1h4.2c.6 0 1-.4 1-1v-4.2c0-.5-.4-1-1-1zm-1 4.2h-2.2v-2.2h2.2v2.2zM32.7 31.7h4.2c.6 0 1-.4 1-1v-4.2c0-.6-.4-1-1-1h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1zm1-4.2h2.2v2.2h-2.2v-2.2zM22.4 33.5h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1h4.2c.6 0 1-.4 1-1v-4.2c0-.5-.4-1-1-1zm-1 4.2h-2.2v-2.2h2.2v2.2zM29.6 33.5h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1h4.2c.6 0 1-.4 1-1v-4.2c0-.5-.4-1-1-1zm-1 4.2h-2.2v-2.2h2.2v2.2zM22.4 41.3h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1h4.2c.6 0 1-.4 1-1v-4.2c0-.5-.4-1-1-1zm-1 4.2h-2.2v-2.2h2.2v2.2zM29.6 41.3h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1h4.2c.6 0 1-.4 1-1v-4.2c0-.5-.4-1-1-1zm-1 4.2h-2.2v-2.2h2.2v2.2zM37.9 38.7v-4.2c0-.6-.4-1-1-1h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.4 1 1 1h4.2c.5 0 1-.5 1-1zm-2-1h-2.2v-2.2h2.2v2.2zM39.9 31.7h4.2c.6 0 1-.4 1-1v-4.2c0-.6-.4-1-1-1h-4.2c-.6 0-1 .4-1 1v4.2c0 .6.5 1 1 1zm1-4.2h2.2v2.2h-2.2v-2.2z"
                 />
             </svg>
-            <p className="font-bold max-w-6xl text-brand-1 text-2xl text-center transform -translate-y-10">
+            <p className="font-bold text-brand-1 text-2xl text-center transform -translate-y-10">
                 {text}
             </p>
         </div>
