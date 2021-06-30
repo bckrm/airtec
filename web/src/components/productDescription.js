@@ -13,7 +13,7 @@ export default function ProductDescription({ data }) {
     return (
         <div className="container gap-x-20 grid grid-cols-1 md:grid-cols-2 my-24">
             <div className="md:col-start-1">
-                <h2 className="leadership-accent mb-12 text-3xl font-bold text-brand-1 my-1">
+                <h2 className="single-product-accent mb-12 text-3xl font-bold text-brand-1 my-1">
                     {productName}
                 </h2>
                 <p className="leading-relaxed mb-4">{productDescription}</p>
