@@ -9,9 +9,8 @@ export default function FourOhOneK({ text }) {
                 x={0}
                 y={0}
                 viewBox="0 0 72 72"
-                width="350"
-                height="350"
                 xmlSpace="preserve"
+                className="w-72"
             >
                 <style>{'.prefix__st0{fill:#232656}'}</style>
                 <path

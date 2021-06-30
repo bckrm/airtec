@@ -9,8 +9,7 @@ export default function VeteranHiringProgram({ text }) {
                 x={0}
                 y={0}
                 viewBox="0 0 72 72"
-                width="350"
-                height="350"
+                className="w-72"
                 xmlSpace="preserve"
             >
                 <style>{'.prefix__st0{fill:#232656}'}</style>
