@@ -15,8 +15,9 @@ const Carousel = loadable(() => import('./carouselWrapper'));
 export default function RecentNewsList({ news }) {
     const forward = 'More ❯';
     const back = '❮ Back';
+
     return (
-        <div className="container h-full overflow-visible pl-5 md:pl-9 pb-48">
+        <div className="container h-full overflow-hidden pl-5 md:pl-9 pb-48">
             <h2 className="ml-3 pt-12 text-brand-1 text-4xl">Recent News</h2>
             <div className="mt-8 relative">
                 <Carousel
