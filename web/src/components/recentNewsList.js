@@ -17,7 +17,7 @@ export default function RecentNewsList({ news }) {
     const back = '❮ Back';
 
     return (
-        <div className="container h-full overflow-hidden pl-5 md:pl-9 pb-48">
+        <section className="container h-full overflow-hidden pl-5 md:pl-9 pb-48">
             <h2 className="ml-3 pt-12 text-brand-1 text-4xl">Recent News</h2>
             <div className="mt-8 relative">
                 <Carousel
@@ -60,7 +60,7 @@ export default function RecentNewsList({ news }) {
                     })}
                 </Carousel>
             </div>
-        </div>
+        </section>
     );
 }
 
