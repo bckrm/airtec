@@ -13,7 +13,7 @@ import MoreButton from './moreButton';
 const Carousel = loadable(() => import('./carouselWrapper'));
 
 export default function RecentNewsList({ news }) {
-    const text = 'More ❯';
+    const forward = 'More ❯';
     const back = '❮ Back';
     return (
         <div className="container h-full overflow-visible pl-5 md:pl-9 pb-48">
@@ -31,9 +31,11 @@ export default function RecentNewsList({ news }) {
                                 arrowLeftDisabled: (
                                     <MoreButton text={back} isLeft isDisabled />
                                 ),
-                                arrowRight: <MoreButton text={text} isLight />,
+                                arrowRight: (
+                                    <MoreButton text={forward} isLight />
+                                ),
                                 arrowRightDisabled: (
-                                    <MoreButton text={text} isDisabled />
+                                    <MoreButton text={forward} isDisabled />
                                 ),
                                 addArrowClickHandler: true,
                             },
