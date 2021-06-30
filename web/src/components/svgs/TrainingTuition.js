@@ -10,7 +10,7 @@ export default function TrainingTuition({ text }) {
                     fill="#232656"
                 />
             </svg>
-            <p className="font-bold text-brand-1 text-2xl text-center transform -translate-y-10">
+            <p className="font-bold max-w-6xl text-brand-1 text-2xl text-center transform -translate-y-10">
                 {text}
             </p>
         </div>
