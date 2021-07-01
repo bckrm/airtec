@@ -48,7 +48,7 @@ const nav = [
     },
     {
         name: 'careers',
-        link: '/#',
+        link: '/careers',
     },
     {
         name: 'contact',
