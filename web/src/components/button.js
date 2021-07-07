@@ -7,6 +7,8 @@ export default function Button({
     isPrimaryDark,
     isSecondary,
     isSecondaryDark,
+    to,
+    href,
 }) {
     const primaryStyle =
         'bg-brand-1 border-2 border-brand-1 text-white hover:bg-brand-2 hover:border-brand-2 focus:bg-brand-2';
@@ -22,10 +24,29 @@ export default function Button({
         isSecondary ? secondaryStyle : ''
     }${isSecondaryDark ? secondaryDarkStyle : ''}`;
 
+    if (to) {
+        return (
+            <Link to={to} className={finalStyles}>
+                Learn More
+            </Link>
+        );
+    }
+    if (href) {
+        return (
+            <a
+                className={finalStyles}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Learn More
+            </a>
+        );
+    }
     return (
-        <Link to="/" className={finalStyles}>
+        <button type="button" className={finalStyles}>
             Learn More
-        </Link>
+        </button>
     );
 }
 
@@ -41,4 +62,6 @@ Button.propTypes = {
     isPrimaryDark: PropTypes.bool,
     isSecondary: PropTypes.bool,
     isSecondaryDark: PropTypes.bool,
+    to: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
 };

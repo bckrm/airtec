@@ -30,15 +30,15 @@ const nav = [
             },
             {
                 sublink: 'Fleet',
-                subnav: '/#fleet',
+                subnav: '/capabilities/#fleet',
             },
             {
                 sublink: 'Certifications',
-                subnav: '/#certifications',
+                subnav: '/capabilities/#certifications',
             },
             {
                 sublink: 'Contracts',
-                subnav: '/#contracts',
+                subnav: '/capabilities/#contracts',
             },
         ],
     },

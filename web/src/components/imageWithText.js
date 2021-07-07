@@ -13,6 +13,8 @@ export default function ImageWithText({
     isSecondaryDark,
     isSecondary,
     isTransparent,
+    to,
+    href,
 }) {
     const {
         heading,
@@ -44,6 +46,8 @@ export default function ImageWithText({
                             isPrimary={isPrimary}
                             isSecondaryDark={isSecondaryDark}
                             isTransparent={isTransparent}
+                            href={href}
+                            to={to}
                         />
                     )}
                 </div>
@@ -61,4 +65,6 @@ ImageWithText.propTypes = {
     isSecondaryDark: PropTypes.bool.isRequired,
     hasButton: PropTypes.bool.isRequired,
     isTransparent: PropTypes.bool.isRequired,
+    to: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
 };

@@ -13,8 +13,10 @@ export default function Card({
     isPrimary,
     isSecondaryDark,
     isSecondary,
+    to,
+    href,
 }) {
-    const { heading, description } = data;
+    const { heading, id, description } = data;
 
     const darkStyle = isDark
         ? 'bg-brand-1 text-white'
@@ -26,7 +28,7 @@ export default function Card({
     ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`;
 
     return (
-        <div className="container">
+        <div id={id} className="container">
             <div className={cardStyle}>
                 <h2 className="card-accent font-semibold pt-7 mb-12 text-4xl uppercase">
                     {heading}
@@ -39,6 +41,8 @@ export default function Card({
                         isPrimary={isPrimary}
                         isSecondaryDark={isSecondaryDark}
                         isTransparent={isTransparent}
+                        to={to}
+                        href={href}
                     />
                 )}
             </div>
@@ -56,4 +60,6 @@ Card.propTypes = {
     isPrimaryDark: PropTypes.bool.isRequired,
     isSecondary: PropTypes.bool.isRequired,
     isSecondaryDark: PropTypes.bool.isRequired,
+    to: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
 };

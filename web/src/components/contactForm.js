@@ -55,7 +55,7 @@ export default function ContactForm() {
                     </label>
                     <label htmlFor="name">Name*</label>
                     <input
-                        className="mb-4 h-10"
+                        className="mb-4 h-10 pl-2"
                         type="text"
                         id="name"
                         name="name"
@@ -64,7 +64,7 @@ export default function ContactForm() {
                     />
                     <label htmlFor="email">Email*</label>
                     <input
-                        className="mb-4 h-10"
+                        className="mb-4 h-10 pl-2"
                         type="text"
                         id="email"
                         name="email"
@@ -73,7 +73,7 @@ export default function ContactForm() {
                     />
                     <label htmlFor="subject">Subject*</label>
                     <input
-                        className="mb-4 h-10"
+                        className="mb-4 h-10 pl-2"
                         type="text"
                         id="subject"
                         name="subject"
@@ -83,7 +83,7 @@ export default function ContactForm() {
                     <label htmlFor="message">Message*</label>
                     <textarea
                         rows="5"
-                        className="mb-4 h-10"
+                        className="mb-4 pt-2 h-10 pl-2"
                         id="message"
                         name="message"
                         onChange={handleChange}
