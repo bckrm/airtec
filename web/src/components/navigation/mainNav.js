@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 export default function MainNav({ navItems }) {
     return (
-        <ul className="hidden active:font-extrabold lg:flex flex-row items-center font-semibold leading-5 justify-between self-center uppercase">
+        <ul className="hidden lg:flex flex-row items-center font-semibold leading-5 justify-between self-center uppercase">
             {navItems.map((item) => {
                 return (
                     <li key={item.link} className="group relative">
