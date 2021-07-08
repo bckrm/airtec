@@ -45,6 +45,11 @@ export default function BgImagewithCard({
     );
 }
 
+BgImagewithCard.defaultProps = {
+    to: '',
+    href: '',
+};
+
 BgImagewithCard.propTypes = {
     data: PropTypes.object.isRequired,
     hasButton: PropTypes.bool.isRequired,
@@ -56,6 +61,6 @@ BgImagewithCard.propTypes = {
     isPrimaryDark: PropTypes.bool.isRequired,
     isSecondary: PropTypes.bool.isRequired,
     isSecondaryDark: PropTypes.bool.isRequired,
-    to: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
+    to: PropTypes.string,
+    href: PropTypes.string,
 };

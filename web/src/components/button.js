@@ -55,6 +55,8 @@ Button.defaultProps = {
     isPrimaryDark: false,
     isSecondary: false,
     isSecondaryDark: false,
+    to: '',
+    href: '',
 };
 
 Button.propTypes = {
@@ -62,6 +64,6 @@ Button.propTypes = {
     isPrimaryDark: PropTypes.bool,
     isSecondary: PropTypes.bool,
     isSecondaryDark: PropTypes.bool,
-    to: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
+    to: PropTypes.string,
+    href: PropTypes.string,
 };

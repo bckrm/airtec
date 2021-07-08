@@ -56,6 +56,11 @@ export default function ImageWithText({
     );
 }
 
+ImageWithText.defaultProps = {
+    to: '',
+    href: '',
+};
+
 ImageWithText.propTypes = {
     data: PropTypes.object.isRequired,
     isLeft: PropTypes.bool.isRequired,
@@ -65,6 +70,6 @@ ImageWithText.propTypes = {
     isSecondaryDark: PropTypes.bool.isRequired,
     hasButton: PropTypes.bool.isRequired,
     isTransparent: PropTypes.bool.isRequired,
-    to: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
+    to: PropTypes.string,
+    href: PropTypes.string,
 };

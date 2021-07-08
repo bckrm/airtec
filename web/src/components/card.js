@@ -50,6 +50,11 @@ export default function Card({
     );
 }
 
+Card.defaultProps = {
+    to: '',
+    href: '',
+};
+
 Card.propTypes = {
     data: PropTypes.object.isRequired,
     hasButton: PropTypes.object.isRequired,
@@ -60,6 +65,6 @@ Card.propTypes = {
     isPrimaryDark: PropTypes.bool.isRequired,
     isSecondary: PropTypes.bool.isRequired,
     isSecondaryDark: PropTypes.bool.isRequired,
-    to: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
+    to: PropTypes.string,
+    href: PropTypes.string,
 };
