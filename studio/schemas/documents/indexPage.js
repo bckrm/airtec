@@ -10,14 +10,40 @@ export default {
     ],
     fields: [
         {
-            name: 'heroHeading',
-            title: 'Hero Heading',
+            name: 'pageTitle',
+            title: 'Page Title',
             type: 'string',
         },
         {
             name: 'heroImage',
             title: 'Hero Image',
             type: 'image',
+            validation: (Rule) => Rule.required(),
         },
+        {
+            name: 'heroHeading',
+            title: 'Hero Heading',
+            type: 'string',
+        },
+        {
+            name: 'subHero',
+            title: 'Sub Hero',
+            type: 'bgImgwithCard',
+        },
+        {
+            name: 'visionSection',
+            title: 'Vision Section',
+            type: 'bgImgwithCard',
+        },
+        {
+            name: 'whatWeDoSection',
+            title: 'What We Do Section',
+            type: 'bgImgwithCard',
+        },
+        // {
+        //     name: 'newsSection',
+        //     title: 'News Section',
+        //     type: '',
+        // },
     ],
 };
