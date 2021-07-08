@@ -20,13 +20,13 @@ export default function ContactInfo() {
                 River, MD.
             </p>
 
-            <p className="font-light text-brand-5 my-8 underline">
+            <p className="font-light text-brand-4 my-8 underline">
                 <a href="mailto:info@flyairtec.com">info@flyairtec.com</a>
             </p>
             <p>
                 Find us on{' '}
                 <a
-                    className="underline text-brand-5 font-light"
+                    className="underline text-brand-4 font-light"
                     href="https://www.linkedin.com/company/airtec-inc/"
                 >
                     LinkedIn

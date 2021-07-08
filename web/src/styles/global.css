@@ -64,6 +64,18 @@
         top: 149%;
         left: 0;
     }
+    .active-nav-link {
+        font-weight: 800;
+    }
+    .active-nav-link::after {
+        content: '';
+        height: 5px;
+        width: 90%;
+        background-color: #acc9e8;
+        position: absolute;
+        left: 25px;
+        top: 40px;
+    }
 }
 
 * {

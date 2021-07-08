@@ -15,6 +15,8 @@ export default function BgImagewithCard({
     isPrimary,
     isSecondaryDark,
     isSecondary,
+    to,
+    href,
 }) {
     const {
         childImageSharp: { fluid },
@@ -36,10 +38,17 @@ export default function BgImagewithCard({
                 isPrimary={isPrimary}
                 isSecondaryDark={isSecondaryDark}
                 hasButton={hasButton}
+                href={href}
+                to={to}
             />
         </BackgroundImage>
     );
 }
+
+BgImagewithCard.defaultProps = {
+    to: '',
+    href: '',
+};
 
 BgImagewithCard.propTypes = {
     data: PropTypes.object.isRequired,
@@ -52,4 +61,6 @@ BgImagewithCard.propTypes = {
     isPrimaryDark: PropTypes.bool.isRequired,
     isSecondary: PropTypes.bool.isRequired,
     isSecondaryDark: PropTypes.bool.isRequired,
+    to: PropTypes.string,
+    href: PropTypes.string,
 };
