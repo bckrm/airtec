@@ -15,7 +15,7 @@ export default {
         },
         {
             name: 'backgroundImage',
-            title: 'BackgroundImage',
+            title: 'Background Image',
             type: 'image',
         },
     ],
