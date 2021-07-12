@@ -40,10 +40,10 @@ export default {
             title: 'What We Do Section',
             type: 'bgImgwithCard',
         },
-        // {
-        //     name: 'newsSection',
-        //     title: 'News Section',
-        //     type: '',
-        // },
+        {
+            name: 'newsSection',
+            title: 'News Section',
+            type: 'newsSection',
+        },
     ],
 };
