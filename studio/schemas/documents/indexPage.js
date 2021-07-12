@@ -28,17 +28,17 @@ export default {
         {
             name: 'subHero',
             title: 'Sub Hero',
-            type: 'bgImgwithCard',
+            type: 'backgroundImgwithCard',
         },
         {
             name: 'visionSection',
             title: 'Vision Section',
-            type: 'bgImgwithCard',
+            type: 'backgroundImgwithCard',
         },
         {
             name: 'whatWeDoSection',
             title: 'What We Do Section',
-            type: 'bgImgwithCard',
+            type: 'backgroundImgwithCard',
         },
         {
             name: 'newsSection',

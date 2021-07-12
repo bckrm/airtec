@@ -1,5 +1,5 @@
 export default {
-    name: 'bgImgwithCard',
+    name: 'backgroundImgwithCard',
     title: 'Background Image With Card',
     type: 'document',
     fields: [
@@ -14,8 +14,8 @@ export default {
             type: 'text',
         },
         {
-            name: 'bgImage',
-            title: 'BgImage',
+            name: 'backgroundImage',
+            title: 'BackgroundImage',
             type: 'image',
         },
     ],

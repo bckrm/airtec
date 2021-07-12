@@ -6,7 +6,7 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // documents
-import bgImgwithCard from './documents/bgImgwithCard';
+import backgroundImgwithCard from './documents/backgroundImgwithCard';
 import indexPage from './documents/indexPage';
 import newsCard from './documents/newsCard';
 import newsSection from './documents/newsSection';
@@ -21,7 +21,7 @@ export default createSchema({
     // to the ones provided by any plugins that are installed
     types: schemaTypes.concat([
         // documents
-        bgImgwithCard,
+        backgroundImgwithCard,
         indexPage,
         newsCard,
         newsSection,
