@@ -19,6 +19,7 @@ import newsCard from './documents/newsCard';
 import newsSection from './documents/newsSection';
 
 // Object types
+import aboutPortableText from './objects/aboutPortableText';
 import mainImage from './objects/mainImage';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -38,9 +39,10 @@ export default createSchema({
         indexPage,
         leaderCard,
         leadershipSection,
-        mainImage,
         newsCard,
         newsSection,
         // objects
+        aboutPortableText,
+        mainImage,
     ]),
 });
