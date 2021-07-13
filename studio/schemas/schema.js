@@ -6,7 +6,6 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // documents
-import aboutIcon from './documents/aboutIcon';
 import aboutPage from './documents/aboutPage';
 import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
@@ -30,7 +29,6 @@ export default createSchema({
     // to the ones provided by any plugins that are installed
     types: schemaTypes.concat([
         // documents
-        aboutIcon,
         aboutPage,
         aboutSection,
         backgroundImgwithCard,

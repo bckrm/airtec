@@ -4,19 +4,13 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'leftAboutText',
-            title: 'Left About Text',
+            name: 'leftColumn',
+            title: 'Left Column',
             type: 'aboutPortableText',
         },
         {
-            name: 'aboutIconText',
-            title: 'About Icon Text',
-            type: 'array',
-            of: [{ type: 'reference', to: { type: 'aboutIcon' } }],
-        },
-        {
-            name: 'rightAboutText',
-            title: 'Right About Text',
+            name: 'rightColumn',
+            title: 'Right Column',
             type: 'aboutPortableText',
         },
     ],
