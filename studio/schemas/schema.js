@@ -6,8 +6,15 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // documents
+import aboutIcon from './documents/aboutIcon';
+import aboutPage from './documents/aboutPage';
+import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
+import historySection from './documents/historySection';
+import historyYear from './documents/historyYear';
 import indexPage from './documents/indexPage';
+import leaderCard from './documents/leaderCard';
+import leadershipSection from './documents/leadershipSection';
 import newsCard from './documents/newsCard';
 import newsSection from './documents/newsSection';
 
@@ -21,9 +28,17 @@ export default createSchema({
     // to the ones provided by any plugins that are installed
     types: schemaTypes.concat([
         // documents
+        aboutIcon,
+        aboutPage,
+        aboutSection,
         backgroundImgwithCard,
+        historySection,
+        historyYear,
         indexPage,
+        leaderCard,
+        leadershipSection,
         newsCard,
         newsSection,
+        // objects
     ]),
 });
