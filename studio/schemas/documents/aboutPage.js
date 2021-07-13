@@ -27,7 +27,7 @@ export default {
         },
         {
             name: 'historySection',
-            title: 'About Section',
+            title: 'History Section',
             type: 'historySection',
         },
         {
