@@ -6,8 +6,7 @@ export default {
         {
             name: 'leftAboutText',
             title: 'Left About Text',
-            type: 'array',
-            of: [{ type: 'block' }],
+            type: 'aboutPortableText',
         },
         {
             name: 'aboutIconText',
@@ -18,8 +17,7 @@ export default {
         {
             name: 'rightAboutText',
             title: 'Right About Text',
-            type: 'array',
-            of: [{ type: 'block' }],
+            type: 'aboutPortableText',
         },
     ],
 };
