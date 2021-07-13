@@ -4,8 +4,8 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'aboutText',
-            title: 'About Text',
+            name: 'leftAboutText',
+            title: 'Left About Text',
             type: 'array',
             of: [{ type: 'block' }],
         },
@@ -14,6 +14,12 @@ export default {
             title: 'About Icon Text',
             type: 'array',
             of: [{ type: 'reference', to: { type: 'aboutIcon' } }],
+        },
+        {
+            name: 'rightAboutText',
+            title: 'Right About Text',
+            type: 'array',
+            of: [{ type: 'block' }],
         },
     ],
 };
