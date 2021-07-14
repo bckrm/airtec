@@ -25,5 +25,15 @@ export default {
             title: 'Capabilities and Services',
             type: 'imageWithText',
         },
+        {
+            name: 'services',
+            title: 'Services',
+            type: 'backgroundImgwithCard',
+        },
+        {
+            name: 'fleet',
+            title: 'Fleet',
+            type: 'backgroundImgwithCard',
+        },
     ],
 };
