@@ -9,6 +9,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import aboutPage from './documents/aboutPage';
 import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
+import capabilitiesPage from './documents/capabilitiesPage';
+import certification from './documents/certification';
+import certificationsSection from './documents/certificationsSection';
 import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
 import indexPage from './documents/indexPage';
@@ -32,6 +35,9 @@ export default createSchema({
         aboutPage,
         aboutSection,
         backgroundImgwithCard,
+        capabilitiesPage,
+        certification,
+        certificationsSection,
         historySection,
         historyYear,
         indexPage,

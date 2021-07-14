@@ -35,5 +35,25 @@ export default {
             title: 'Fleet',
             type: 'backgroundImgwithCard',
         },
+        {
+            name: 'certificationsSection',
+            title: 'Certifications Section',
+            type: 'certificationsSection',
+        },
+        {
+            name: 'repairStation',
+            title: 'Repair Station',
+            type: 'backgroundImgwithCard',
+        },
+        {
+            name: 'safety',
+            title: 'Safety',
+            type: 'backgroundImgwithCard',
+        },
+        {
+            name: 'gsaSchedule',
+            title: 'GSA Schedule',
+            type: 'imageWithText',
+        },
     ],
 };
