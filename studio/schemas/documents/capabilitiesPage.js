@@ -20,5 +20,10 @@ export default {
             type: 'image',
             validation: (Rule) => Rule.required(),
         },
+        {
+            name: 'capabilitiesAndServices',
+            title: 'Capabilities and Services',
+            type: 'imageWithText',
+        },
     ],
 };
