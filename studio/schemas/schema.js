@@ -6,12 +6,20 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // documents
+import aboutPage from './documents/aboutPage';
+import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
+import historySection from './documents/historySection';
+import historyYear from './documents/historyYear';
 import indexPage from './documents/indexPage';
+import leaderCard from './documents/leaderCard';
+import leadershipSection from './documents/leadershipSection';
 import newsCard from './documents/newsCard';
 import newsSection from './documents/newsSection';
 
 // Object types
+import aboutPortableText from './objects/aboutPortableText';
+import mainImage from './objects/mainImage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,9 +29,18 @@ export default createSchema({
     // to the ones provided by any plugins that are installed
     types: schemaTypes.concat([
         // documents
+        aboutPage,
+        aboutSection,
         backgroundImgwithCard,
+        historySection,
+        historyYear,
         indexPage,
+        leaderCard,
+        leadershipSection,
         newsCard,
         newsSection,
+        // objects
+        aboutPortableText,
+        mainImage,
     ]),
 });

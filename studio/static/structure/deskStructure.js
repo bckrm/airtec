@@ -14,8 +14,17 @@ export default () => {
                         .schemaType('indexPage')
                         .documentId('indexPage'),
                 ),
+            S.listItem()
+                .title('About Page')
+                .icon(VscFile)
+                .child(
+                    S.document()
+                        .schemaType('aboutPage')
+                        .documentId('aboutPage'),
+                ),
             ...S.documentTypeListItems().filter(
-                (listItem) => !['indexPage'].includes(listItem.getId()),
+                (listItem) =>
+                    !['indexPage', 'aboutPage'].includes(listItem.getId()),
             ),
         ]);
 };
