@@ -1,6 +1,6 @@
 export default {
-    name: 'service',
-    title: 'Service',
+    name: 'servicePage',
+    title: 'Service Page',
     type: 'document',
     __experimental_actions: [
         'create',
