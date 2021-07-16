@@ -13,7 +13,8 @@ import fleetPage from './documents/fleetPage';
 import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
 import indexPage from './documents/indexPage';
-import individualFleetItemPage from './documents/individualFleetItemPage.js';
+import individualFleetItemPage from './documents/individualFleetItemPage';
+import individualServiceItemPage from './documents/individualServiceItemPage';
 import leaderCard from './documents/leaderCard';
 import leadershipSection from './documents/leadershipSection';
 import newsCard from './documents/newsCard';
@@ -41,6 +42,7 @@ export default createSchema({
         historyYear,
         indexPage,
         individualFleetItemPage,
+        individualServiceItemPage,
         leaderCard,
         leadershipSection,
         newsCard,

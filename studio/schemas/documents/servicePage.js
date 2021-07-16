@@ -20,18 +20,5 @@ export default {
             type: 'image',
             validation: (Rule) => Rule.required(),
         },
-        {
-            name: 'description',
-            title: 'Description',
-            type: 'text',
-            description:
-                'Brief description of this item. This text will appear on Fleet Card.',
-            validation: (Rule) => Rule.required().min(10).max(160),
-        },
-        {
-            name: 'serviceInfoBody',
-            title: 'Service Info Body',
-            type: 'bodyPortableText',
-        },
     ],
 };
