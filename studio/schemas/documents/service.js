@@ -1,6 +1,6 @@
 export default {
-    name: 'individualServiceItemPage',
-    title: 'Indivudal Service Item Page',
+    name: 'service',
+    title: 'Services',
     type: 'document',
     __experimental_actions: [
         'create',
