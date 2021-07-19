@@ -9,17 +9,17 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import aboutPage from './documents/aboutPage';
 import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
-import fleetCard from './documents/fleetCard';
-import fleetCardSection from './documents/fleetCardSection';
 import fleetPage from './documents/fleetPage';
 import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
 import indexPage from './documents/indexPage';
-import individualFleetItemPage from './documents/individualFleetItemPage.js';
+import individualFleetItemPage from './documents/individualFleetItemPage';
+import individualServiceItemPage from './documents/individualServiceItemPage';
 import leaderCard from './documents/leaderCard';
 import leadershipSection from './documents/leadershipSection';
 import newsCard from './documents/newsCard';
 import newsSection from './documents/newsSection';
+import servicePage from './documents/servicePage';
 
 // Object types
 import aboutPortableText from './objects/aboutPortableText';
@@ -37,17 +37,17 @@ export default createSchema({
         aboutPage,
         aboutSection,
         backgroundImgwithCard,
-        fleetCard,
-        fleetCardSection,
         fleetPage,
         historySection,
         historyYear,
         indexPage,
         individualFleetItemPage,
+        individualServiceItemPage,
         leaderCard,
         leadershipSection,
         newsCard,
         newsSection,
+        servicePage,
         // objects
         aboutPortableText,
         bodyPortableText,
