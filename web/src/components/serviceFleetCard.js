@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
-export default function ServiceFleetCard({ data }) {
+export default function ServiceFleetCard({ data, pathname }) {
     const {
         node: {
             description,
@@ -17,7 +17,7 @@ export default function ServiceFleetCard({ data }) {
 
     return (
         <Link
-            to={`/fleet/${current}`}
+            to={`${pathname}/${current}`}
             className="bg-white h-[34rem] transform transition focus:scale-110 md:hover:scale-110 shadow-2xl w-80"
         >
             <GatsbyImage
@@ -35,4 +35,5 @@ export default function ServiceFleetCard({ data }) {
 
 ServiceFleetCard.propTypes = {
     data: PropTypes.object.isRequired,
+    pathname: PropTypes.string.isRequired,
 };

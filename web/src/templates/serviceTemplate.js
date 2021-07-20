@@ -7,7 +7,7 @@ import Hero from '../components/hero';
 import ProductDescription from '../components/productDescription';
 
 export const query = graphql`
-    query FleetTemplateQuery($id: String!) {
+    query ServiceTemplateQuery($id: String!) {
         heroImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
                 fluid {
@@ -16,7 +16,7 @@ export const query = graphql`
             }
         }
 
-        fleetItem: sanityFleet(id: { eq: $id }) {
+        serviceItem: sanityService(id: { eq: $id }) {
             heroImage {
                 asset {
                     gatsbyImageData
@@ -30,8 +30,8 @@ export const query = graphql`
     }
 `;
 
-export default function SingleFleetTemplate({ data }) {
-    const { heroImage, fleetItem } = data;
+export default function SingleServiceTemplate({ data }) {
+    const { heroImage, serviceItem } = data;
 
     const content = {
         hero: {
@@ -49,14 +49,14 @@ export default function SingleFleetTemplate({ data }) {
     return (
         <Layout>
             <Hero data={content.hero} />
-            <ProductDescription data={fleetItem} />
+            <ProductDescription data={serviceItem} />
         </Layout>
     );
 }
 
-SingleFleetTemplate.propTypes = {
+SingleServiceTemplate.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
-        fleetItem: PropTypes.object.isRequired,
+        serviceItem: PropTypes.object.isRequired,
     }).isRequired,
 };
