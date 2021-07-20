@@ -7,7 +7,7 @@ import Hero from '../components/hero';
 import ServiceFleetSection from '../components/serviceFleetSection';
 
 export const query = graphql`
-    query FleetIndexQuery {
+    query ServiceIndexQuery {
         heroImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
                 fluid {
@@ -16,7 +16,7 @@ export const query = graphql`
             }
         }
 
-        allSanityFleet {
+        allSanityService {
             edges {
                 node {
                     description
@@ -40,9 +40,9 @@ export const query = graphql`
     }
 `;
 
-export default function FleetIndex({ data, location }) {
+export default function ServiceIndex({ data, location }) {
     const {
-        allSanityFleet: { edges },
+        allSanityService: { edges },
         heroImage,
     } = data;
 
@@ -63,7 +63,7 @@ export default function FleetIndex({ data, location }) {
     );
 }
 
-FleetIndex.propTypes = {
+ServiceIndex.propTypes = {
     data: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
 };
