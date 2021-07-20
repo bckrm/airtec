@@ -16,8 +16,6 @@ import historyYear from './documents/historyYear';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
 import leadershipSection from './documents/leadershipSection';
-import newsCard from './documents/newsCard';
-import newsSection from './documents/newsSection';
 import service from './documents/service';
 import servicePage from './documents/servicePage';
 
@@ -44,8 +42,6 @@ export default createSchema({
         indexPage,
         leaderCard,
         leadershipSection,
-        newsCard,
-        newsSection,
         service,
         servicePage,
         // objects
