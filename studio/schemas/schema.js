@@ -9,10 +9,13 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import aboutPage from './documents/aboutPage';
 import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
+import capabilitiesPage from './documents/capabilitiesPage';
+import certification from './documents/certification';
 import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
 import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
+import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
 import leadershipSection from './documents/leadershipSection';
@@ -35,10 +38,13 @@ export default createSchema({
         aboutPage,
         aboutSection,
         backgroundImgwithCard,
+        capabilitiesPage,
+        certification,
         fleet,
         fleetPage,
         historySection,
         historyYear,
+        imageWithText,
         indexPage,
         leaderCard,
         leadershipSection,

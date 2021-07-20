@@ -1,6 +1,6 @@
 export default {
-    name: 'indexPage',
-    title: 'Index Page',
+    name: 'capabilitiesPage',
+    title: 'Capabilities Page',
     type: 'document',
     __experimental_actions: [
         'create',
@@ -21,24 +21,34 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
-            name: 'heroHeading',
-            title: 'Hero Heading',
-            type: 'string',
+            name: 'capabilitiesAndServices',
+            title: 'Capabilities and Services',
+            type: 'imageWithText',
         },
         {
-            name: 'subHero',
-            title: 'Sub Hero',
+            name: 'services',
+            title: 'Services',
             type: 'backgroundImgwithCard',
         },
         {
-            name: 'visionSection',
-            title: 'Vision Section',
+            name: 'fleet',
+            title: 'Fleet',
             type: 'backgroundImgwithCard',
         },
         {
-            name: 'whatWeDoSection',
-            title: 'What We Do Section',
+            name: 'repairStation',
+            title: 'Repair Station',
             type: 'backgroundImgwithCard',
+        },
+        {
+            name: 'safety',
+            title: 'Safety',
+            type: 'backgroundImgwithCard',
+        },
+        {
+            name: 'gsaSchedule',
+            title: 'GSA Schedule',
+            type: 'imageWithText',
         },
     ],
 };
