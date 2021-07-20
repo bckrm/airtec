@@ -8,7 +8,12 @@ import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
 
 export default function IndexPage({ data }) {
-    const { heroImage, plane } = data;
+    const {
+        heroImage,
+        plane,
+        vision: { edges },
+    } = data;
+    console.log(edges);
 
     const news = [
         {
@@ -77,7 +82,7 @@ export default function IndexPage({ data }) {
         <Layout>
             <Hero data={content.hero} />
             <BgImagewithCard
-                data={content.info}
+                data={edges}
                 image={plane}
                 isRight
                 isTransparent
@@ -119,6 +124,16 @@ export const query = graphql`
                 }
             }
         }
+        vision: allSanityIndexPage {
+            edges {
+                node {
+                    visionSection {
+                        heading
+                        info
+                    }
+                }
+            }
+        }
     }
 `;
 
@@ -126,5 +141,6 @@ IndexPage.propTypes = {
     data: PropTypes.shape({
         plane: PropTypes.object.isRequired,
         heroImage: PropTypes.object.isRequired,
+        vision: PropTypes.object.isRequired,
     }).isRequired,
 };
