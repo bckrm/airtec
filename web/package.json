@@ -34,6 +34,7 @@
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-source-sanity": "^7.0.4",
     "gatsby-transformer-sharp": "^3.5.0",
+    "gbimage-bridge": "^0.1.4",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
