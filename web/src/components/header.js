@@ -30,7 +30,7 @@ const nav = [
             },
             {
                 sublink: 'Fleet',
-                subnav: '/capabilities/#fleet',
+                subnav: '/fleet',
             },
             {
                 sublink: 'Certifications',
