@@ -40,10 +40,5 @@ export default {
             title: 'What We Do Section',
             type: 'backgroundImgwithCard',
         },
-        {
-            name: 'newsSection',
-            title: 'News Section',
-            type: 'newsSection',
-        },
     ],
 };

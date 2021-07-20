@@ -36,11 +36,6 @@ export default {
             type: 'backgroundImgwithCard',
         },
         {
-            name: 'certificationsSection',
-            title: 'Certifications Section',
-            type: 'certificationsSection',
-        },
-        {
             name: 'repairStation',
             title: 'Repair Station',
             type: 'backgroundImgwithCard',

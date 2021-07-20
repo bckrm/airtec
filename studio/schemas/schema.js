@@ -11,17 +11,20 @@ import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
 import capabilitiesPage from './documents/capabilitiesPage';
 import certification from './documents/certification';
-import certificationsSection from './documents/certificationsSection';
+import fleet from './documents/fleet';
+import fleetPage from './documents/fleetPage';
 import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
+import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
 import leadershipSection from './documents/leadershipSection';
-import newsCard from './documents/newsCard';
-import newsSection from './documents/newsSection';
+import service from './documents/service';
+import servicePage from './documents/servicePage';
 
 // Object types
 import aboutPortableText from './objects/aboutPortableText';
+import bodyPortableText from './objects/bodyPortableText';
 import mainImage from './objects/mainImage';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -37,16 +40,19 @@ export default createSchema({
         backgroundImgwithCard,
         capabilitiesPage,
         certification,
-        certificationsSection,
+        fleet,
+        fleetPage,
         historySection,
         historyYear,
+        imageWithText,
         indexPage,
         leaderCard,
         leadershipSection,
-        newsCard,
-        newsSection,
+        service,
+        servicePage,
         // objects
         aboutPortableText,
+        bodyPortableText,
         mainImage,
     ]),
 });

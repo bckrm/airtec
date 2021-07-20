@@ -6,10 +6,8 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import ServiceFleetSection from '../components/serviceFleetSection';
 
-// Todo: will need to update the "fleet" query as this page will query news items, not fleet or service items.
-
 export const query = graphql`
-    query NewsPageQuery {
+    query FleetIndexQuery {
         heroImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
                 fluid {
@@ -18,7 +16,7 @@ export const query = graphql`
             }
         }
 
-        fleet: allSanityFleet {
+        allSanityFleet {
             edges {
                 node {
                     description
@@ -42,15 +40,16 @@ export const query = graphql`
     }
 `;
 
-export default function NewsPage({ data }) {
+export default function ServiceFleetTemplate({ data }) {
     const {
-        fleet: { edges },
+        allSanityFleet: { edges },
         heroImage,
     } = data;
+
     const content = {
         hero: {
             image: heroImage,
-            text: 'News',
+            text: 'Donec eleifend faucibus finibus maximus',
         },
     };
 
@@ -62,9 +61,6 @@ export default function NewsPage({ data }) {
     );
 }
 
-NewsPage.propTypes = {
-    data: PropTypes.shape({
-        heroImage: PropTypes.object.isRequired,
-        fleet: PropTypes.object.isRequired,
-    }).isRequired,
+ServiceFleetTemplate.propTypes = {
+    data: PropTypes.object.isRequired,
 };

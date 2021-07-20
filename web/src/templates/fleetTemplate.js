@@ -6,8 +6,32 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import ProductDescription from '../components/productDescription';
 
+export const query = graphql`
+    query FleetTemplateQuery($id: String!) {
+        heroImage: file(relativePath: { regex: "/hero/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+
+        fleetItem: sanityFleet(id: { eq: $id }) {
+            heroImage {
+                asset {
+                    gatsbyImageData
+                }
+            }
+            id
+            title
+            _rawBodyLeftColumn(resolveReferences: { maxDepth: 10 })
+            _rawBodyRightColumn(resolveReferences: { maxDepth: 10 })
+        }
+    }
+`;
+
 export default function SingleProductTemplate({ data }) {
-    const { heroImage } = data;
+    const { heroImage, fleetItem } = data;
 
     const content = {
         hero: {
@@ -25,25 +49,14 @@ export default function SingleProductTemplate({ data }) {
     return (
         <Layout>
             <Hero data={content.hero} />
-            <ProductDescription data={content.product} />
+            <ProductDescription data={fleetItem} />
         </Layout>
     );
 }
 
-export const query = graphql`
-    query SingleProductTemplateQuery {
-        heroImage: file(relativePath: { regex: "/hero/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`;
-
 SingleProductTemplate.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
+        fleetItem: PropTypes.object.isRequired,
     }).isRequired,
 };
