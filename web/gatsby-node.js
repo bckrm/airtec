@@ -31,6 +31,41 @@ async function createFleetPages(graphql, actions) {
     });
 }
 
+async function createServicePages(graphql, actions) {
+    const { createPage } = actions;
+    const result = await graphql(`
+        {
+            allSanityService {
+                edges {
+                    node {
+                        id
+                        slug {
+                            current
+                        }
+                    }
+                }
+            }
+        }
+    `);
+
+    if (result.errors) throw result.errors;
+
+    const serviceEdges = (result.data.allSanityService || {}).edges || [];
+
+    serviceEdges.forEach((edge) => {
+        const { id, slug = {} } = edge.node;
+        const path = `/services/${slug.current}/`;
+
+        console.log(path);
+        createPage({
+            path,
+            component: require.resolve('./src/templates/serviceTemplate.js'),
+            context: { id },
+        });
+    });
+}
+
 exports.createPages = async ({ graphql, actions }) => {
     await createFleetPages(graphql, actions);
+    await createServicePages(graphql, actions);
 };
