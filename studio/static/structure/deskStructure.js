@@ -23,6 +23,14 @@ export default () => {
                         .documentId('aboutPage'),
                 ),
             S.listItem()
+                .title('Career Page')
+                .icon(VscFile)
+                .child(
+                    S.document()
+                        .schemaType('careerPage')
+                        .documentId('careerPage'),
+                ),
+            S.listItem()
                 .title('Fleet Page')
                 .icon(VscFile)
                 .child(
@@ -51,6 +59,7 @@ export default () => {
                     ![
                         'aboutPage',
                         'capabilitiesPage',
+                        'careerPage',
                         'fleetPage',
                         'indexPage',
                         'servicePage',
@@ -58,3 +67,4 @@ export default () => {
             ),
         ]);
 };
+
