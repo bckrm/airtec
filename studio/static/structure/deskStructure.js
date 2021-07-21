@@ -22,9 +22,30 @@ export default () => {
                         .schemaType('aboutPage')
                         .documentId('aboutPage'),
                 ),
+            S.listItem()
+                .title('Capabilities Page')
+                .icon(VscFile)
+                .child(
+                    S.document()
+                        .schemaType('capabilitiesPage')
+                        .documentId('capabilitiesPage'),
+                ),
+            S.listItem()
+                .title('Career Page')
+                .icon(VscFile)
+                .child(
+                    S.document()
+                        .schemaType('careerPage')
+                        .documentId('careerPage'),
+                ),
             ...S.documentTypeListItems().filter(
                 (listItem) =>
-                    !['indexPage', 'aboutPage'].includes(listItem.getId()),
+                    ![
+                        'indexPage',
+                        'aboutPage',
+                        'capabilitiesPage',
+                        'careerPage',
+                    ].includes(listItem.getId()),
             ),
         ]);
 };
