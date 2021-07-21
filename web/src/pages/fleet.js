@@ -8,12 +8,17 @@ import ServiceFleetSection from '../components/serviceFleetSection';
 
 export const query = graphql`
     query FleetIndexQuery {
-        heroImage: file(relativePath: { regex: "/hero/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
+        sanityFleetPage {
+            heroImage {
+                asset {
+                    gatsbyImageData(
+                        width: 2000
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                    )
                 }
             }
+            pageTitle
         }
 
         allSanityFleet {
@@ -43,21 +48,14 @@ export const query = graphql`
 export default function FleetIndex({ data, location }) {
     const {
         allSanityFleet: { edges },
-        heroImage,
+        sanityFleetPage: { heroImage, pageTitle },
     } = data;
-
-    const content = {
-        hero: {
-            image: heroImage,
-            text: 'Donec eleifend faucibus finibus maximus',
-        },
-    };
 
     const { pathname } = location;
 
     return (
         <Layout>
-            <Hero data={content.hero} />
+            <Hero image={heroImage} title={pageTitle} />
             <ServiceFleetSection products={edges} pathname={pathname} />
         </Layout>
     );

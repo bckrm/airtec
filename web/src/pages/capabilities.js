@@ -8,12 +8,42 @@ import ImageWithText from '../components/imageWithText';
 import BgImagewithCard from '../components/bgImagewithCard';
 import CertificationSection from '../components/certificationSection';
 
+export const query = graphql`
+    query CapabilitiesQuery {
+        sanityCapabilitiesPage {
+            heroImage {
+                asset {
+                    gatsbyImageData
+                }
+            }
+            pageTitle
+        }
+        testImage: file(relativePath: { regex: "/hero/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        plane: file(relativePath: { regex: "/plane/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`;
 export default function CapabilitiesPage({ data }) {
-    const { heroImage, plane } = data;
+    const {
+        testImage,
+        plane,
+        sanityCapabilitiesPage: { heroImage, pageTitle },
+    } = data;
 
     const content = {
         hero: {
-            image: heroImage,
+            image: testImage,
             text: 'Capabilities',
         },
         subHero: {
@@ -57,7 +87,7 @@ export default function CapabilitiesPage({ data }) {
     ];
     return (
         <Layout>
-            <Hero data={content.hero} />
+            <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={content.subHero} />
             <BgImagewithCard
                 data={content.info}
@@ -86,28 +116,10 @@ export default function CapabilitiesPage({ data }) {
     );
 }
 
-export const query = graphql`
-    query CapabilitiesQuery {
-        heroImage: file(relativePath: { regex: "/hero/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-        plane: file(relativePath: { regex: "/plane/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`;
-
 CapabilitiesPage.propTypes = {
     data: PropTypes.shape({
-        heroImage: PropTypes.object.isRequired,
+        testImage: PropTypes.object.isRequired,
         plane: PropTypes.object.isRequired,
+        sanityCapabilitiesPage: PropTypes.object.isRequired,
     }).isRequired,
 };
