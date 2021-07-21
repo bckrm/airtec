@@ -9,11 +9,14 @@ import NewsList from '../components/newsList';
 
 export default function IndexPage({ data }) {
     const {
-        subHero,
-        vision: { edges },
-        whatWeDoSection,
         plane,
-        sanityIndexPage: { heroImage, pageTitle },
+        sanityIndexPage: {
+            heroImage,
+            pageTitle,
+            subHero,
+            visionSection,
+            whatWeDoSection,
+        },
         testImage,
     } = data;
 
@@ -70,20 +73,16 @@ export default function IndexPage({ data }) {
     return (
         <Layout>
             <Hero image={heroImage} title={pageTitle} />
+            <BgImagewithCard data={subHero} image={plane} isPrimaryDark />
             <BgImagewithCard
-                data={subHero.edges[0].node.subHero}
-                image={plane}
-                isPrimaryDark
-            />
-            <BgImagewithCard
-                data={edges[0].node.visionSection}
+                data={visionSection}
                 image={plane}
                 isDark
                 isRight
                 isPrimaryDark
             />
             <BgImagewithCard
-                data={whatWeDoSection.edges[0].node.whatWeDoSection}
+                data={whatWeDoSection}
                 image={plane}
                 hasButton
                 isSecondaryDark
@@ -96,36 +95,6 @@ export default function IndexPage({ data }) {
 
 export const query = graphql`
     query IndexQuery {
-        subHero: allSanityIndexPage {
-            edges {
-                node {
-                    subHero {
-                        heading
-                        info
-                    }
-                }
-            }
-        }
-        vision: allSanityIndexPage {
-            edges {
-                node {
-                    visionSection {
-                        heading
-                        info
-                    }
-                }
-            }
-        }
-        whatWeDoSection: allSanityIndexPage {
-            edges {
-                node {
-                    whatWeDoSection {
-                        heading
-                        info
-                    }
-                }
-            }
-        }
         sanityIndexPage {
             heroImage {
                 asset {
@@ -137,6 +106,18 @@ export const query = graphql`
                 }
             }
             pageTitle
+            visionSection {
+                heading
+                info
+            }
+            subHero {
+                heading
+                info
+            }
+            whatWeDoSection {
+                heading
+                info
+            }
         }
 
         testImage: file(relativePath: { regex: "/hero/" }) {
