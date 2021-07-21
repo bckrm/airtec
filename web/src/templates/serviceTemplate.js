@@ -7,15 +7,11 @@ import Hero from '../components/hero';
 import ProductDescription from '../components/productDescription';
 
 export const query = graphql`
-    query FleetTemplateQuery($id: String!) {
-        fleetItem: sanityFleet(id: { eq: $id }) {
+    query ServiceTemplateQuery($id: String!) {
+        serviceItem: sanityService(id: { eq: $id }) {
             heroImage {
                 asset {
-                    gatsbyImageData(
-                        width: 2000
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                    )
+                    gatsbyImageData
                 }
             }
             id
@@ -25,21 +21,22 @@ export const query = graphql`
         }
     }
 `;
-export default function SingleFleetTemplate({ data }) {
-    const { fleetItem } = data;
-    const { heroImage, title } = fleetItem;
+
+export default function SingleServiceTemplate({ data }) {
+    const { serviceItem } = data;
+    const { heroImage, title } = serviceItem;
 
     return (
         <Layout>
             <Hero image={heroImage} title={title} />
-            <ProductDescription data={fleetItem} />
+            <ProductDescription data={serviceItem} />
         </Layout>
     );
 }
 
-SingleFleetTemplate.propTypes = {
+SingleServiceTemplate.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
-        fleetItem: PropTypes.object.isRequired,
+        serviceItem: PropTypes.object.isRequired,
     }).isRequired,
 };

@@ -10,6 +10,7 @@ import aboutPage from './documents/aboutPage';
 import aboutSection from './documents/aboutSection';
 import backgroundImgwithCard from './documents/backgroundImgwithCard';
 import capabilitiesPage from './documents/capabilitiesPage';
+import careerPage from './documents/careerPage';
 import certification from './documents/certification';
 import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
@@ -39,6 +40,7 @@ export default createSchema({
         aboutSection,
         backgroundImgwithCard,
         capabilitiesPage,
+        careerPage,
         certification,
         fleet,
         fleetPage,
