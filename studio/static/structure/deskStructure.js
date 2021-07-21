@@ -23,14 +23,6 @@ export default () => {
                         .documentId('aboutPage'),
                 ),
             S.listItem()
-                .title('Capabilities Page')
-                .icon(VscFile)
-                .child(
-                    S.document()
-                        .schemaType('capabilitiesPage')
-                        .documentId('capabilitiesPage'),
-                ),
-            S.listItem()
                 .title('Career Page')
                 .icon(VscFile)
                 .child(
@@ -40,12 +32,9 @@ export default () => {
                 ),
             ...S.documentTypeListItems().filter(
                 (listItem) =>
-                    ![
-                        'indexPage',
-                        'aboutPage',
-                        'capabilitiesPage',
-                        'careerPage',
-                    ].includes(listItem.getId()),
+                    !['indexPage', 'aboutPage', 'careerPage'].includes(
+                        listItem.getId(),
+                    ),
             ),
         ]);
 };
