@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
-import Hero from '../components/hero';
+// import Hero from '../components/hero';
 import ImageWithText from '../components/imageWithText';
 import IconGrid from '../components/iconGrid';
 
@@ -26,7 +26,7 @@ export default function Careers({ data }) {
     const text = 'Training & Tuition Reimbursement';
     return (
         <Layout>
-            <Hero data={content.hero} />
+            {/* <Hero data={content.hero} /> */}
             <ImageWithText data={content.subHero} />
             <IconGrid text={text} />
             <ImageWithText

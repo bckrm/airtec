@@ -30,11 +30,41 @@ export default () => {
                         .schemaType('careerPage')
                         .documentId('careerPage'),
                 ),
+            S.listItem()
+                .title('Fleet Page')
+                .icon(VscFile)
+                .child(
+                    S.document()
+                        .schemaType('fleetPage')
+                        .documentId('fleetPage'),
+                ),
+            S.listItem()
+                .title('Capabilities Page')
+                .icon(VscFile)
+                .child(
+                    S.document()
+                        .schemaType('capabilitiesPage')
+                        .documentId('capabilitiesPage'),
+                ),
+            S.listItem()
+                .title('Service Page')
+                .icon(VscFile)
+                .child(
+                    S.document()
+                        .schemaType('servicePage')
+                        .documentId('servicePage'),
+                ),
             ...S.documentTypeListItems().filter(
                 (listItem) =>
-                    !['indexPage', 'aboutPage', 'careerPage'].includes(
-                        listItem.getId(),
-                    ),
+                    ![
+                        'aboutPage',
+                        'capabilitiesPage',
+                        'careerPage',
+                        'fleetPage',
+                        'indexPage',
+                        'servicePage',
+                    ].includes(listItem.getId()),
             ),
         ]);
 };
+

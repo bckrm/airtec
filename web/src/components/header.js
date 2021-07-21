@@ -26,7 +26,7 @@ const nav = [
         subnav: [
             {
                 sublink: 'Services',
-                subnav: '/capabilities/#services',
+                subnav: '/services',
             },
             {
                 sublink: 'Fleet',

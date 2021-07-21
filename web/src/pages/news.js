@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
-import Hero from '../components/hero';
+// import Hero from '../components/hero';
 import ServiceFleetSection from '../components/serviceFleetSection';
 
 // Todo: will need to update the "fleet" query as this page will query news items, not fleet or service items.
@@ -45,18 +45,18 @@ export const query = graphql`
 export default function NewsPage({ data }) {
     const {
         fleet: { edges },
-        heroImage,
+        // heroImage,
     } = data;
-    const content = {
-        hero: {
-            image: heroImage,
-            text: 'News',
-        },
-    };
+    //     const content = {
+    //         hero: {
+    //             image: heroImage,
+    //             text: 'News',
+    //         },
+    //     };
 
     return (
         <Layout>
-            <Hero data={content.hero} />
+            {/* <Hero data={content.hero} /> */}
             <ServiceFleetSection products={edges} />
         </Layout>
     );
