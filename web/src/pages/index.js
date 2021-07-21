@@ -15,7 +15,6 @@ export default function IndexPage({ data }) {
         vision: { edges },
         whatWeDoSection,
     } = data;
-    console.log(subHero.edges[0].node.subHero);
 
     const news = [
         {
