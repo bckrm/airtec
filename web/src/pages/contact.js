@@ -3,18 +3,18 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
-import Hero from '../components/hero';
+// import Hero from '../components/hero';
 import ContactSection from '../components/contactSection';
 import LogoSection from '../components/logoSection';
 
 export default function Contact({ data }) {
-    const { heroImage, kieyos, priority } = data;
-    const content = {
-        hero: {
-            image: heroImage,
-            text: 'Contact',
-        },
-    };
+    const { kieyos, priority } = data;
+    //     const content = {
+    //         hero: {
+    //             image: heroImage,
+    //             text: 'Contact',
+    //         },
+    //     };
     const images = [
         {
             image: priority,
@@ -25,7 +25,7 @@ export default function Contact({ data }) {
     ];
     return (
         <Layout>
-            <Hero data={content.hero} />
+            {/* <Hero data={content.hero} /> */}
             <ContactSection />
             <LogoSection images={images} />
         </Layout>

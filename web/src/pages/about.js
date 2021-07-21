@@ -8,14 +8,45 @@ import LeaderSection from '../components/leaderSection';
 import AboutText from '../components/aboutTextSection';
 import HistorySection from '../components/historySection';
 
+export const query = graphql`
+    query AboutQuery {
+        sanityAboutPage {
+            heroImage {
+                asset {
+                    gatsbyImageData(
+                        width: 2000
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                    )
+                }
+            }
+            pageTitle
+        }
+        aboutImage: file(relativePath: { regex: "/about/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        testImage: file(relativePath: { regex: "/hero/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`;
+
 export default function AboutPage({ data }) {
-    const { aboutImage, heroImage } = data;
+    const {
+        aboutImage,
+        testImage,
+        sanityAboutPage: { heroImage, pageTitle },
+    } = data;
 
     const content = {
-        hero: {
-            image: aboutImage,
-            text: 'ABOUT PAGE',
-        },
         about: {
             textSectionOne:
                 'We maintain a fleet of specially modified fixed-wing and rotary-wing aircraft to meet customers unique surveillance, test, telemetry, range safety and airborne science requirements. AIRtec is skilled at engineering unique aircraft configurations and obtaining airworthiness certifications through FAA and DOD processes. We retain a highly qualified team of mission oriented pilots, operators, and technicians to deliver full end-to-end results for customer needs. The AIRtec team provides a high mean experience level across all critical aviation areas to include: flight operations, safety, maintenance, training, equipment integration and sensor operation.  AIRtec can quickly turn a customer requirement into meaningful flight operations and data as a service without typical government contracting and procurement delays.',
@@ -26,49 +57,49 @@ export default function AboutPage({ data }) {
     };
     const historyData = [
         {
-            image: heroImage,
+            image: testImage,
             text:
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
             year: '1995',
             id: 1,
         },
         {
-            image: heroImage,
+            image: testImage,
             text:
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
             year: '1999',
             id: 2,
         },
         {
-            image: heroImage,
+            image: testImage,
             text:
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
             year: '2003',
             id: 3,
         },
         {
-            image: heroImage,
+            image: testImage,
             text:
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
             year: '2007',
             id: 4,
         },
         {
-            image: heroImage,
+            image: testImage,
             text:
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
             year: '2012',
             id: 5,
         },
         {
-            image: heroImage,
+            image: testImage,
             text:
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
             year: '2017',
             id: 6,
         },
         {
-            image: heroImage,
+            image: testImage,
             text:
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
             year: '2021',
@@ -111,7 +142,7 @@ export default function AboutPage({ data }) {
 
     return (
         <Layout>
-            <Hero data={content.hero} />
+            <Hero image={heroImage} title={pageTitle} />
             <AboutText data={content.about} />
             <HistorySection years={historyData} />
             <LeaderSection leaders={leaders} />
@@ -119,28 +150,10 @@ export default function AboutPage({ data }) {
     );
 }
 
-export const query = graphql`
-    query AboutQuery {
-        aboutImage: file(relativePath: { regex: "/about/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-        heroImage: file(relativePath: { regex: "/hero/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`;
-
 AboutPage.propTypes = {
     data: PropTypes.shape({
         aboutImage: PropTypes.object.isRequired,
-        heroImage: PropTypes.object.isRequired,
+        sanityAboutPage: PropTypes.object.isRequired,
+        testImage: PropTypes.object.isRequired,
     }).isRequired,
 };

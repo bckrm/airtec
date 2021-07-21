@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
-import Hero from '../components/hero';
+// import Hero from '../components/hero';
 import NewsContent from '../components/newsContent';
 import RecentNewsList from '../components/recentNewsList';
 
@@ -60,15 +60,15 @@ export default function NewsTemplate({ data }) {
         },
     ];
 
-    const content = {
-        hero: {
-            image: heroImage,
-            text: 'News Item',
-        },
-    };
+    //     const content = {
+    //         hero: {
+    //             image: heroImage,
+    //             text: 'News Item',
+    //         },
+    //     };
     return (
         <Layout>
-            <Hero data={content.hero} />
+            {/* <Hero data={content.hero} /> */}
             <NewsContent />
             <RecentNewsList news={news} />
         </Layout>
