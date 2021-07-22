@@ -8,7 +8,11 @@ import ImageWithText from '../components/imageWithText';
 import IconGrid from '../components/iconGrid';
 
 export default function Careers({ data }) {
-    const { heroImage, plane } = data;
+    const {
+        // sanityCareersPage: { heroImage, pageTitle },
+        heroImage,
+        plane,
+    } = data;
 
     const content = {
         hero: {
@@ -26,7 +30,7 @@ export default function Careers({ data }) {
     const text = 'Training & Tuition Reimbursement';
     return (
         <Layout>
-            {/* <Hero data={content.hero} /> */}
+            {/* <Hero image={heroImage} title={pageTitle} /> */}
             <ImageWithText data={content.subHero} />
             <IconGrid text={text} />
             <ImageWithText
@@ -66,5 +70,6 @@ Careers.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         plane: PropTypes.object.isRequired,
+        sanityCareersPage: PropTypes.object.isRequired,
     }).isRequired,
 };

@@ -8,7 +8,11 @@ import ContactSection from '../components/contactSection';
 import LogoSection from '../components/logoSection';
 
 export default function Contact({ data }) {
-    const { kieyos, priority } = data;
+    const {
+        // sanityContactPage: { heroImage, pageTitle },
+        kieyos,
+        priority,
+    } = data;
     //     const content = {
     //         hero: {
     //             image: heroImage,
@@ -25,7 +29,7 @@ export default function Contact({ data }) {
     ];
     return (
         <Layout>
-            {/* <Hero data={content.hero} /> */}
+            {/* <Hero image={heroImage} title={pageTitle} /> */}
             <ContactSection />
             <LogoSection images={images} />
         </Layout>
@@ -63,5 +67,6 @@ Contact.propTypes = {
         heroImage: PropTypes.object.isRequired,
         kieyos: PropTypes.object.isRequired,
         priority: PropTypes.object.isRequired,
+        // sanityContactPage: PropTypes.object.isRequired,
     }).isRequired,
 };
