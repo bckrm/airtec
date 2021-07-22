@@ -9,10 +9,9 @@ import NewsList from '../components/newsList';
 
 export default function IndexPage({ data }) {
     const {
-        plane,
         sanityIndexPage: {
             heroImage,
-            pageTitle,
+            heroHeading,
             subHero,
             visionSection,
             whatWeDoSection,
@@ -72,18 +71,22 @@ export default function IndexPage({ data }) {
 
     return (
         <Layout>
-            <Hero image={heroImage} title={pageTitle} />
-            <BgImagewithCard data={subHero} image={plane} isPrimaryDark />
+            <Hero image={heroImage} title={heroHeading} />
+            <BgImagewithCard
+                data={subHero}
+                image={subHero.backgroundImage}
+                isPrimaryDark
+            />
             <BgImagewithCard
                 data={visionSection}
-                image={plane}
+                image={visionSection.backgroundImage}
                 isDark
                 isRight
                 isPrimaryDark
             />
             <BgImagewithCard
                 data={whatWeDoSection}
-                image={plane}
+                image={whatWeDoSection.backgroundImage}
                 hasButton
                 isSecondaryDark
                 isTransparent
@@ -105,29 +108,49 @@ export const query = graphql`
                     )
                 }
             }
-            pageTitle
+            heroHeading
             visionSection {
                 heading
                 info
+                backgroundImage {
+                    asset {
+                        gatsbyImageData(
+                            width: 2000
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
+                }
             }
             subHero {
                 heading
                 info
+                backgroundImage {
+                    asset {
+                        gatsbyImageData(
+                            width: 2000
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
+                }
             }
             whatWeDoSection {
                 heading
                 info
+                backgroundImage {
+                    asset {
+                        gatsbyImageData(
+                            width: 2000
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
+                }
             }
         }
 
         testImage: file(relativePath: { regex: "/hero/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-        plane: file(relativePath: { regex: "/plane/" }) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
@@ -139,7 +162,6 @@ export const query = graphql`
 
 IndexPage.propTypes = {
     data: PropTypes.shape({
-        plane: PropTypes.object.isRequired,
         heroImage: PropTypes.object.isRequired,
         subHero: PropTypes.object.isRequired,
         vision: PropTypes.object.isRequired,
