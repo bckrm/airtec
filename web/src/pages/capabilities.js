@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import Hero from '../components/hero';
 import ImageWithText from '../components/imageWithText';
-import BgImagewithCard from '../components/bgImagewithCard';
+// import BgImagewithCard from '../components/bgImagewithCard';
 import CertificationSection from '../components/certificationSection';
 
 export const query = graphql`
@@ -89,7 +89,7 @@ export default function CapabilitiesPage({ data }) {
         <Layout>
             <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={content.subHero} />
-            <BgImagewithCard
+            {/* <BgImagewithCard
                 data={content.info}
                 image={plane}
                 hasButton
@@ -101,16 +101,16 @@ export default function CapabilitiesPage({ data }) {
                 isRight
                 hasButton
                 isSecondaryDark
-            />
+            /> */}
             <CertificationSection certifications={certifications} />
-            <BgImagewithCard data={content.info} image={plane} />
+            {/* <BgImagewithCard data={content.info} image={plane} />
             <BgImagewithCard
                 data={content.info}
                 image={plane}
                 isRight
                 hasButton
                 isSecondaryDark
-            />
+            /> */}
             <ImageWithText data={content.contracts} />
         </Layout>
     );
