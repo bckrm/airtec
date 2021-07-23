@@ -72,21 +72,15 @@ export default function IndexPage({ data }) {
     return (
         <Layout>
             <Hero image={heroImage} title={heroHeading} />
-            <BgImagewithCard
-                data={subHero}
-                image={subHero.backgroundImage}
-                isPrimaryDark
-            />
+            <BgImagewithCard data={subHero} isPrimaryDark />
             <BgImagewithCard
                 data={visionSection}
-                image={visionSection.backgroundImage}
                 isDark
                 isRight
                 isPrimaryDark
             />
             <BgImagewithCard
                 data={whatWeDoSection}
-                image={whatWeDoSection.backgroundImage}
                 hasButton
                 isSecondaryDark
                 isTransparent
