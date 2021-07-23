@@ -7,42 +7,15 @@ import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
 
-export const query = graphql`
-    query IndexQuery {
-        sanityIndexPage {
-            heroImage {
-                asset {
-                    gatsbyImageData(
-                        width: 2000
-                        placeholder: BLURRED
-                        formats: [AUTO, WEBP, AVIF]
-                    )
-                }
-            }
-            pageTitle
-        }
-
-        testImage: file(relativePath: { regex: "/hero/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-        plane: file(relativePath: { regex: "/plane/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`;
-
 export default function IndexPage({ data }) {
     const {
-        plane,
-        sanityIndexPage: { heroImage, pageTitle },
+        sanityIndexPage: {
+            heroImage,
+            heroHeading,
+            subHero,
+            visionSection,
+            whatWeDoSection,
+        },
         testImage,
     } = data;
 
@@ -95,49 +68,104 @@ export default function IndexPage({ data }) {
                 'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
         },
     ];
-    const content = {
-        info: {
-            heading: 'this is a heading',
-            description:
-                'Etiam felis mauris, dapibus commodo ex a, vestibulum consequat neque. Vestibulum id auctor sapien. Vestibulum tempor tortor eget purus lobortis pretium.',
-        },
-        button: {
-            text: 'Learn More',
-        },
-    };
+
     return (
         <Layout>
-            <Hero image={heroImage} title={pageTitle} />
+            <Hero image={heroImage} title={heroHeading} />
             <BgImagewithCard
-                data={content.info}
-                image={plane}
-                isRight
-                isTransparent
-                isSecondaryDark
-                hasButton
+                data={subHero}
+                image={subHero.backgroundImage}
+                isPrimaryDark
             />
             <BgImagewithCard
-                data={content.info}
-                image={plane}
-                hasButton
-                isPrimary
-            />
-            <BgImagewithCard
-                data={content.info}
-                image={plane}
+                data={visionSection}
+                image={visionSection.backgroundImage}
                 isDark
                 isRight
                 isPrimaryDark
+            />
+            <BgImagewithCard
+                data={whatWeDoSection}
+                image={whatWeDoSection.backgroundImage}
                 hasButton
+                isSecondaryDark
+                isTransparent
             />
             <NewsList news={news} />
         </Layout>
     );
 }
 
+export const query = graphql`
+    query IndexQuery {
+        sanityIndexPage {
+            heroImage {
+                asset {
+                    gatsbyImageData(
+                        width: 2000
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                    )
+                }
+            }
+            heroHeading
+            visionSection {
+                heading
+                info
+                backgroundImage {
+                    asset {
+                        gatsbyImageData(
+                            width: 2000
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
+                }
+            }
+            subHero {
+                heading
+                info
+                backgroundImage {
+                    asset {
+                        gatsbyImageData(
+                            width: 2000
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
+                }
+            }
+            whatWeDoSection {
+                heading
+                info
+                backgroundImage {
+                    asset {
+                        gatsbyImageData(
+                            width: 2000
+                            placeholder: BLURRED
+                            formats: [AUTO, WEBP, AVIF]
+                        )
+                    }
+                }
+            }
+        }
+
+        testImage: file(relativePath: { regex: "/hero/" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`;
+
 IndexPage.propTypes = {
     data: PropTypes.shape({
-        plane: PropTypes.object.isRequired,
+        heroImage: PropTypes.object.isRequired,
+        subHero: PropTypes.object.isRequired,
+        vision: PropTypes.object.isRequired,
+        whatWeDoSection: PropTypes.object.isRequired,
         sanityIndexPage: PropTypes.object.isRequired,
         testImage: PropTypes.object.isRequired,
     }).isRequired,

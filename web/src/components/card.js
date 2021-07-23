@@ -16,7 +16,7 @@ export default function Card({
     to,
     href,
 }) {
-    const { heading, id, description } = data;
+    const { heading, id, info } = data;
 
     const darkStyle = isDark
         ? 'bg-brand-1 text-white'
@@ -33,7 +33,7 @@ export default function Card({
                 <h2 className="card-accent font-semibold pt-7 mb-12 text-4xl uppercase">
                     {heading}
                 </h2>
-                <p className="pr-6 pb-7">{description}</p>
+                <p className="pr-6 pb-7">{info}</p>
                 {hasButton && (
                     <Button
                         isPrimaryDark={isPrimaryDark}
