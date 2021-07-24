@@ -59,17 +59,24 @@ export default function ImageWithText({
 ImageWithText.defaultProps = {
     to: '',
     href: '',
+    isLeft: false,
+    isPrimary: false,
+    isPrimaryDark: false,
+    isSecondary: false,
+    isSecondaryDark: false,
+    hasButton: false,
+    isTransparent: false,
 };
 
 ImageWithText.propTypes = {
     data: PropTypes.object.isRequired,
-    isLeft: PropTypes.bool.isRequired,
-    isPrimary: PropTypes.bool.isRequired,
-    isPrimaryDark: PropTypes.bool.isRequired,
-    isSecondary: PropTypes.bool.isRequired,
-    isSecondaryDark: PropTypes.bool.isRequired,
-    hasButton: PropTypes.bool.isRequired,
-    isTransparent: PropTypes.bool.isRequired,
+    isLeft: PropTypes.bool,
+    isPrimary: PropTypes.bool,
+    isPrimaryDark: PropTypes.bool,
+    isSecondary: PropTypes.bool,
+    isSecondaryDark: PropTypes.bool,
+    hasButton: PropTypes.bool,
+    isTransparent: PropTypes.bool,
     to: PropTypes.string,
     href: PropTypes.string,
 };

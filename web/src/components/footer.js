@@ -47,19 +47,27 @@ export default function Footer() {
         <footer className="bg-brand-1 bottom-0 text-white w-full">
             <div className="container flex flex-col md:flex-row md:justify-between py-11">
                 <div className="flex flex-col md:flex-row md:pl-20 md:space-x-16">
-                    <Link to="/">
+                    <Link key="logo" to="/">
                         <AIRtecAwhite />
                     </Link>
 
                     <div className="grid grid-cols-2 md:gap-x-24 gap-y-5 pt-10 md:mt-16">
                         {internalLinks.map((link) => {
-                            return <Link to={link.link}>{link.text}</Link>;
+                            return (
+                                <Link key={link.text} to={link.link}>
+                                    {link.text}
+                                </Link>
+                            );
                         })}
                     </div>
                 </div>
                 <div className="flex flex-col gap-5 pt-10 md:mt-16">
                     {externalLinks.map((link) => {
-                        return <a href={link.link}>{link.text}</a>;
+                        return (
+                            <a key={link.text} href={link.link}>
+                                {link.text}
+                            </a>
+                        );
                     })}
                 </div>
             </div>

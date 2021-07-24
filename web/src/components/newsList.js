@@ -54,7 +54,9 @@ export default function NewsList({ news }) {
                     ]}
                 >
                     {news.map((newsItem) => {
-                        return <NewsCard data={newsItem} />;
+                        return (
+                            <NewsCard key={newsItem.title} data={newsItem} />
+                        );
                     })}
                 </Carousel>
             </div>
