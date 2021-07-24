@@ -38,10 +38,6 @@ export const query = graphql`
                 }
             }
         }
-        sanityCertification {
-            description
-            title
-        }
     }
 `;
 export default function CapabilitiesPage({ data }) {
