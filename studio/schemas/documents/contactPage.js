@@ -1,6 +1,6 @@
 export default {
-    name: 'careerPage',
-    title: 'Career Page',
+    name: 'contactPage',
+    title: 'Contact Page',
     type: 'document',
     __experimental_actions: [
         'create',
@@ -19,16 +19,6 @@ export default {
             title: 'Hero Image',
             type: 'image',
             validation: (Rule) => Rule.required(),
-        },
-        {
-            name: 'generalSellingPoints',
-            title: 'General Selling Points',
-            type: 'imageWithText',
-        },
-        {
-            name: 'jobsAtAirtec',
-            title: 'Jobs at Airtec',
-            type: 'imageWithText',
         },
     ],
 };
