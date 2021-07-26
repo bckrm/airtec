@@ -26,11 +26,6 @@ export default {
             type: 'imageWithText',
         },
         {
-            name: 'iconText',
-            title: 'Icon Text',
-            type: 'string',
-        },
-        {
             name: 'jobsAtAirtec',
             title: 'Jobs at Airtec',
             type: 'imageWithText',
