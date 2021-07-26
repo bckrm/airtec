@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function HistoryItem({ data, isOpen, isActive }) {
     const {
         text,
-        image: {
-            childImageSharp: { fluid },
-        },
+        image: { asset },
     } = data;
+
+    const imageData = getImage(asset);
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -26,7 +27,10 @@ export default function HistoryItem({ data, isOpen, isActive }) {
                         isActive={isActive}
                         className="flex flex-col-reverse md:flex-row-reverse gap-11 pt-6 md:pt-9"
                     >
-                        <Img className="w-full md:w-1/2" fluid={fluid} />
+                        <GatsbyImage
+                            className="w-full md:w-1/2"
+                            image={imageData}
+                        />
                         <p className="w-full md:w-1/2">{text}</p>
                     </div>
                 </motion.div>
