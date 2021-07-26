@@ -12,6 +12,7 @@ import backgroundImgwithCard from './documents/backgroundImgwithCard';
 import capabilitiesPage from './documents/capabilitiesPage';
 import careerPage from './documents/careerPage';
 import certification from './documents/certification';
+import contactPage from './documents/contactPage';
 import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
 import historySection from './documents/historySection';
@@ -42,6 +43,7 @@ export default createSchema({
         capabilitiesPage,
         careerPage,
         certification,
+        contactPage,
         fleet,
         fleetPage,
         historySection,
