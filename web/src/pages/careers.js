@@ -3,38 +3,28 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
-// import Hero from '../components/hero';
+import Hero from '../components/hero';
 import ImageWithText from '../components/imageWithText';
 import IconGrid from '../components/iconGrid';
 
 export default function Careers({ data }) {
     const {
-        // sanityCareersPage: { heroImage, pageTitle },
-        heroImage,
-        plane,
+        sanityCareerPage: {
+            heroImage,
+            pageTitle,
+            generalSellingPoints,
+            jobsAtAirtec,
+        },
     } = data;
 
-    const content = {
-        hero: {
-            image: heroImage,
-            text: 'Proin nec porta mauris. Donec et sapien turpis.',
-        },
-        subHero: {
-            id: 'services',
-            image: plane,
-            heading: 'Capabilities & Services',
-            text:
-                'Cras ut hendrerit lorem. Nunc tempus, est eu finibus porta, ante nisl molestie nunc, at gravida purus lectus a tellus. Aenean quis massa nulla. Mauris at leo quis diam finibus maximus. Donec cursus a metus id varius. Morbi feugiat, nisl vitae porttitor condimentum, tellus felis scelerisque leo, in cursus lacus augue nec justo.',
-        },
-    };
     const text = 'Training & Tuition Reimbursement';
     return (
         <Layout>
-            {/* <Hero image={heroImage} title={pageTitle} /> */}
-            <ImageWithText data={content.subHero} />
+            <Hero image={heroImage} title={pageTitle} />
+            <ImageWithText data={generalSellingPoints} />
             <IconGrid text={text} />
             <ImageWithText
-                data={content.subHero}
+                data={jobsAtAirtec}
                 isLeft
                 hasButton
                 isSecondaryDark
@@ -49,6 +39,36 @@ export default function Careers({ data }) {
 
 export const query = graphql`
     query CareersQuery {
+        sanityCareerPage {
+            heroImage {
+                asset {
+                    gatsbyImageData(
+                        width: 2000
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP, AVIF]
+                    )
+                }
+            }
+            pageTitle
+            generalSellingPoints {
+                heading
+                _rawInfo
+                image {
+                    asset {
+                        gatsbyImageData
+                    }
+                }
+            }
+            jobsAtAirtec {
+                heading
+                _rawInfo
+                image {
+                    asset {
+                        gatsbyImageData
+                    }
+                }
+            }
+        }
         heroImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
                 fluid {
@@ -70,6 +90,6 @@ Careers.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         plane: PropTypes.object.isRequired,
-        sanityCareersPage: PropTypes.object.isRequired,
+        sanityCareerPage: PropTypes.object.isRequired,
     }).isRequired,
 };
