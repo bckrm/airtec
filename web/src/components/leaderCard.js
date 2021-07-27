@@ -6,7 +6,7 @@ export default function LeaderCard({ data }) {
     const {
         name,
         title,
-        link,
+        linkedinURL,
         image: { asset },
     } = data;
 
@@ -14,7 +14,7 @@ export default function LeaderCard({ data }) {
 
     return (
         <div className="bg-white text-brand-1">
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
                 <GatsbyImage
                     className="h-96 rounded-bl-[2.5rem]"
                     image={imageData}
