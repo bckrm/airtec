@@ -14,11 +14,11 @@ export default function LeaderCard({ data }) {
 
     return (
         <div className="bg-white text-brand-1">
+            <GatsbyImage
+                className="h-96 rounded-bl-[2.5rem]"
+                image={imageData}
+            />
             <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
-                <GatsbyImage
-                    className="h-96 rounded-bl-[2.5rem]"
-                    image={imageData}
-                />
                 <h2 className="font-bold pl-5 mt-6">{name}</h2>
                 <p className="pl-5 mb-6 mt-1">{title}</p>
             </a>
