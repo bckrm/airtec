@@ -18,5 +18,10 @@ export default {
             title: 'Image',
             type: 'mainImage',
         },
+        {
+            name: 'linkedinURL',
+            title: 'LinkedIn URL',
+            type: 'url',
+        },
     ],
 };

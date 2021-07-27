@@ -9,6 +9,11 @@ export default {
             type: 'aboutPortableText',
         },
         {
+            name: 'iconText',
+            title: 'Icon Text',
+            type: 'string',
+        },
+        {
             name: 'rightColumn',
             title: 'Right Column',
             type: 'aboutPortableText',
