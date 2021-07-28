@@ -50,7 +50,7 @@ export default {
         {
             name: 'cardOrientation',
             title: 'Card Orientation',
-            type: 'boolean',
+            type: 'string',
             description: 'Selection will align the card on the right.',
             options: {
                 list: [{ title: 'Right', value: 'right' }],
@@ -60,7 +60,7 @@ export default {
         {
             name: 'button',
             title: 'Button',
-            type: 'boolean',
+            type: 'string',
             description: 'Selection will give card a button',
             options: {
                 list: [{ title: 'hasButton', value: 'hasButton' }],
