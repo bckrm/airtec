@@ -23,18 +23,30 @@ export default {
             title: 'Card Type',
             type: 'string',
             description:
-                'Selection will give card a white, blue or transparent background color.',
+                'Selection will give card a primary or secondary color scheme.',
             options: {
                 list: [
-                    { title: 'Primary Light', value: 'primaryLight' },
-                    { title: 'Primary Dark', value: 'primaryDark' },
-                    { title: 'Secondary Light', value: 'secondaryLight' },
-                    { title: 'Secondary Dark', value: 'secondaryDark' },
-                    { title: 'Transparent', value: 'transparent' },
+                    { title: 'Primary', value: 'primary' },
+                    { title: 'Secondary', value: 'secondary' },
                 ],
                 layout: 'radio',
             },
         },
+        {
+            name: 'backgroundColor',
+            title: 'Background Color',
+            type: 'string',
+            description:
+                'Selection will give card a white, blue or transparent background color.',
+            options: {
+                list: [
+                    { title: 'Light', value: 'light' },
+                    { title: 'Dark', value: 'dark' },
+                    { title: 'Transparent', value: 'transparent' },
+                ],
+            },
+        },
+
         {
             name: 'cardOrientation',
             title: 'Card Orientation',
