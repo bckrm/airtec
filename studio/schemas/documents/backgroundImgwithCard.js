@@ -23,7 +23,7 @@ export default {
             title: 'Card Type',
             type: 'string',
             description:
-                'Selection will give card a primary or secondary color scheme.',
+                'Selection will give card and/or button a primary or secondary color scheme.',
             options: {
                 list: [
                     { title: 'Primary', value: 'primary' },
@@ -37,7 +37,7 @@ export default {
             title: 'Background Color',
             type: 'string',
             description:
-                'Selection will give card a white, blue or transparent background color.',
+                'Selection will give card and/or button a white, blue or transparent background color.',
             options: {
                 list: [
                     { title: 'Light', value: 'light' },
@@ -50,14 +50,20 @@ export default {
         {
             name: 'cardOrientation',
             title: 'Card Orientation',
-            type: 'string',
-            description:
-                'Selection will align the card on the right or left side of the screen.',
+            type: 'boolean',
+            description: 'Selection will align the card on the right.',
             options: {
-                list: [
-                    { title: 'Left', value: 'left' },
-                    { title: 'Right', value: 'right' },
-                ],
+                list: [{ title: 'Right', value: 'right' }],
+                layout: 'radio',
+            },
+        },
+        {
+            name: 'button',
+            title: 'Button',
+            type: 'boolean',
+            description: 'Selection will give card a button',
+            options: {
+                list: [{ title: 'hasButton', value: 'hasButton' }],
                 layout: 'radio',
             },
         },
