@@ -22,6 +22,8 @@ export default {
             name: 'cardType',
             title: 'Card Type',
             type: 'string',
+            description:
+                'Selection will give card a white, blue or transparent background color.',
             options: {
                 list: [
                     { title: 'Primary Light', value: 'primaryLight' },
@@ -29,6 +31,20 @@ export default {
                     { title: 'Secondary Light', value: 'secondaryLight' },
                     { title: 'Secondary Dark', value: 'secondaryDark' },
                     { title: 'Transparent', value: 'transparent' },
+                ],
+                layout: 'radio',
+            },
+        },
+        {
+            name: 'cardOrientation',
+            title: 'Card Orientation',
+            type: 'string',
+            description:
+                'Selection will align the card on the right or left side of the screen.',
+            options: {
+                list: [
+                    { title: 'Left', value: 'left' },
+                    { title: 'Right', value: 'right' },
                 ],
                 layout: 'radio',
             },
