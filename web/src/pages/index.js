@@ -21,6 +21,8 @@ export default function IndexPage({ data }) {
         testImage,
     } = data;
 
+    console.log(subHero);
+
     const news = [
         {
             image: testImage,
@@ -115,6 +117,10 @@ export const query = graphql`
             visionSection {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
+                button
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -128,6 +134,10 @@ export const query = graphql`
             subHero {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
+                button
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -141,6 +151,9 @@ export const query = graphql`
             whatWeDoSection {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
