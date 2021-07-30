@@ -30,7 +30,7 @@ export default {
             type: 'text',
             description:
                 'Brief description of this item. This text will appear on Fleet Card.',
-            validation: (Rule) => Rule.required().min(10).max(160),
+            validation: (Rule) => Rule.required().min(10).max(185),
         },
         {
             name: 'bodyLeftColumn',
