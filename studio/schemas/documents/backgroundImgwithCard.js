@@ -19,15 +19,15 @@ export default {
             type: 'image',
         },
         {
-            name: 'cardBackgroundColor',
-            title: 'Card Background Color',
+            name: 'backgroundColor',
+            title: 'Background Color',
             type: 'string',
             description:
                 'Selection will give the card a dark blue or transparent background color. The default color is white',
             options: {
                 list: [
-                    { title: 'Dark', value: 'dark' },
-                    { title: 'Transparent', value: 'transparent' },
+                    { title: 'Dark', value: 'true' },
+                    { title: 'Transparent', value: 'true' },
                 ],
             },
         },
@@ -38,7 +38,7 @@ export default {
             description:
                 'Selection will align the card on the right. Default is left oriented',
             options: {
-                list: [{ title: 'Right', value: 'right' }],
+                list: [{ title: 'Right', value: 'true' }],
             },
         },
         {
@@ -47,21 +47,24 @@ export default {
             type: 'string',
             description: 'Selection will give card a button',
             options: {
-                list: [{ title: 'Button', value: 'button' }],
+                list: [{ title: 'Button', value: 'true' }],
             },
         },
         {
-            name: 'buttonType',
-            title: 'Button Type',
+            name: 'buttonURL',
+            title: 'Button URL',
+            type: 'url',
+        },
+        {
+            name: 'cardType',
+            title: 'Card Type',
             type: 'string',
             description:
                 'Selection will give button a primary or secondary color scheme. If the card is light, choose a dark button',
             options: {
                 list: [
-                    { title: 'Primary Light', value: 'primaryLight' },
-                    { title: 'Primary Dark', value: 'primaryDark' },
-                    { title: 'Secondary Light', value: 'secondaryLight' },
-                    { title: 'Secondary Dark', value: 'secondaryDark' },
+                    { title: 'Primary', value: 'true' },
+                    { title: 'Secondary', value: 'true' },
                 ],
             },
         },
