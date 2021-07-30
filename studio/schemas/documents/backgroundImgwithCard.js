@@ -26,8 +26,8 @@ export default {
                 'Selection will give the card a dark blue or transparent background color. The default color is white',
             options: {
                 list: [
-                    { title: 'Dark', value: 'true' },
-                    { title: 'Transparent', value: 'true' },
+                    { title: 'Dark', value: 'isDark' },
+                    { title: 'Transparent', value: 'isTransparent' },
                 ],
             },
         },
@@ -38,7 +38,7 @@ export default {
             description:
                 'Selection will align the card on the right. Default is left oriented',
             options: {
-                list: [{ title: 'Right', value: 'true' }],
+                list: [{ title: 'Right', value: 'isRight' }],
             },
         },
         {
@@ -47,7 +47,7 @@ export default {
             type: 'string',
             description: 'Selection will give card a button',
             options: {
-                list: [{ title: 'Button', value: 'true' }],
+                list: [{ title: 'Button', value: 'hasButton' }],
             },
         },
         {
@@ -63,8 +63,8 @@ export default {
                 'Selection will give button a primary or secondary color scheme. If the card is light, choose a dark button',
             options: {
                 list: [
-                    { title: 'Primary', value: 'true' },
-                    { title: 'Secondary', value: 'true' },
+                    { title: 'Primary', value: 'isPrimary' },
+                    { title: 'Secondary', value: 'isSecondary' },
                 ],
             },
         },
