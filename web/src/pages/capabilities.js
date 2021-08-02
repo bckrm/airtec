@@ -82,6 +82,7 @@ export const query = graphql`
             gsaSchedule {
                 heading
                 _rawInfo
+                id
                 image {
                     asset {
                         id
