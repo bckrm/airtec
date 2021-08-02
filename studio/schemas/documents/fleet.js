@@ -14,7 +14,7 @@ export default {
             title: 'Slug',
             description: 'This will be the url path for this post',
             options: {
-                source: 'name',
+                source: 'title',
                 maxLength: 96,
             },
         },
