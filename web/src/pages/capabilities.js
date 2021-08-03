@@ -138,7 +138,7 @@ export default function CapabilitiesPage({ data }) {
                 hasButton
                 isSecondaryDark
             />
-            <ImageWithText data={gsaSchedule} />
+            <ImageWithText id="contracts" data={gsaSchedule} />
         </Layout>
     );
 }

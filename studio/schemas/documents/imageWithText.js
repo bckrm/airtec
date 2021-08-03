@@ -19,10 +19,5 @@ export default {
             title: 'Image',
             type: 'mainImage',
         },
-        {
-            name: 'id',
-            title: 'Id',
-            type: 'string',
-        },
     ],
 };
