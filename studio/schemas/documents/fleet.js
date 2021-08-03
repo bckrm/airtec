@@ -14,7 +14,7 @@ export default {
             title: 'Slug',
             description: 'This will be the url path for this post',
             options: {
-                source: 'name',
+                source: 'title',
                 maxLength: 96,
             },
         },
@@ -30,7 +30,7 @@ export default {
             type: 'text',
             description:
                 'Brief description of this item. This text will appear on Fleet Card.',
-            validation: (Rule) => Rule.required().min(10).max(160),
+            validation: (Rule) => Rule.required().min(10).max(200),
         },
         {
             name: 'bodyLeftColumn',
