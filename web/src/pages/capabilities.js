@@ -132,12 +132,7 @@ export default function CapabilitiesPage({ data }) {
             <BgImagewithCard data={fleet} isRight hasButton isSecondaryDark />
             <CertificationSection certifications={certifications} />
             <BgImagewithCard data={safety} />
-            <BgImagewithCard
-                data={repairStation}
-                isRight
-                hasButton
-                isSecondaryDark
-            />
+            <BgImagewithCard data={repairStation} />
             <ImageWithText id="contracts" data={gsaSchedule} />
         </Layout>
     );
