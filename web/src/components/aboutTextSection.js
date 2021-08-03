@@ -4,26 +4,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PlaneIconWithText from './svgs/PlaneIconWithText';
+import BlockText from './block-content/blockText';
 
 export default function AboutText({ data }) {
-    const { textSectionOne, textSectionTwo } = data;
+    const { _rawLeftColumn, _rawRightColumn, iconTextList } = data;
 
     return (
         <div className="container gap-11 grid grid-cols-1 md:grid-cols-2 my-14">
-            <p>
-                {textSectionOne}
+            <div>
+                <BlockText blocks={_rawLeftColumn} />
                 <div className="mt-4">
-                    <PlaneIconWithText data={data} />
-                    <PlaneIconWithText data={data} />
-                    <PlaneIconWithText data={data} />
-                    <PlaneIconWithText data={data} />
+                    {iconTextList.map((text) => {
+                        return <PlaneIconWithText data={text} />;
+                    })}
                 </div>
-            </p>
-            <p>{textSectionTwo}</p>
+            </div>
+            <BlockText blocks={_rawRightColumn} />
         </div>
     );
 }
 
 AboutText.propTypes = {
     data: PropTypes.object.isRequired,
+    iconTextList: PropTypes.array.isRequired,
 };

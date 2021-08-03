@@ -90,6 +90,12 @@ export const query = graphql`
                 }
             }
         }
+        allSanityCertification {
+            nodes {
+                title
+                description
+            }
+        }
     }
 `;
 export default function CapabilitiesPage({ data }) {
@@ -104,32 +110,16 @@ export default function CapabilitiesPage({ data }) {
             capabilitiesAndServices,
             gsaSchedule,
         },
+        allSanityCertification: { nodes },
     } = data;
 
-    const certifications = [
-        {
-            title: 'Nulla fermentum massa',
-            description:
-                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
-        },
-        {
-            title: 'Nulla fermentum massa',
-            description:
-                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
-        },
-        {
-            title: 'Nulla fermentum massa',
-            description:
-                'Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat',
-        },
-    ];
     return (
         <Layout>
             <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={capabilitiesAndServices} />
             <BgImagewithCard data={services} hasButton isSecondaryDark />
             <BgImagewithCard data={fleet} isRight hasButton isSecondaryDark />
-            <CertificationSection certifications={certifications} />
+            <CertificationSection certifications={nodes} />
             <BgImagewithCard data={safety} />
             <BgImagewithCard
                 data={repairStation}
@@ -145,5 +135,6 @@ export default function CapabilitiesPage({ data }) {
 CapabilitiesPage.propTypes = {
     data: PropTypes.shape({
         sanityCapabilitiesPage: PropTypes.object.isRequired,
+        allSanityCertification: PropTypes.object.isRequired,
     }).isRequired,
 };
