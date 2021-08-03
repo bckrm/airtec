@@ -13,8 +13,9 @@ export default function Card({
     isPrimaryDark,
     isSecondary,
     isSecondaryDark,
-    to,
-    href,
+    internalLink,
+    externalLink,
+    link,
 }) {
     const { heading, id, info } = data;
 
@@ -40,8 +41,9 @@ export default function Card({
                         isPrimary={isPrimary}
                         isSecondaryDark={isSecondaryDark}
                         isPrimaryDark={isPrimaryDark}
-                        to={to}
-                        href={href}
+                        link={link}
+                        externalLink={externalLink}
+                        internalLink={internalLink}
                     />
                 )}
             </div>
@@ -58,8 +60,8 @@ Card.defaultProps = {
     isTransparent: false,
     isDark: false,
     isRight: false,
-    to: '',
-    href: '',
+    internalLink: false,
+    externalLink: false,
 };
 
 Card.propTypes = {
@@ -72,6 +74,7 @@ Card.propTypes = {
     isPrimaryDark: PropTypes.bool,
     isSecondaryDark: PropTypes.bool,
     isSecondary: PropTypes.bool,
-    to: PropTypes.string,
-    href: PropTypes.string,
+    externalLink: PropTypes.bool,
+    internalLink: PropTypes.bool,
+    link: PropTypes.string.isRequired,
 };

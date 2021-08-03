@@ -51,9 +51,21 @@ export default {
             },
         },
         {
-            name: 'buttonURL',
-            title: 'Button URL',
-            type: 'url',
+            name: 'linkType',
+            title: 'Link Type',
+            type: 'string',
+            description: 'Selection will render internal or external link',
+            options: {
+                list: [
+                    { title: 'Internal', value: 'internal' },
+                    { title: 'External', value: 'external' },
+                ],
+            },
+        },
+        {
+            name: 'link',
+            title: 'Link',
+            type: 'string',
         },
 
         {

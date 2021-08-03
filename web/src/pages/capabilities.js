@@ -24,7 +24,8 @@ export const query = graphql`
                 info
                 backgroundColor
                 button
-                buttonURL
+                link
+                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -42,7 +43,8 @@ export const query = graphql`
                 info
                 backgroundColor
                 button
-                buttonURL
+                link
+                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -60,7 +62,8 @@ export const query = graphql`
                 info
                 backgroundColor
                 button
-                buttonURL
+                link
+                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -78,7 +81,8 @@ export const query = graphql`
                 info
                 backgroundColor
                 button
-                buttonURL
+                link
+                linkType
                 cardOrientation
                 cardType
                 backgroundImage {

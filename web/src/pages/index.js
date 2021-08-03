@@ -75,9 +75,9 @@ export default function IndexPage({ data }) {
         <Layout>
             <Seo title={seo.pageTitle} description={seo.pageDescription} />
             <Hero image={heroImage} title={heroHeading} />
-            <BgImagewithCard data={subHero} isDark />
-            <BgImagewithCard data={visionSection} isDark />
-            <BgImagewithCard data={whatWeDoSection} isDark />
+            <BgImagewithCard data={subHero} />
+            <BgImagewithCard data={visionSection} />
+            <BgImagewithCard data={whatWeDoSection} />
             <NewsList news={news} />
         </Layout>
     );
@@ -99,7 +99,8 @@ export const query = graphql`
             visionSection {
                 backgroundColor
                 button
-                buttonURL
+                link
+                linkType
                 cardOrientation
                 cardType
                 info
@@ -119,7 +120,8 @@ export const query = graphql`
                 info
                 backgroundColor
                 button
-                buttonURL
+                link
+                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -137,7 +139,8 @@ export const query = graphql`
                 info
                 backgroundColor
                 button
-                buttonURL
+                link
+                linkType
                 cardOrientation
                 cardType
                 backgroundImage {

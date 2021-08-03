@@ -7,14 +7,15 @@ import { convertToBgImage } from 'gbimage-bridge';
 
 import Card from './card';
 
-export default function BgImagewithCard({ data, href }) {
+export default function BgImagewithCard({ data }) {
     const {
         backgroundImage: { asset },
         cardType,
         backgroundColor,
         cardOrientation,
         button,
-        buttonURL,
+        link,
+        linkType,
     } = data;
     const imageData = getImage(asset);
     const bgImageData = convertToBgImage(imageData);
@@ -26,7 +27,8 @@ export default function BgImagewithCard({ data, href }) {
     const isPrimary = cardType === 'primary';
     const isPrimaryDark = cardType === 'secondary';
     const isSecondaryDark = cardType === 'transparent';
-    const to = buttonURL === 'true';
+    const externalLink = linkType === 'external';
+    const internalLink = linkType === 'internal';
 
     return (
         <BackgroundImage
@@ -43,16 +45,15 @@ export default function BgImagewithCard({ data, href }) {
                 isPrimaryDark={isPrimaryDark}
                 isSecondaryDark={isSecondaryDark}
                 hasButton={hasButton}
-                href={href}
-                to={to}
+                link={link}
+                externalLink={externalLink}
+                internalLink={internalLink}
             />
         </BackgroundImage>
     );
 }
 
 BgImagewithCard.defaultProps = {
-    to: '',
-    href: '',
     isPrimary: false,
     isPrimaryDark: false,
     isSecondary: false,
@@ -61,6 +62,8 @@ BgImagewithCard.defaultProps = {
     hasButton: false,
     isDark: false,
     isRight: false,
+    internalLink: false,
+    externalLink: false,
 };
 
 BgImagewithCard.propTypes = {
@@ -73,8 +76,9 @@ BgImagewithCard.propTypes = {
     isPrimaryDark: PropTypes.bool,
     isSecondary: PropTypes.bool,
     isSecondaryDark: PropTypes.bool,
-    href: PropTypes.string,
-    to: PropTypes.string,
+    externalLink: PropTypes.bool,
+    internalLink: PropTypes.bool,
+    link: PropTypes.string.isRequired,
     cardType: PropTypes.string.isRequired,
     backgroundColor: PropTypes.string.isRequired,
     button: PropTypes.string.isRequired,
