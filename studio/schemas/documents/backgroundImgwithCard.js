@@ -55,16 +55,18 @@ export default {
             title: 'Button URL',
             type: 'url',
         },
+
         {
             name: 'cardType',
             title: 'Card Type',
             type: 'string',
             description:
-                'Selection will give button a primary or secondary color scheme. If the card is light, choose a dark button',
+                'Selection will give button a primary or secondary color theme. If the card is light, choose a primary button. If card is dark, choose secondary button',
             options: {
                 list: [
                     { title: 'Primary', value: 'primary' },
                     { title: 'Secondary', value: 'secondary' },
+                    { title: 'Transparent', value: 'transparent' },
                 ],
             },
         },

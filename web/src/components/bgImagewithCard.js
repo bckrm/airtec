@@ -7,22 +7,26 @@ import { convertToBgImage } from 'gbimage-bridge';
 
 import Card from './card';
 
-export default function BgImagewithCard({
-    data,
-    hasButton,
-    isDark,
-    isRight,
-    isTransparent,
-    isPrimary,
-    isSecondary,
-    to,
-    href,
-}) {
+export default function BgImagewithCard({ data, href }) {
     const {
         backgroundImage: { asset },
+        cardType,
+        backgroundColor,
+        cardOrientation,
+        button,
+        buttonURL,
     } = data;
     const imageData = getImage(asset);
     const bgImageData = convertToBgImage(imageData);
+
+    const isDark = backgroundColor === 'dark';
+    const isTransparent = backgroundColor === 'transparent';
+    const isRight = cardOrientation === 'right';
+    const hasButton = button === 'button';
+    const isPrimary = cardType === 'primary';
+    const isPrimaryDark = cardType === 'secondary';
+    const isSecondaryDark = cardType === 'transparent';
+    const to = buttonURL === 'true';
 
     return (
         <BackgroundImage
@@ -35,8 +39,9 @@ export default function BgImagewithCard({
                 isTransparent={isTransparent}
                 isRight={isRight}
                 data={data}
-                isSecondary={isSecondary}
                 isPrimary={isPrimary}
+                isPrimaryDark={isPrimaryDark}
+                isSecondaryDark={isSecondaryDark}
                 hasButton={hasButton}
                 href={href}
                 to={to}
@@ -49,7 +54,9 @@ BgImagewithCard.defaultProps = {
     to: '',
     href: '',
     isPrimary: false,
+    isPrimaryDark: false,
     isSecondary: false,
+    isSecondaryDark: false,
     isTransparent: false,
     hasButton: false,
     isDark: false,
@@ -63,7 +70,12 @@ BgImagewithCard.propTypes = {
     isRight: PropTypes.bool,
     isDark: PropTypes.bool,
     isPrimary: PropTypes.bool,
+    isPrimaryDark: PropTypes.bool,
     isSecondary: PropTypes.bool,
+    isSecondaryDark: PropTypes.bool,
     href: PropTypes.string,
     to: PropTypes.string,
+    cardType: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string.isRequired,
+    button: PropTypes.string.isRequired,
 };

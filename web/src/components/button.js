@@ -17,7 +17,7 @@ export default function Button({
     const secondaryStyle =
         'bg-white border-2 border-current text-brand-1 hover:text-brand-2 focus:text-brand-2';
     const secondaryDarkStyle =
-        'bg-transparent border-2 border-white text-white hover:text-gray-300 hover:border-gray-300 focus:text-gray-300 focue:border-gray-300';
+        'bg-transparent border-2 border-current text-white hover:text-gray-300 hover:border-gray-300 focus:text-gray-300 focue:border-gray-300';
     const finalStyles = `font-semibold inline-block leading-tight px-8 py-2 mb-6 rounded-bl-2xl tracking-[.12rem] transition-colors uppercase ${
         isPrimary ? primaryStyle : ''
     }${isPrimaryDark ? primaryDarkStyle : ''}${

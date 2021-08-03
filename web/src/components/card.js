@@ -10,7 +10,9 @@ export default function Card({
     isTransparent,
     isDark,
     isPrimary,
+    isPrimaryDark,
     isSecondary,
+    isSecondaryDark,
     to,
     href,
 }) {
@@ -36,7 +38,8 @@ export default function Card({
                     <Button
                         isSecondary={isSecondary}
                         isPrimary={isPrimary}
-                        isTransparent={isTransparent}
+                        isSecondaryDark={isSecondaryDark}
+                        isPrimaryDark={isPrimaryDark}
                         to={to}
                         href={href}
                     />
@@ -48,6 +51,8 @@ export default function Card({
 
 Card.defaultProps = {
     isPrimary: false,
+    isPrimaryDark: false,
+    isSecondaryDark: false,
     isSecondary: false,
     hasButton: false,
     isTransparent: false,
@@ -64,6 +69,8 @@ Card.propTypes = {
     isDark: PropTypes.bool,
     isRight: PropTypes.bool,
     isPrimary: PropTypes.bool,
+    isPrimaryDark: PropTypes.bool,
+    isSecondaryDark: PropTypes.bool,
     isSecondary: PropTypes.bool,
     to: PropTypes.string,
     href: PropTypes.string,
