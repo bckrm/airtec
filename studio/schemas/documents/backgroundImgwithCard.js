@@ -23,9 +23,10 @@ export default {
             title: 'Background Color',
             type: 'string',
             description:
-                'Selection will give the card a dark blue or transparent background color. The default color is white',
+                'Selection will give the card a white, dark blue or transparent background color. The default color is white',
             options: {
                 list: [
+                    { title: 'Light', value: 'light' },
                     { title: 'Dark', value: 'dark' },
                     { title: 'Transparent', value: 'transparent' },
                 ],
@@ -36,9 +37,12 @@ export default {
             title: 'Card Orientation',
             type: 'string',
             description:
-                'Selection will align the card on the right. Default is left oriented',
+                'Selection will align the card to the right or left of the container. Default is left oriented',
             options: {
-                list: [{ title: 'Right', value: 'right' }],
+                list: [
+                    { title: 'Right', value: 'right' },
+                    { title: 'Left', value: 'left' },
+                ],
             },
         },
         {
