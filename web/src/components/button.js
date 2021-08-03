@@ -27,7 +27,7 @@ export default function Button({
 
     if (internalLink) {
         return (
-            <Link to={`${link}`} className={finalStyles}>
+            <Link to={`/${link}`} className={finalStyles}>
                 Learn More
             </Link>
         );
