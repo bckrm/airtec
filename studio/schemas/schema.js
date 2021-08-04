@@ -29,6 +29,7 @@ import servicePage from './documents/servicePage';
 import aboutPortableText from './objects/aboutPortableText';
 import bodyPortableText from './objects/bodyPortableText';
 import mainImage from './objects/mainImage';
+import seo from './objects/seo';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -60,5 +61,6 @@ export default createSchema({
         aboutPortableText,
         bodyPortableText,
         mainImage,
+        seo,
     ]),
 });
