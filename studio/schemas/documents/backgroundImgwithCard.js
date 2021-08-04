@@ -46,19 +46,11 @@ export default {
             },
         },
         {
-            name: 'button',
-            title: 'Button',
-            type: 'string',
-            description: 'Selection will give card a button',
-            options: {
-                list: [{ title: 'Button', value: 'button' }],
-            },
-        },
-        {
             name: 'linkType',
             title: 'Link Type',
             type: 'string',
-            description: 'Selection will render internal or external link',
+            description:
+                'Selection will render internal or external link for your button',
             options: {
                 list: [
                     { title: 'Internal', value: 'internal' },
@@ -70,6 +62,7 @@ export default {
             name: 'link',
             title: 'Link',
             type: 'string',
+            description: 'Add a link if card needs a button',
         },
 
         {
