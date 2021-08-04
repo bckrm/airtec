@@ -5,7 +5,6 @@ import Button from './button';
 
 export default function Card({
     data,
-    hasButton,
     isRight,
     isTransparent,
     isDark,
@@ -35,7 +34,7 @@ export default function Card({
                     {heading}
                 </h2>
                 <p className="pr-6 pb-7">{info}</p>
-                {hasButton && (
+                {link && (
                     <Button
                         isSecondary={isSecondary}
                         isPrimary={isPrimary}
@@ -56,7 +55,6 @@ Card.defaultProps = {
     isPrimaryDark: false,
     isSecondaryDark: false,
     isSecondary: false,
-    hasButton: false,
     isTransparent: false,
     isDark: false,
     isRight: false,
@@ -66,7 +64,6 @@ Card.defaultProps = {
 
 Card.propTypes = {
     data: PropTypes.object.isRequired,
-    hasButton: PropTypes.object,
     isTransparent: PropTypes.bool,
     isDark: PropTypes.bool,
     isRight: PropTypes.bool,
