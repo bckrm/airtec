@@ -12,10 +12,12 @@ import backgroundImgwithCard from './documents/backgroundImgwithCard';
 import capabilitiesPage from './documents/capabilitiesPage';
 import careerPage from './documents/careerPage';
 import certification from './documents/certification';
+import contactPage from './documents/contactPage';
 import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
 import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
+import iconText from './documents/iconText';
 import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
@@ -42,10 +44,12 @@ export default createSchema({
         capabilitiesPage,
         careerPage,
         certification,
+        contactPage,
         fleet,
         fleetPage,
         historySection,
         historyYear,
+        iconText,
         imageWithText,
         indexPage,
         leaderCard,

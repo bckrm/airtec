@@ -1,20 +1,27 @@
 import React from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 
 export default function LeaderCard({ data }) {
     const {
         name,
         title,
-        image: {
-            childImageSharp: { fluid },
-        },
+        linkedinURL,
+        image: { asset },
     } = data;
+
+    const imageData = getImage(asset);
+
     return (
         <div className="bg-white text-brand-1">
-            <Img className="h-96 rounded-bl-[2.5rem]" fluid={fluid} />
-            <h2 className="font-bold pl-5 mt-6">{name}</h2>
-            <p className="pl-5 mb-6 mt-1">{title}</p>
+            <GatsbyImage
+                className="h-96 rounded-bl-[2.5rem]"
+                image={imageData}
+            />
+            <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
+                <h2 className="font-bold pl-5 mt-6">{name}</h2>
+                <p className="pl-5 mb-6 mt-1">{title}</p>
+            </a>
         </div>
     );
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
+import BlockText from './block-content/blockText';
 import Button from './button';
 
 export default function ImageWithText({
@@ -18,12 +19,12 @@ export default function ImageWithText({
 }) {
     const {
         heading,
-        text,
-        image: {
-            childImageSharp: { fluid },
-        },
+        _rawInfo,
+        image: { asset },
         id,
     } = data;
+
+    const imageData = getImage(asset);
 
     return (
         <section
@@ -32,12 +33,14 @@ export default function ImageWithText({
                 isLeft ? 'flex-col md:flex-row' : 'flex-col md:flex-row-reverse'
             }`}
         >
-            <Img className="w-full md:w-1/2" fluid={fluid} />
+            <GatsbyImage className="w-full md:w-1/2" image={imageData} />
             <div className="flex flex-col w-full md:w-1/2">
                 <h2 className="font-bold text-brand-1 text-3xl leadership-accent">
                     {heading}
                 </h2>
-                <p className="pt-10">{text}</p>
+                <p className="pt-10">
+                    <BlockText blocks={_rawInfo} />
+                </p>
                 <div className="w-auto pt-4">
                     {hasButton && (
                         <Button

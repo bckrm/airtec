@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
 export default function NewsCard({ data }) {
     const {
         title,
         description,
-        image: {
-            childImageSharp: { fluid },
-        },
+        image: { asset },
     } = data;
+
+    const imageData = getImage(asset);
 
     return (
         <Link
             to="/"
             className="bg-white h-[34rem] mx-3 md:mr-9 transform transition focus:scale-110 md:hover:scale-110 shadow-md overflow-hidden w-80"
         >
-            <Img className="rounded-bl-[2.5rem]" fluid={fluid} />
+            <GatsbyImage className="rounded-bl-[2.5rem]" image={imageData} />
             <h3 className="heading-accent font-bold mt-4 pb-10 px-4 text-brand-1 text-ts-h4">
                 {title}
             </h3>

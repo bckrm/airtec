@@ -9,6 +9,12 @@ export default {
             type: 'aboutPortableText',
         },
         {
+            name: 'iconTextList',
+            title: 'Icon Text List',
+            type: 'array',
+            of: [{ type: 'reference', to: { type: 'iconText' } }],
+        },
+        {
             name: 'rightColumn',
             title: 'Right Column',
             type: 'aboutPortableText',
