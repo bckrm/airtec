@@ -22,6 +22,7 @@ import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
 import leadershipSection from './documents/leadershipSection';
+import newsPage from './documents/newsPage';
 import service from './documents/service';
 import servicePage from './documents/servicePage';
 
@@ -54,6 +55,7 @@ export default createSchema({
         indexPage,
         leaderCard,
         leadershipSection,
+        newsPage,
         service,
         servicePage,
         // objects

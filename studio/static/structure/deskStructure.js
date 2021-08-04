@@ -62,6 +62,12 @@ export default () => {
                         .schemaType('servicePage')
                         .documentId('servicePage'),
                 ),
+            S.listItem()
+                .title('News Page')
+                .icon(VscFile)
+                .child(
+                    S.document().schemaType('newsPage').documentId('newsPage'),
+                ),
             ...S.documentTypeListItems().filter(
                 (listItem) =>
                     ![
@@ -71,6 +77,7 @@ export default () => {
                         'contactPage',
                         'fleetPage',
                         'indexPage',
+                        'newsPage',
                         'servicePage',
                     ].includes(listItem.getId()),
             ),
