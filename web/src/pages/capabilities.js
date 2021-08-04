@@ -23,7 +23,6 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                button
                 link
                 linkType
                 cardOrientation
@@ -42,7 +41,6 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                button
                 link
                 linkType
                 cardOrientation
@@ -61,7 +59,6 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                button
                 link
                 linkType
                 cardOrientation
@@ -80,7 +77,6 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                button
                 link
                 linkType
                 cardOrientation
