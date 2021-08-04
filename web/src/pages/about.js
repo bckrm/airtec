@@ -68,7 +68,6 @@ export default function AboutPage({ data }) {
             leadershipSection,
         },
     } = data;
-    console.log(aboutSection);
 
     const historyData = [
         {

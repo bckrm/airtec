@@ -3,12 +3,14 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
-// import Hero from '../components/hero';
+import Hero from '../components/hero';
 import NewsContent from '../components/newsContent';
 import RecentNewsList from '../components/recentNewsList';
 
 export default function NewsTemplate({ data }) {
-    const { heroImage } = data;
+    const {
+        sanityServicePage: { heroImage, pageTitle },
+    } = data;
 
     const news = [
         {
@@ -60,15 +62,9 @@ export default function NewsTemplate({ data }) {
         },
     ];
 
-    //     const content = {
-    //         hero: {
-    //             image: heroImage,
-    //             text: 'News Item',
-    //         },
-    //     };
     return (
         <Layout>
-            {/* <Hero data={content.hero} /> */}
+            <Hero image={heroImage} title={pageTitle} />
             <NewsContent />
             <RecentNewsList news={news} />
         </Layout>
@@ -77,6 +73,14 @@ export default function NewsTemplate({ data }) {
 
 export const query = graphql`
     query NewsTemplateQuery {
+        sanityServicePage {
+            heroImage {
+                asset {
+                    gatsbyImageData
+                }
+            }
+            pageTitle
+        }
         heroImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
                 fluid {
@@ -90,5 +94,6 @@ export const query = graphql`
 NewsTemplate.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
+        sanityServicePage: PropTypes.object.isRequired,
     }).isRequired,
 };
