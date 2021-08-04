@@ -23,8 +23,6 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                link
-                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -35,14 +33,16 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             fleet {
                 heading
                 info
                 backgroundColor
-                link
-                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -53,14 +53,16 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             safety {
                 heading
                 info
                 backgroundColor
-                link
-                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -72,13 +74,15 @@ export const query = graphql`
                         )
                     }
                 }
+                cta {
+                    link
+                    linkType
+                }
             }
             repairStation {
                 heading
                 info
                 backgroundColor
-                link
-                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -89,6 +93,10 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             capabilitiesAndServices {

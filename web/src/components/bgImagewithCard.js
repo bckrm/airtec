@@ -13,22 +13,15 @@ export default function BgImagewithCard({ data }) {
         cardType,
         backgroundColor,
         cardOrientation,
-        button,
-        link,
-        linkType,
+        cta,
     } = data;
     const imageData = getImage(asset);
     const bgImageData = convertToBgImage(imageData);
 
+    const isRight = cardOrientation === 'right';
+    const isPrimary = cardType === 'primary';
     const isDark = backgroundColor === 'dark';
     const isTransparent = backgroundColor === 'transparent';
-    const isRight = cardOrientation === 'right';
-    const hasButton = button === 'button';
-    const isPrimary = cardType === 'primary';
-    const isPrimaryDark = cardType === 'secondary';
-    const isSecondaryDark = cardType === 'transparent';
-    const externalLink = linkType === 'external';
-    const internalLink = linkType === 'internal';
 
     return (
         <BackgroundImage
@@ -37,17 +30,12 @@ export default function BgImagewithCard({ data }) {
             {...bgImageData}
         >
             <Card
-                isDark={isDark}
-                isTransparent={isTransparent}
                 isRight={isRight}
                 data={data}
+                cta={cta}
                 isPrimary={isPrimary}
-                isPrimaryDark={isPrimaryDark}
-                isSecondaryDark={isSecondaryDark}
-                hasButton={hasButton}
-                link={link}
-                externalLink={externalLink}
-                internalLink={internalLink}
+                isDark={isDark}
+                isTransparent={isTransparent}
             />
         </BackgroundImage>
     );
@@ -55,31 +43,17 @@ export default function BgImagewithCard({ data }) {
 
 BgImagewithCard.defaultProps = {
     isPrimary: false,
-    isPrimaryDark: false,
-    isSecondary: false,
-    isSecondaryDark: false,
-    isTransparent: false,
-    hasButton: false,
     isDark: false,
     isRight: false,
-    internalLink: false,
-    externalLink: false,
+    cta: {},
 };
 
 BgImagewithCard.propTypes = {
     data: PropTypes.object.isRequired,
-    hasButton: PropTypes.bool,
-    isTransparent: PropTypes.bool,
     isRight: PropTypes.bool,
     isDark: PropTypes.bool,
     isPrimary: PropTypes.bool,
-    isPrimaryDark: PropTypes.bool,
-    isSecondary: PropTypes.bool,
-    isSecondaryDark: PropTypes.bool,
-    externalLink: PropTypes.bool,
-    internalLink: PropTypes.bool,
-    link: PropTypes.string.isRequired,
+    cta: PropTypes.object,
     cardType: PropTypes.string.isRequired,
     backgroundColor: PropTypes.string.isRequired,
-    button: PropTypes.string.isRequired,
 };

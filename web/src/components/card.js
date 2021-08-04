@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -6,25 +7,26 @@ import Button from './button';
 export default function Card({
     data,
     isRight,
-    isTransparent,
-    isDark,
+    cta,
     isPrimary,
-    isPrimaryDark,
-    isSecondary,
-    isSecondaryDark,
-    internalLink,
-    externalLink,
-    link,
+    isDark,
+    isTransparent,
 }) {
     const { heading, id, info } = data;
-
-    const darkStyle = isDark
-        ? 'bg-brand-1 text-white'
-        : 'bg-white text-brand-1';
-    const transparentStyle = isTransparent ? 'bg-transparent text-black' : '';
+    const cardBackgroundColor = isTransparent
+        ? 'transparent'
+        : isDark
+        ? 'bg-brand-1'
+        : 'bg-white';
+    const textColor = isTransparent
+        ? 'text-white'
+        : isDark
+        ? 'text-white'
+        : 'text-brand-1';
 
     const cardStyle = `pl-6 rounded-bl-[2.5rem] w-11/12 md:w-6/12 
-   ${darkStyle} ${transparentStyle}
+   ${cardBackgroundColor}
+   ${textColor}
     ${isRight ? 'md:ml-auto' : 'md:mr-auto'}`;
 
     return (
@@ -34,15 +36,12 @@ export default function Card({
                     {heading}
                 </h2>
                 <p className="pr-6 pb-7">{info}</p>
-                {link && (
+                {cta && (
                     <Button
-                        isSecondary={isSecondary}
+                        cta={cta}
                         isPrimary={isPrimary}
-                        isSecondaryDark={isSecondaryDark}
-                        isPrimaryDark={isPrimaryDark}
-                        link={link}
-                        externalLink={externalLink}
-                        internalLink={internalLink}
+                        isDark={isDark}
+                        isTransparent={isTransparent}
                     />
                 )}
             </div>
@@ -51,27 +50,18 @@ export default function Card({
 }
 
 Card.defaultProps = {
-    isPrimary: false,
-    isPrimaryDark: false,
-    isSecondaryDark: false,
-    isSecondary: false,
-    isTransparent: false,
-    isDark: false,
+    cta: '',
     isRight: false,
-    internalLink: false,
-    externalLink: false,
+    isPrimary: false,
+    isDark: false,
+    isTransparent: false,
 };
 
 Card.propTypes = {
     data: PropTypes.object.isRequired,
-    isTransparent: PropTypes.bool,
-    isDark: PropTypes.bool,
     isRight: PropTypes.bool,
+    cta: PropTypes.object,
     isPrimary: PropTypes.bool,
-    isPrimaryDark: PropTypes.bool,
-    isSecondaryDark: PropTypes.bool,
-    isSecondary: PropTypes.bool,
-    externalLink: PropTypes.bool,
-    internalLink: PropTypes.bool,
-    link: PropTypes.string.isRequired,
+    isDark: PropTypes.bool,
+    isTransparent: PropTypes.bool,
 };

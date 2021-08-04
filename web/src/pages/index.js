@@ -98,8 +98,6 @@ export const query = graphql`
             heroHeading
             visionSection {
                 backgroundColor
-                link
-                linkType
                 cardOrientation
                 cardType
                 info
@@ -112,14 +110,16 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             subHero {
                 heading
                 info
                 backgroundColor
-                link
-                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -131,13 +131,15 @@ export const query = graphql`
                         )
                     }
                 }
+                cta {
+                    link
+                    linkType
+                }
             }
             whatWeDoSection {
                 heading
                 info
                 backgroundColor
-                link
-                linkType
                 cardOrientation
                 cardType
                 backgroundImage {
@@ -148,6 +150,10 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             seo {
