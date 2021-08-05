@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
@@ -15,6 +16,7 @@ export default function IndexPage({ data }) {
             subHero,
             visionSection,
             whatWeDoSection,
+            seo,
         },
         testImage,
     } = data;
@@ -71,6 +73,7 @@ export default function IndexPage({ data }) {
 
     return (
         <Layout>
+            <Seo title={seo.pageTitle} description={seo.pageDescription} />
             <Hero image={heroImage} title={heroHeading} />
             <BgImagewithCard
                 data={subHero}
@@ -147,6 +150,10 @@ export const query = graphql`
                         )
                     }
                 }
+            }
+            seo {
+                pageDescription
+                pageTitle
             }
         }
 

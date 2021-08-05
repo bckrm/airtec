@@ -12,14 +12,8 @@ const query = graphql`
                 titleTemplate
                 defaultDescription: description
                 siteUrl
+                defaultImage: image
                 twitter
-            }
-        }
-        sanityIndexPage {
-            heroImage {
-                asset {
-                    url
-                }
             }
         }
     }
@@ -33,14 +27,14 @@ const SEO = ({ title, description, image, article }) => {
         titleTemplate,
         defaultDescription,
         siteUrl,
-        sanityIndexPage: { heroImage },
+        defaultImage,
         twitter,
     } = site.siteMetadata;
 
     const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: image || heroImage,
+        image: image || defaultImage,
         url: `${siteUrl}${pathname}`,
     };
     return (
