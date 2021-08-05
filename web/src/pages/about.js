@@ -8,7 +8,6 @@ import Hero from '../components/hero';
 import LeaderSection from '../components/leaderSection';
 import AboutText from '../components/aboutTextSection';
 import HistorySection from '../components/historySection';
-import seo from '../../../studio/schemas/objects/seo';
 
 export const query = graphql`
     query AboutQuery {
@@ -73,6 +72,7 @@ export default function AboutPage({ data }) {
             pageTitle,
             aboutSection,
             leadershipSection,
+            seo,
         },
     } = data;
 

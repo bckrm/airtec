@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import ServiceFleetSection from '../components/serviceFleetSection';
 
@@ -14,9 +15,14 @@ export const query = graphql`
             heroImage {
                 asset {
                     gatsbyImageData
+                    url
                 }
             }
             pageTitle
+            seo {
+                pageTitle
+                pageDescription
+            }
         }
         heroImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
@@ -53,7 +59,7 @@ export const query = graphql`
 export default function NewsPage({ data }) {
     const {
         fleet: { edges },
-        sanityServicePage: { heroImage, pageTitle },
+        sanityServicePage: { heroImage, pageTitle, seo },
     } = data;
     //     const content = {
     //         hero: {
@@ -64,6 +70,11 @@ export default function NewsPage({ data }) {
 
     return (
         <Layout>
+            <Seo
+                title={seo.pageTitle}
+                description={seo.pageDescription}
+                image={heroImage.asset.url}
+            />
             <Hero image={heroImage} title={pageTitle} />
             <ServiceFleetSection products={edges} />
         </Layout>
