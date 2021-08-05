@@ -4,9 +4,12 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: '',
-        siteUrl: 'https://www.siteurlhere.com',
-        description: ``,
+        title: 'AIRtec',
+        titleTemplate: '%s',
+        siteUrl: 'https://www.flyairtec.com',
+        description: `AIRtec specializes in modifying aircraft to meet unique operational requirements, then operating & maintaining them to deliver outstanding mission results & data.`,
+        image: '',
+        twitter: '',
     },
     plugins: [
         {
