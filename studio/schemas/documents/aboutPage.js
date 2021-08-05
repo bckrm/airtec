@@ -35,5 +35,10 @@ export default {
             title: 'Leadership Section',
             type: 'leadershipSection',
         },
+        {
+            name: 'seo',
+            title: 'SEO',
+            type: 'seo',
+        },
     ],
 };

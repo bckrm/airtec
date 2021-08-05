@@ -50,5 +50,10 @@ export default {
             title: 'GSA Schedule',
             type: 'imageWithText',
         },
+        {
+            name: 'seo',
+            title: 'SEO',
+            type: 'seo',
+        },
     ],
 };
