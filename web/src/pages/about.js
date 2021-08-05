@@ -132,7 +132,7 @@ export default function AboutPage({ data }) {
         <Layout>
             <Seo
                 description={seo.pageDescription}
-                image={heroImage}
+                image={heroImage.asset.url}
                 title={seo.pageTitle}
             />
             <Hero image={heroImage} title={pageTitle} />
