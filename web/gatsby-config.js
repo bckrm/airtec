@@ -8,7 +8,8 @@ module.exports = {
         titleTemplate: '%s',
         siteUrl: 'https://www.flyairtec.com',
         description: `AIRtec specializes in modifying aircraft to meet unique operational requirements, then operating & maintaining them to deliver outstanding mission results & data.`,
-        image: '',
+        image:
+            'https://cdn.sanity.io/images/wqj2xpad/production/234735b1b8a645eeeaff61265a642fe6c42668f6-4608x2592.jpg',
         twitter: '',
     },
     plugins: [
