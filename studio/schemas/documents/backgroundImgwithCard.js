@@ -18,5 +18,20 @@ export default {
             title: 'Background Image',
             type: 'image',
         },
+        {
+            name: 'cardType',
+            title: 'Card Type',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'Primary Light', value: 'primaryLight' },
+                    { title: 'Primary Dark', value: 'primaryDark' },
+                    { title: 'Secondary Light', value: 'secondaryLight' },
+                    { title: 'Secondary Dark', value: 'secondaryDark' },
+                    { title: 'Transparent', value: 'transparent' },
+                ],
+                layout: 'radio',
+            },
+        },
     ],
 };
