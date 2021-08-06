@@ -22,6 +22,9 @@ export const query = graphql`
             services {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -30,11 +33,18 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             fleet {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -43,11 +53,18 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             safety {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -57,10 +74,17 @@ export const query = graphql`
                         )
                     }
                 }
+                cta {
+                    link
+                    linkType
+                }
             }
             repairStation {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -69,6 +93,10 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             capabilitiesAndServices {

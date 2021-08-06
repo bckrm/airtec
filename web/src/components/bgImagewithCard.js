@@ -7,24 +7,21 @@ import { convertToBgImage } from 'gbimage-bridge';
 
 import Card from './card';
 
-export default function BgImagewithCard({
-    data,
-    hasButton,
-    isDark,
-    isRight,
-    isTransparent,
-    isPrimaryDark,
-    isPrimary,
-    isSecondaryDark,
-    isSecondary,
-    to,
-    href,
-}) {
+export default function BgImagewithCard({ data }) {
     const {
         backgroundImage: { asset },
+        cardType,
+        backgroundColor,
+        cardOrientation,
+        cta,
     } = data;
     const imageData = getImage(asset);
     const bgImageData = convertToBgImage(imageData);
+
+    const isRight = cardOrientation === 'right';
+    const isPrimary = cardType === 'primary';
+    const isDark = backgroundColor === 'dark';
+    const isTransparent = backgroundColor === 'transparent';
 
     return (
         <BackgroundImage
@@ -33,37 +30,30 @@ export default function BgImagewithCard({
             {...bgImageData}
         >
             <Card
-                isDark={isDark}
-                isTransparent={isTransparent}
                 isRight={isRight}
                 data={data}
-                isPrimaryDark={isPrimaryDark}
-                isSecondary={isSecondary}
+                cta={cta}
                 isPrimary={isPrimary}
-                isSecondaryDark={isSecondaryDark}
-                hasButton={hasButton}
-                href={href}
-                to={to}
+                isDark={isDark}
+                isTransparent={isTransparent}
             />
         </BackgroundImage>
     );
 }
 
 BgImagewithCard.defaultProps = {
-    to: '',
-    href: '',
+    isPrimary: false,
+    isDark: false,
+    isRight: false,
+    cta: {},
 };
 
 BgImagewithCard.propTypes = {
     data: PropTypes.object.isRequired,
-    hasButton: PropTypes.bool.isRequired,
-    isTransparent: PropTypes.bool.isRequired,
-    isRight: PropTypes.bool.isRequired,
-    isDark: PropTypes.bool.isRequired,
-    isPrimary: PropTypes.bool.isRequired,
-    isPrimaryDark: PropTypes.bool.isRequired,
-    isSecondary: PropTypes.bool.isRequired,
-    isSecondaryDark: PropTypes.bool.isRequired,
-    to: PropTypes.string,
-    href: PropTypes.string,
+    isRight: PropTypes.bool,
+    isDark: PropTypes.bool,
+    isPrimary: PropTypes.bool,
+    cta: PropTypes.object,
+    cardType: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string.isRequired,
 };
