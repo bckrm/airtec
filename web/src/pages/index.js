@@ -21,8 +21,6 @@ export default function IndexPage({ data }) {
         testImage,
     } = data;
 
-    console.log(subHero);
-
     const news = [
         {
             image: testImage,
@@ -77,25 +75,9 @@ export default function IndexPage({ data }) {
         <Layout>
             <Seo title={seo.pageTitle} description={seo.pageDescription} />
             <Hero image={heroImage} title={heroHeading} />
-            <BgImagewithCard
-                data={subHero}
-                image={subHero.backgroundImage}
-                isPrimaryDark
-            />
-            <BgImagewithCard
-                data={visionSection}
-                image={visionSection.backgroundImage}
-                isDark
-                isRight
-                isPrimaryDark
-            />
-            <BgImagewithCard
-                data={whatWeDoSection}
-                image={whatWeDoSection.backgroundImage}
-                hasButton
-                isSecondaryDark
-                isTransparent
-            />
+            <BgImagewithCard data={subHero} />
+            <BgImagewithCard data={visionSection} />
+            <BgImagewithCard data={whatWeDoSection} />
             <NewsList news={news} />
         </Layout>
     );
@@ -118,8 +100,8 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                cardOrientation
                 cardType
+                cardOrientation
                 button
                 backgroundImage {
                     asset {
@@ -135,8 +117,8 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                cardOrientation
                 cardType
+                cardOrientation
                 button
                 backgroundImage {
                     asset {
@@ -152,8 +134,9 @@ export const query = graphql`
                 heading
                 info
                 backgroundColor
-                cardOrientation
                 cardType
+                cardOrientation
+                button
                 backgroundImage {
                     asset {
                         gatsbyImageData(

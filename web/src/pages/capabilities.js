@@ -22,6 +22,10 @@ export const query = graphql`
             services {
                 heading
                 info
+                backgroundColor
+                cardType
+                cardOrientation
+                button
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -35,6 +39,10 @@ export const query = graphql`
             fleet {
                 heading
                 info
+                backgroundColor
+                cardType
+                cardOrientation
+                button
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -48,6 +56,10 @@ export const query = graphql`
             safety {
                 heading
                 info
+                backgroundColor
+                cardType
+                cardOrientation
+                button
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -61,6 +73,10 @@ export const query = graphql`
             repairStation {
                 heading
                 info
+                backgroundColor
+                cardType
+                cardOrientation
+                button
                 backgroundImage {
                     asset {
                         gatsbyImageData(

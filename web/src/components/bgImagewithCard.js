@@ -13,9 +13,7 @@ export default function BgImagewithCard({
     isDark,
     isRight,
     isTransparent,
-    isPrimaryDark,
     isPrimary,
-    isSecondaryDark,
     isSecondary,
     to,
     href,
@@ -37,10 +35,8 @@ export default function BgImagewithCard({
                 isTransparent={isTransparent}
                 isRight={isRight}
                 data={data}
-                isPrimaryDark={isPrimaryDark}
                 isSecondary={isSecondary}
                 isPrimary={isPrimary}
-                isSecondaryDark={isSecondaryDark}
                 hasButton={hasButton}
                 href={href}
                 to={to}
@@ -52,18 +48,22 @@ export default function BgImagewithCard({
 BgImagewithCard.defaultProps = {
     to: '',
     href: '',
+    isPrimary: false,
+    isSecondary: false,
+    isTransparent: false,
+    hasButton: false,
+    isDark: false,
+    isRight: false,
 };
 
 BgImagewithCard.propTypes = {
     data: PropTypes.object.isRequired,
-    hasButton: PropTypes.bool.isRequired,
-    isTransparent: PropTypes.bool.isRequired,
-    isRight: PropTypes.bool.isRequired,
-    isDark: PropTypes.bool.isRequired,
-    isPrimary: PropTypes.bool.isRequired,
-    isPrimaryDark: PropTypes.bool.isRequired,
-    isSecondary: PropTypes.bool.isRequired,
-    isSecondaryDark: PropTypes.bool.isRequired,
-    to: PropTypes.string,
+    hasButton: PropTypes.bool,
+    isTransparent: PropTypes.bool,
+    isRight: PropTypes.bool,
+    isDark: PropTypes.bool,
+    isPrimary: PropTypes.bool,
+    isSecondary: PropTypes.bool,
     href: PropTypes.string,
+    to: PropTypes.string,
 };
