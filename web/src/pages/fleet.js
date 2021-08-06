@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import ServiceFleetSection from '../components/serviceFleetSection';
 
@@ -16,9 +17,14 @@ export const query = graphql`
                         placeholder: BLURRED
                         formats: [AUTO, WEBP, AVIF]
                     )
+                    url
                 }
             }
             pageTitle
+            seo {
+                pageTitle
+                pageDescription
+            }
         }
 
         allSanityFleet {
@@ -48,13 +54,18 @@ export const query = graphql`
 export default function FleetIndex({ data, location }) {
     const {
         allSanityFleet: { edges },
-        sanityFleetPage: { heroImage, pageTitle },
+        sanityFleetPage: { heroImage, pageTitle, seo },
     } = data;
 
     const { pathname } = location;
 
     return (
         <Layout>
+            <Seo
+                title={seo.pageTitle}
+                description={seo.pageDescription}
+                image={heroImage.asset.url}
+            />
             <Hero image={heroImage} title={pageTitle} />
             <ServiceFleetSection products={edges} pathname={pathname} />
         </Layout>

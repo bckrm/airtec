@@ -3,13 +3,14 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import ContactSection from '../components/contactSection';
 import LogoSection from '../components/logoSection';
 
 export default function Contact({ data }) {
     const {
-        sanityContactPage: { heroImage, pageTitle },
+        sanityContactPage: { heroImage, pageTitle, seo },
         kieyos,
         priority,
     } = data;
@@ -24,6 +25,11 @@ export default function Contact({ data }) {
     ];
     return (
         <Layout>
+            <Seo
+                title={seo.pageTitle}
+                description={seo.pageDescription}
+                image={heroImage.asset.url}
+            />
             <Hero image={heroImage} title={pageTitle} />
             <ContactSection />
             <LogoSection images={images} />
@@ -41,9 +47,14 @@ export const query = graphql`
                         placeholder: BLURRED
                         formats: [AUTO, WEBP, AVIF]
                     )
+                    url
                 }
             }
             pageTitle
+            seo {
+                pageTitle
+                pageDescription
+            }
         }
         heroImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
