@@ -17,6 +17,7 @@ export default function LeaderCard({ data }) {
             <GatsbyImage
                 className="h-96 rounded-bl-[2.5rem]"
                 image={imageData}
+                alt=""
             />
             <a href={linkedinURL} target="_blank" rel="noopener noreferrer">
                 <h2 className="font-bold pl-5 mt-6">{name}</h2>

@@ -54,7 +54,7 @@ export default function Footer() {
                     <div className="grid grid-cols-2 md:gap-x-24 gap-y-5 pt-10 md:mt-16">
                         {internalLinks.map((link) => {
                             return (
-                                <Link key={link.text} to={link.link}>
+                                <Link key={link.id} to={link.link}>
                                     {link.text}
                                 </Link>
                             );
@@ -64,7 +64,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-5 pt-10 md:mt-16">
                     {externalLinks.map((link) => {
                         return (
-                            <a key={link.text} href={link.link}>
+                            <a key={link.id} href={link.link}>
                                 {link.text}
                             </a>
                         );

@@ -88,7 +88,7 @@ export default function Header() {
             }`}
         >
             <div className="container flex justify-between text-white">
-                <Link href="/">
+                <Link to="/">
                     <Logo />
                 </Link>
                 <MobileNav

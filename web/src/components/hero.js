@@ -15,6 +15,7 @@ export default function Hero({ image, title }) {
             Tag="section"
             className="w-full min-h-screen flex justify-center items-center"
             {...bgImageData}
+            alt=""
         >
             <h1 className="max-w-2xl px-4 text-center text-ts-h1 text-white uppercase">
                 {title}

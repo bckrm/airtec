@@ -13,8 +13,8 @@ export default function CertificationSection({ certifications }) {
                 {certifications.map((certification) => {
                     return (
                         <Certification
-                            key={certification.title}
                             data={certification}
+                            key={certification.id}
                         />
                     );
                 })}
