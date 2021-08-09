@@ -15,7 +15,6 @@ import certification from './documents/certification';
 import contactPage from './documents/contactPage';
 import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
-import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
 import iconText from './documents/iconText';
 import imageWithText from './documents/imageWithText';
@@ -51,7 +50,6 @@ export default createSchema({
         contactPage,
         fleet,
         fleetPage,
-        historySection,
         historyYear,
         iconText,
         imageWithText,
