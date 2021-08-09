@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+
 module.exports = {
     purge: ['./src/**/*.js', './src/**/*.jsx'],
     darkMode: false, // or 'media' or 'class'
@@ -48,5 +50,5 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 };
