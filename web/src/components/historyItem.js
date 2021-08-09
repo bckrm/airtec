@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function HistoryItem({ data, isOpen, isActive }) {
     const {
-        text,
+        historyText,
         image: { asset },
     } = data;
 
@@ -32,7 +32,7 @@ export default function HistoryItem({ data, isOpen, isActive }) {
                             image={imageData}
                             alt="history-image"
                         />
-                        <p className="w-full md:w-1/2">{text}</p>
+                        <p className="w-full md:w-1/2">{historyText}</p>
                     </div>
                 </motion.div>
             )}
