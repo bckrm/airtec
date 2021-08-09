@@ -26,11 +26,6 @@ export default {
             type: 'aboutSection',
         },
         {
-            name: 'historySection',
-            title: 'History Section',
-            type: 'historySection',
-        },
-        {
             name: 'leadershipSection',
             title: 'Leadership Section',
             type: 'leadershipSection',
