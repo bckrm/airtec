@@ -55,6 +55,12 @@ export default () => {
                         .documentId('contactPage'),
                 ),
             S.listItem()
+                .title('News Page')
+                .icon(VscFile)
+                .child(
+                    S.document().schemaType('newsPage').documentId('newsPage'),
+                ),
+            S.listItem()
                 .title('Service Page')
                 .icon(VscFile)
                 .child(
@@ -71,6 +77,7 @@ export default () => {
                         'contactPage',
                         'fleetPage',
                         'indexPage',
+                        'newsPage',
                         'servicePage',
                     ].includes(listItem.getId()),
             ),
