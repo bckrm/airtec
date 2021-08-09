@@ -11,7 +11,9 @@ export default function ContactInfo() {
 
             <h2 className="font-bold text-3xl">Operational Address</h2>
             <p className="mt-4">
-                AIRtec Inc.44174 Airport Rd. #300
+                AIRtec Inc.
+                <br />
+                44174 Airport Rd. #300
                 <br />
                 California, MD 20619
             </p>
