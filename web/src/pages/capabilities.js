@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import ImageWithText from '../components/imageWithText';
 import BgImagewithCard from '../components/bgImagewithCard';
@@ -14,12 +15,16 @@ export const query = graphql`
             heroImage {
                 asset {
                     gatsbyImageData
+                    url
                 }
             }
             pageTitle
             services {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -28,11 +33,18 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             fleet {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -41,11 +53,18 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             safety {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -55,10 +74,17 @@ export const query = graphql`
                         )
                     }
                 }
+                cta {
+                    link
+                    linkType
+                }
             }
             repairStation {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -67,6 +93,10 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             capabilitiesAndServices {
@@ -89,6 +119,10 @@ export const query = graphql`
                     }
                 }
             }
+            seo {
+                pageTitle
+                pageDescription
+            }
         }
         allSanityCertification {
             nodes {
@@ -109,12 +143,18 @@ export default function CapabilitiesPage({ data }) {
             repairStation,
             capabilitiesAndServices,
             gsaSchedule,
+            seo,
         },
         allSanityCertification: { nodes },
     } = data;
 
     return (
         <Layout>
+            <Seo
+                title={seo.pageTitle}
+                description={seo.pageDescription}
+                image={heroImage.asset.url}
+            />
             <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={capabilitiesAndServices} />
             <BgImagewithCard data={services} hasButton isSecondaryDark />

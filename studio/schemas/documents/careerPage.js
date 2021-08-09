@@ -30,5 +30,10 @@ export default {
             title: 'Jobs at Airtec',
             type: 'imageWithText',
         },
+        {
+            name: 'seo',
+            title: 'SEO',
+            type: 'seo',
+        },
     ],
 };

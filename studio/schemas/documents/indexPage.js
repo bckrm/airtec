@@ -40,5 +40,10 @@ export default {
             title: 'What We Do Section',
             type: 'backgroundImgwithCard',
         },
+        {
+            name: 'seo',
+            title: 'SEO',
+            type: 'seo',
+        },
     ],
 };

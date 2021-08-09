@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
@@ -15,6 +16,7 @@ export default function IndexPage({ data }) {
             subHero,
             visionSection,
             whatWeDoSection,
+            seo,
         },
     } = data;
 
@@ -70,26 +72,11 @@ export default function IndexPage({ data }) {
 
     return (
         <Layout>
+            <Seo title={seo.pageTitle} description={seo.pageDescription} />
             <Hero image={heroImage} title={heroHeading} />
-            <BgImagewithCard
-                data={subHero}
-                image={subHero.backgroundImage}
-                isPrimaryDark
-            />
-            <BgImagewithCard
-                data={visionSection}
-                image={visionSection.backgroundImage}
-                isDark
-                isRight
-                isPrimaryDark
-            />
-            <BgImagewithCard
-                data={whatWeDoSection}
-                image={whatWeDoSection.backgroundImage}
-                hasButton
-                isSecondaryDark
-                isTransparent
-            />
+            <BgImagewithCard data={subHero} />
+            <BgImagewithCard data={visionSection} />
+            <BgImagewithCard data={whatWeDoSection} />
             <NewsList news={news} />
         </Layout>
     );
@@ -109,8 +96,11 @@ export const query = graphql`
             }
             heroHeading
             visionSection {
-                heading
+                backgroundColor
+                cardOrientation
+                cardType
                 info
+                heading
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -119,11 +109,18 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             subHero {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -132,11 +129,18 @@ export const query = graphql`
                             formats: [AUTO, WEBP, AVIF]
                         )
                     }
+                }
+                cta {
+                    link
+                    linkType
                 }
             }
             whatWeDoSection {
                 heading
                 info
+                backgroundColor
+                cardOrientation
+                cardType
                 backgroundImage {
                     asset {
                         gatsbyImageData(
@@ -146,6 +150,14 @@ export const query = graphql`
                         )
                     }
                 }
+                cta {
+                    link
+                    linkType
+                }
+            }
+            seo {
+                pageDescription
+                pageTitle
             }
         }
     }

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import LeaderSection from '../components/leaderSection';
 import AboutText from '../components/aboutTextSection';
@@ -13,6 +14,7 @@ export const query = graphql`
         sanityAboutPage {
             heroImage {
                 asset {
+                    url
                     gatsbyImageData(
                         width: 2000
                         placeholder: BLURRED
@@ -40,6 +42,10 @@ export const query = graphql`
                     linkedinURL
                 }
             }
+            seo {
+                pageDescription
+                pageTitle
+            }
         }
         aboutImage: file(relativePath: { regex: "/about/" }) {
             childImageSharp {
@@ -65,6 +71,7 @@ export default function AboutPage({ data }) {
             pageTitle,
             aboutSection,
             leadershipSection,
+            seo,
         },
     } = data;
 
@@ -122,6 +129,11 @@ export default function AboutPage({ data }) {
 
     return (
         <Layout>
+            <Seo
+                description={seo.pageDescription}
+                image={heroImage.asset.url}
+                title={seo.pageTitle}
+            />
             <Hero image={heroImage} title={pageTitle} alt="" />
             <AboutText data={aboutSection} />
             <HistorySection years={historyData} />

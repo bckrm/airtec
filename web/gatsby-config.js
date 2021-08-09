@@ -4,9 +4,13 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: '',
-        siteUrl: 'https://www.siteurlhere.com',
-        description: ``,
+        title: 'AIRtec',
+        titleTemplate: '%s',
+        siteUrl: 'https://www.flyairtec.com',
+        description: `AIRtec specializes in modifying aircraft to meet unique operational requirements, then operating & maintaining them to deliver outstanding mission results & data.`,
+        image:
+            'https://cdn.sanity.io/images/wqj2xpad/production/234735b1b8a645eeeaff61265a642fe6c42668f6-4608x2592.jpg',
+        twitter: '',
     },
     plugins: [
         {
@@ -26,6 +30,17 @@ module.exports = {
                     emitWarning: true,
                     failOnError: false,
                 },
+            },
+        },
+        {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+                // You can add multiple tracking ids and a pageview event will be fired for all of them.
+                trackingIds: [
+                    'G-1GDG9QV1K9', // Google Analytics / GA
+                    'AW-CONVERSION_ID', // Google Ads / Adwords / AW
+                    'DC-FLOODIGHT_ID', // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+                ],
             },
         },
         'gatsby-plugin-image',

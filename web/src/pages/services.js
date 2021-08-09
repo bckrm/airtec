@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import ServiceFleetSection from '../components/serviceFleetSection';
 
@@ -12,9 +13,14 @@ export const query = graphql`
             heroImage {
                 asset {
                     gatsbyImageData
+                    url
                 }
             }
             pageTitle
+            seo {
+                pageTitle
+                pageDescription
+            }
         }
         testImage: file(relativePath: { regex: "/hero/" }) {
             childImageSharp {
@@ -51,13 +57,18 @@ export const query = graphql`
 export default function ServiceIndex({ data, location }) {
     const {
         allSanityService: { edges },
-        sanityServicePage: { heroImage, pageTitle },
+        sanityServicePage: { heroImage, pageTitle, seo },
     } = data;
 
     const { pathname } = location;
 
     return (
         <Layout>
+            <Seo
+                title={seo.pageTitle}
+                description={seo.pageDescription}
+                image={heroImage.asset.url}
+            />
             <Hero image={heroImage} title={pageTitle} />
             <ServiceFleetSection products={edges} pathname={pathname} />
         </Layout>

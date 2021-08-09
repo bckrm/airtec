@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
+import Seo from '../components/seo';
 import Hero from '../components/hero';
 import ImageWithText from '../components/imageWithText';
 import IconGrid from '../components/iconGrid';
@@ -14,11 +15,17 @@ export default function Careers({ data }) {
             pageTitle,
             generalSellingPoints,
             jobsAtAirtec,
+            seo,
         },
     } = data;
 
     return (
         <Layout>
+            <Seo
+                title={seo.pageTitle}
+                description={seo.pageDescription}
+                image={heroImage.asset.url}
+            />
             <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={generalSellingPoints} />
             <IconGrid />
@@ -46,9 +53,14 @@ export const query = graphql`
                         placeholder: BLURRED
                         formats: [AUTO, WEBP, AVIF]
                     )
+                    url
                 }
             }
             pageTitle
+            seo {
+                pageTitle
+                pageDescription
+            }
             generalSellingPoints {
                 heading
                 _rawInfo
