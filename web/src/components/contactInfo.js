@@ -3,25 +3,23 @@ import React from 'react';
 export default function ContactInfo() {
     return (
         <div className="w-full md:w-11/12">
-            <h2 className="font-bold text-3xl">Corporate Address</h2>
+            <h2 className="font-bold text-2xl">Corporate Address</h2>
             <p className="my-4">
                 46610 Expedition Dr. Suite 100 <br />
                 Lexington Park, MD 20653
             </p>
 
-            <h2 className="font-bold text-3xl">Operational Address</h2>
-            <p className="mt-4">
+            <h2 className="font-bold text-2xl">Operational Address</h2>
+            <p className="mt-4 mb-2">
                 AIRtec Inc.
                 <br />
                 44174 Airport Rd. #300
                 <br />
                 California, MD 20619
             </p>
-            <br />
-            <p>
+            <p className="mb-2">
                 <a href="tel:3013732101"> +1 301 373 2101</a>
             </p>
-            <br />
             <p className="text-sm">
                 Approximately seven miles from the Naval Air Station, Patuxent
                 River, MD.
