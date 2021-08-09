@@ -61,12 +61,6 @@ export default function NewsPage({ data }) {
         fleet: { edges },
         sanityServicePage: { heroImage, pageTitle, seo },
     } = data;
-    //     const content = {
-    //         hero: {
-    //             image: heroImage,
-    //             text: 'News',
-    //         },
-    //     };
 
     return (
         <Layout>
