@@ -12,14 +12,14 @@ export default function AboutText({ data }) {
     return (
         <div className="container gap-11 grid grid-cols-1 md:grid-cols-2 my-14">
             <div>
-                <BlockText blocks={_rawLeftColumn} />
+                <BlockText className="prose" blocks={_rawLeftColumn} />
                 <div className="mt-4">
                     {iconTextList.map((text) => {
                         return <PlaneIconWithText key={text.id} data={text} />;
                     })}
                 </div>
             </div>
-            <BlockText blocks={_rawRightColumn} />
+            <BlockText className="prose" blocks={_rawRightColumn} />
         </div>
     );
 }

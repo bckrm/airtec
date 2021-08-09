@@ -15,13 +15,13 @@ import certification from './documents/certification';
 import contactPage from './documents/contactPage';
 import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
-import historySection from './documents/historySection';
 import historyYear from './documents/historyYear';
 import iconText from './documents/iconText';
 import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
 import leadershipSection from './documents/leadershipSection';
+import newsItem from './documents/newsItem';
 import newsPage from './documents/newsPage';
 import service from './documents/service';
 import servicePage from './documents/servicePage';
@@ -50,13 +50,13 @@ export default createSchema({
         contactPage,
         fleet,
         fleetPage,
-        historySection,
         historyYear,
         iconText,
         imageWithText,
         indexPage,
         leaderCard,
         leadershipSection,
+        newsItem,
         newsPage,
         service,
         servicePage,

@@ -5,42 +5,18 @@ import AIRtecAwhite from './svgs/AIRtecAwhite';
 export default function Footer() {
     const externalLinks = [
         {
-            link: '/',
-            text: 'Link',
-        },
-        {
-            link: '/',
-            text: 'Link',
-        },
-        {
-            link: '/',
-            text: 'Link',
+            link: 'https://www.linkedin.com/company/airtec-inc/',
+            text: 'LinkedIn',
         },
     ];
     const internalLinks = [
         {
-            link: '/',
-            text: 'Link',
+            link: '/careers',
+            text: 'Careers',
         },
         {
-            link: '/',
-            text: 'Link',
-        },
-        {
-            link: '/',
-            text: 'Link',
-        },
-        {
-            link: '/',
-            text: 'Link',
-        },
-        {
-            link: '/',
-            text: 'Link',
-        },
-        {
-            link: '/',
-            text: 'Link',
+            link: '/contact',
+            text: 'Contact',
         },
     ];
     return (

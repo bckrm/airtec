@@ -10,12 +10,12 @@ export default function ProductDescription({ data }) {
                 {title}
             </h2>
             <div className="md:col-start-1">
-                <div className="leading-relaxed mb-4">
+                <div className="leading-relaxed mb-4 prose">
                     <BlockText blocks={_rawBodyLeftColumn} />
                 </div>
             </div>
             <div className="md:col-start-2">
-                <div className="leading-relaxed mb-4">
+                <div className="leading-relaxed mb-4 prose">
                     <BlockText blocks={_rawBodyRightColumn} />
                 </div>
             </div>
