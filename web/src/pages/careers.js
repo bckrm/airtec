@@ -19,7 +19,6 @@ export default function Careers({ data }) {
         },
     } = data;
 
-    const text = 'Training & Tuition Reimbursement';
     return (
         <Layout>
             <Seo
@@ -29,7 +28,7 @@ export default function Careers({ data }) {
             />
             <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={generalSellingPoints} />
-            <IconGrid text={text} />
+            <IconGrid />
             <ImageWithText
                 data={jobsAtAirtec}
                 isLeft

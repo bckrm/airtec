@@ -30,6 +30,7 @@ export default function HistoryItem({ data, isOpen, isActive }) {
                         <GatsbyImage
                             className="w-full md:w-1/2"
                             image={imageData}
+                            alt="history-image"
                         />
                         <p className="w-full md:w-1/2">{text}</p>
                     </div>

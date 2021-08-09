@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import FourOhOneK from './svgs/FourOhOneK';
 import VeteranHiringProgram from './svgs/VeteranHiringProgram';
@@ -8,19 +7,15 @@ import ScheduleFlexibility from './svgs/ScheduleFlexibility';
 import HealthcareBenefits from './svgs/HealthcareBenefits';
 import CompetitivePay from './svgs/CompetitivePay';
 
-export default function IconGrid({ text }) {
+export default function IconGrid() {
     return (
         <section className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
-            <ScheduleFlexibility text={text} />
-            <VeteranHiringProgram text={text} />
-            <HealthcareBenefits text={text} />
-            <TrainingTuition text={text} />
-            <FourOhOneK text={text} />
-            <CompetitivePay text={text} />
+            <ScheduleFlexibility text="Schedule Flexibility" />
+            <VeteranHiringProgram text="Veteran Hiring Program" />
+            <HealthcareBenefits text="Healthcare Benefits" />
+            <TrainingTuition text="Training & Tuition Reimbursement" />
+            <FourOhOneK text="401(k)" />
+            <CompetitivePay text="Competitive Pay" />
         </section>
     );
 }
-
-IconGrid.propTypes = {
-    text: PropTypes.string.isRequired,
-};

@@ -11,7 +11,12 @@ export default function CertificationSection({ certifications }) {
             <div className="container grid grid-col gap-4">
                 <h2 className="text-ts-h2 uppercase">Certifications</h2>
                 {certifications.map((certification) => {
-                    return <Certification data={certification} />;
+                    return (
+                        <Certification
+                            data={certification}
+                            key={certification.id}
+                        />
+                    );
                 })}
             </div>
         </section>

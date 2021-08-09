@@ -12,7 +12,7 @@ export default function LeaderSection({ leaders }) {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-9">
                     {leaders.map((leader) => {
-                        return <LeaderCard data={leader} />;
+                        return <LeaderCard key={leader.id} data={leader} />;
                     })}
                 </div>
             </div>

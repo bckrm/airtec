@@ -15,7 +15,7 @@ export default function AboutText({ data }) {
                 <BlockText blocks={_rawLeftColumn} />
                 <div className="mt-4">
                     {iconTextList.map((text) => {
-                        return <PlaneIconWithText data={text} />;
+                        return <PlaneIconWithText key={text.id} data={text} />;
                     })}
                 </div>
             </div>
