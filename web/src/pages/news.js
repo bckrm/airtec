@@ -11,7 +11,7 @@ import ServiceFleetSection from '../components/serviceFleetSection';
 
 export const query = graphql`
     query NewsPageQuery {
-        sanityServicePage {
+        sanityNewsPage {
             heroImage {
                 asset {
                     gatsbyImageData
@@ -59,7 +59,7 @@ export const query = graphql`
 export default function NewsPage({ data }) {
     const {
         fleet: { edges },
-        sanityServicePage: { heroImage, pageTitle, seo },
+        sanityNewsPage: { heroImage, pageTitle, seo },
     } = data;
 
     return (
@@ -79,6 +79,6 @@ NewsPage.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         fleet: PropTypes.object.isRequired,
-        sanityServicePage: PropTypes.object.isRequired,
+        sanityNewsPage: PropTypes.object.isRequired,
     }).isRequired,
 };

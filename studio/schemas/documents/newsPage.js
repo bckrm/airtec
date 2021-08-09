@@ -20,5 +20,10 @@ export default {
             type: 'image',
             validation: (Rule) => Rule.required(),
         },
+        {
+            name: 'seo',
+            title: 'SEO',
+            type: 'seo',
+        },
     ],
 };
