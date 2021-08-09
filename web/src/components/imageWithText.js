@@ -38,7 +38,7 @@ export default function ImageWithText({
                 <h2 className="font-bold text-brand-1 text-3xl leadership-accent">
                     {heading}
                 </h2>
-                <p className="pt-10">
+                <p className="prose pt-10">
                     <BlockText blocks={_rawInfo} />
                 </p>
                 <div className="w-auto pt-4">
