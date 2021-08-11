@@ -1,6 +1,6 @@
 export default {
-    name: 'individualFleetItemPage',
-    title: 'Individual Fleet Item Page',
+    name: 'newsItem',
+    title: 'News Item',
     type: 'document',
     __experimental_actions: [
         'create',
