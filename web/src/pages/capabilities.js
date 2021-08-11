@@ -162,7 +162,7 @@ export default function CapabilitiesPage({ data }) {
             <CertificationSection certifications={nodes} />
             <BgImagewithCard data={safety} />
             <BgImagewithCard data={repairStation} />
-            <ImageWithText id="contracts" data={gsaSchedule} />
+            <ImageWithText anchorId="contracts" data={gsaSchedule} />
         </Layout>
     );
 }
