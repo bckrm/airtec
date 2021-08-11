@@ -32,6 +32,18 @@ export const query = graphql`
         }
     }
     query AboutQuery {
+        allSanityHistoryYear {
+            edges {
+                node {
+                    id
+                    year
+                    historyText
+                    image {
+                        ...SanityImage
+                    }
+                }
+            }
+        }
         sanityAboutPage {
             heroImage {
                 asset {
@@ -56,9 +68,7 @@ export const query = graphql`
                     name
                     title
                     image {
-                        asset {
-                            gatsbyImageData
-                        }
+                        ...SanityImage
                     }
                     linkedinURL
                 }
@@ -66,16 +76,6 @@ export const query = graphql`
             seo {
                 pageDescription
                 pageTitle
-            }
-            historySection {
-                history {
-                    year
-                    historyText
-                    id
-                    image {
-                        ...SanityImage
-                    }
-                }
             }
         }
         aboutImage: file(relativePath: { regex: "/about/" }) {
@@ -97,12 +97,12 @@ export const query = graphql`
 
 export default function AboutPage({ data }) {
     const {
+        allSanityHistoryYear: { edges },
         sanityAboutPage: {
             heroImage,
             pageTitle,
             aboutSection,
             leadershipSection,
-            historySection,
             seo,
         },
     } = data;
@@ -116,7 +116,7 @@ export default function AboutPage({ data }) {
             />
             <Hero image={heroImage} title={pageTitle} alt="" />
             <AboutText data={aboutSection} />
-            <HistorySection years={historySection.history} />
+            <HistorySection years={edges} />
             <LeaderSection leaders={leadershipSection.leadership} />
         </Layout>
     );
@@ -126,6 +126,7 @@ AboutPage.propTypes = {
     data: PropTypes.shape({
         aboutImage: PropTypes.object.isRequired,
         sanityAboutPage: PropTypes.object.isRequired,
+        allSanityHistoryYear: PropTypes.object.isRequired,
         testImage: PropTypes.object.isRequired,
     }).isRequired,
 };

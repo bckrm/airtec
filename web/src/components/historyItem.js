@@ -6,7 +6,6 @@ import { imageUrlFor, buildImageObj } from '../helpers/sanityImageHelper';
 
 export default function HistoryItem({ data, isOpen, isActive }) {
     const { historyText, image } = data;
-
     return (
         <AnimatePresence>
             {isOpen && (

@@ -29,7 +29,7 @@ export default function History({ years }) {
     }, []);
 
     return (
-        <section id="history" className="container my-24">
+        <section id="history" className="container h-[30rem] my-24">
             <h2 className="uppercase text-ts-h2 mb-4">History</h2>
             <div>
                 <div className="flex gap-20">
@@ -48,16 +48,18 @@ export default function History({ years }) {
                                 return (
                                     <button
                                         type="button"
-                                        onClick={() => setActiveTab(year.id)}
-                                        key={year.id}
-                                        isActive={activeTab === year.id}
+                                        onClick={() =>
+                                            setActiveTab(year.node.id)
+                                        }
+                                        key={year.node.id}
+                                        isActive={activeTab === year.node.id}
                                         className={
-                                            year.id === activeTab
+                                            year.node.id === activeTab
                                                 ? 'underline font-bold'
                                                 : ''
                                         }
                                     >
-                                        {year.year}
+                                        {year.node.year}
                                     </button>
                                 );
                             })}
@@ -67,16 +69,16 @@ export default function History({ years }) {
                             return (
                                 <button
                                     type="button"
-                                    onClick={() => setActiveTab(year.id)}
-                                    key={year.id}
-                                    isActive={activeTab === year.id}
+                                    onClick={() => setActiveTab(year.node.id)}
+                                    key={year.node.id}
+                                    isActive={activeTab === year.node.id}
                                     className={
-                                        year.id === activeTab
+                                        year.node.id === activeTab
                                             ? 'underline font-bold'
                                             : ''
                                     }
                                 >
-                                    {year.year}
+                                    {year.node.year}
                                 </button>
                             );
                         })
@@ -85,10 +87,10 @@ export default function History({ years }) {
                 {years.map((year) => {
                     return (
                         <HistoryItem
-                            data={year}
-                            isOpen={activeTab === year.id}
-                            key={year.id}
-                            isActive={year.id === activeTab}
+                            data={year.node}
+                            isOpen={activeTab === year.node.id}
+                            key={year.node.id}
+                            isActive={year.node.id === activeTab}
                         />
                     );
                 })}
