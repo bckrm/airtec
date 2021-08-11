@@ -16,19 +16,19 @@ export default function ImageWithText({
     isTransparent,
     to,
     href,
+    anchorId,
 }) {
     const {
         heading,
         _rawInfo,
         image: { asset },
-        id,
     } = data;
 
     const imageData = getImage(asset);
 
     return (
         <section
-            id={id}
+            id={anchorId}
             className={`container flex gap-8 my-24 ${
                 isLeft ? 'flex-col md:flex-row' : 'flex-col md:flex-row-reverse'
             }`}
@@ -69,6 +69,7 @@ ImageWithText.defaultProps = {
     isSecondaryDark: false,
     hasButton: false,
     isTransparent: false,
+    anchorId: '',
 };
 
 ImageWithText.propTypes = {
@@ -82,4 +83,5 @@ ImageWithText.propTypes = {
     isTransparent: PropTypes.bool,
     to: PropTypes.string,
     href: PropTypes.string,
+    anchorId: PropTypes.string,
 };
