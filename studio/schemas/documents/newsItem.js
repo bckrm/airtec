@@ -32,12 +32,6 @@ export default {
             description: 'This can be used to schedule post for publishing',
         },
         {
-            name: 'newsImage',
-            title: 'News Image',
-            type: 'mainImage',
-            description: 'This image will be used on the News Card',
-        },
-        {
             name: 'description',
             title: 'Description',
             type: 'text',
