@@ -19,6 +19,20 @@ export default function History({ years }) {
         }
     };
 
+    const sortedYears = years.sort((yearA, yearB) => {
+        const yearANum = Number(yearA.node.year.slice(0, 4));
+        const yearBNum = Number(yearB.node.year.slice(0, 4));
+
+        if (yearANum < yearBNum) {
+            return -1;
+        }
+        if (yearANum > yearBNum) {
+            return 1;
+        }
+
+        return 0;
+    });
+
     useEffect(() => {
         resizeHandler();
         window.addEventListener('resize', resizeHandler);
@@ -44,7 +58,7 @@ export default function History({ years }) {
                                 },
                             ]}
                         >
-                            {years.map((year) => {
+                            {sortedYears.map((year) => {
                                 return (
                                     <button
                                         type="button"
@@ -65,7 +79,7 @@ export default function History({ years }) {
                             })}
                         </Carousel>
                     ) : (
-                        years.map((year) => {
+                        sortedYears.map((year) => {
                             return (
                                 <button
                                     type="button"
@@ -84,7 +98,7 @@ export default function History({ years }) {
                         })
                     )}
                 </div>
-                {years.map((year) => {
+                {sortedYears.map((year) => {
                     return (
                         <HistoryItem
                             data={year.node}
