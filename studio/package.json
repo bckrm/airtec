@@ -30,7 +30,6 @@
     "react-icons": "^4.2.0",
     "sanity-plugin-table": "^2.2.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:bckrm/airtec.git"

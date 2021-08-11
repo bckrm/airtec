@@ -1,6 +1,6 @@
 export default {
-    name: 'individualFleetItemPage',
-    title: 'Individual Fleet Item Page',
+    name: 'newsItem',
+    title: 'News Item',
     type: 'document',
     __experimental_actions: [
         'create',
@@ -30,12 +30,6 @@ export default {
             type: 'date',
             title: 'Publish Date',
             description: 'This can be used to schedule post for publishing',
-        },
-        {
-            name: 'newsImage',
-            title: 'News Image',
-            type: 'mainImage',
-            description: 'This image will be used on the News Card',
         },
         {
             name: 'description',

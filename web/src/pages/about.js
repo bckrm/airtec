@@ -10,7 +10,40 @@ import AboutText from '../components/aboutTextSection';
 import HistorySection from '../components/historySection';
 
 export const query = graphql`
+    fragment SanityImage on SanityMainImage {
+        crop {
+            _key
+            _type
+            top
+            bottom
+            left
+            right
+        }
+        hotspot {
+            _key
+            _type
+            x
+            y
+            height
+            width
+        }
+        asset {
+            _id
+        }
+    }
     query AboutQuery {
+        allSanityHistoryYear {
+            edges {
+                node {
+                    id
+                    year
+                    historyText
+                    image {
+                        ...SanityImage
+                    }
+                }
+            }
+        }
         sanityAboutPage {
             heroImage {
                 asset {
@@ -35,9 +68,7 @@ export const query = graphql`
                     name
                     title
                     image {
-                        asset {
-                            gatsbyImageData
-                        }
+                        ...SanityImage
                     }
                     linkedinURL
                 }
@@ -66,6 +97,7 @@ export const query = graphql`
 
 export default function AboutPage({ data }) {
     const {
+        allSanityHistoryYear: { edges },
         sanityAboutPage: {
             heroImage,
             pageTitle,
@@ -74,58 +106,6 @@ export default function AboutPage({ data }) {
             seo,
         },
     } = data;
-
-    const historyData = [
-        {
-            image: heroImage,
-            text:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-            year: '1995',
-            id: 1,
-        },
-        {
-            image: heroImage,
-            text:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-            year: '1999',
-            id: 2,
-        },
-        {
-            image: heroImage,
-            text:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-            year: '2003',
-            id: 3,
-        },
-        {
-            image: heroImage,
-            text:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-            year: '2007',
-            id: 4,
-        },
-        {
-            image: heroImage,
-            text:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-            year: '2012',
-            id: 5,
-        },
-        {
-            image: heroImage,
-            text:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-            year: '2017',
-            id: 6,
-        },
-        {
-            image: heroImage,
-            text:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-            year: '2021',
-            id: 7,
-        },
-    ];
 
     return (
         <Layout>
@@ -136,7 +116,7 @@ export default function AboutPage({ data }) {
             />
             <Hero image={heroImage} title={pageTitle} alt="" />
             <AboutText data={aboutSection} />
-            <HistorySection years={historyData} />
+            <HistorySection years={edges} />
             <LeaderSection leaders={leadershipSection.leadership} />
         </Layout>
     );
@@ -146,6 +126,7 @@ AboutPage.propTypes = {
     data: PropTypes.shape({
         aboutImage: PropTypes.object.isRequired,
         sanityAboutPage: PropTypes.object.isRequired,
+        allSanityHistoryYear: PropTypes.object.isRequired,
         testImage: PropTypes.object.isRequired,
     }).isRequired,
 };
