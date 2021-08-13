@@ -68,7 +68,9 @@ export const query = graphql`
                     name
                     title
                     image {
-                        ...SanityImage
+                        asset {
+                            gatsbyImageData
+                        }
                     }
                     linkedinURL
                 }
