@@ -17,6 +17,7 @@ import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
 import historyYear from './documents/historyYear';
 import iconItem from './documents/iconItem';
+import iconText from './documents/iconText';
 import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
@@ -52,6 +53,7 @@ export default createSchema({
         fleetPage,
         historyYear,
         iconItem,
+        iconText,
         imageWithText,
         indexPage,
         leaderCard,
