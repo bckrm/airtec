@@ -19,5 +19,16 @@ export default {
             title: 'Image',
             type: 'mainImage',
         },
+        {
+            name: 'buttonURL',
+            title: 'Button URL',
+            type: 'url',
+            description: 'Add URL if component needs a button',
+        },
+        {
+            name: 'buttonText',
+            title: 'Button Text',
+            type: 'string',
+        },
     ],
 };
