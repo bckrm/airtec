@@ -16,7 +16,7 @@ import contactPage from './documents/contactPage';
 import fleet from './documents/fleet';
 import fleetPage from './documents/fleetPage';
 import historyYear from './documents/historyYear';
-import iconText from './documents/iconText';
+import iconItem from './documents/iconItem';
 import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
@@ -51,7 +51,7 @@ export default createSchema({
         fleet,
         fleetPage,
         historyYear,
-        iconText,
+        iconItem,
         imageWithText,
         indexPage,
         leaderCard,
