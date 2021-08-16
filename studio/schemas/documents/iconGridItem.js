@@ -1,6 +1,6 @@
 export default {
-    name: 'iconItem',
-    title: 'Icon Item',
+    name: 'iconGridItem',
+    title: 'Icon Grid Item',
     type: 'document',
     fields: [
         {
