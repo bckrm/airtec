@@ -28,7 +28,7 @@ export default function Careers({ data }) {
             />
             <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={generalSellingPoints} />
-            <IconGrid />
+            <IconGrid data={generalSellingPoints} />
             <ImageWithText
                 data={jobsAtAirtec}
                 isLeft
