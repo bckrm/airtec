@@ -34,7 +34,6 @@ export default function ImageWithText({ data, isLeft, anchorId }) {
                     {buttonURL && (
                         <a
                             href={buttonURL}
-                            type="button"
                             className="font-semibold border-2 inline-block leading-tight px-8 py-2 mb-6 rounded-bl-2xl tracking-[.12rem] transition-colors uppercase bg-brand-1 border-brand-1 text-white hover:bg-brand-2 hover:border-brand-2 focus:bg-brand-2"
                         >
                             {buttonText}
