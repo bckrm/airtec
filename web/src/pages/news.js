@@ -56,11 +56,13 @@ export const query = graphql`
     }
 `;
 
-export default function NewsPage({ data }) {
+export default function NewsPage({ data, location }) {
     const {
         fleet: { edges },
         sanityNewsPage: { heroImage, pageTitle, seo },
     } = data;
+
+    const { pathname } = location;
 
     return (
         <Layout>
@@ -70,12 +72,13 @@ export default function NewsPage({ data }) {
                 image={heroImage.asset.url}
             />
             <Hero image={heroImage} title={pageTitle} />
-            <ServiceFleetSection products={edges} />
+            <ServiceFleetSection products={edges} pathname={pathname} />
         </Layout>
     );
 }
 
 NewsPage.propTypes = {
+    location: PropTypes.object.isRequired,
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         fleet: PropTypes.object.isRequired,

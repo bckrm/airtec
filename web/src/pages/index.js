@@ -18,57 +18,10 @@ export default function IndexPage({ data }) {
             whatWeDoSection,
             seo,
         },
+        allSanityNewsItem: { edges },
     } = data;
 
-    const news = [
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description: 'Nam convallis arcu a quam tristique placerat.',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-    ];
+    console.log(edges);
 
     return (
         <Layout>
@@ -77,13 +30,27 @@ export default function IndexPage({ data }) {
             <BgImagewithCard data={subHero} />
             <BgImagewithCard data={visionSection} />
             <BgImagewithCard data={whatWeDoSection} />
-            <NewsList news={news} />
+            <NewsList news={edges} />
         </Layout>
     );
 }
 
 export const query = graphql`
     query IndexQuery {
+        allSanityNewsItem {
+            edges {
+                node {
+                    heroImage {
+                        asset {
+                            gatsbyImageData
+                        }
+                    }
+                    newsTitle
+                    newsSubTitle
+                    description
+                }
+            }
+        }
         sanityIndexPage {
             heroImage {
                 asset {
@@ -170,5 +137,6 @@ IndexPage.propTypes = {
         vision: PropTypes.object.isRequired,
         whatWeDoSection: PropTypes.object.isRequired,
         sanityIndexPage: PropTypes.object.isRequired,
+        allSanityNewsItem: PropTypes.object.isRequired,
     }).isRequired,
 };

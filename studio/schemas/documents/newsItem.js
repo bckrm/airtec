@@ -26,6 +26,16 @@ export default {
             type: 'string',
         },
         {
+            name: 'slug',
+            type: 'slug',
+            title: 'Slug',
+            description: 'This will be the url path for this post',
+            options: {
+                source: 'title',
+                maxLength: 96,
+            },
+        },
+        {
             name: 'publishDate',
             type: 'date',
             title: 'Publish Date',
