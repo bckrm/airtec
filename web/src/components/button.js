@@ -40,17 +40,13 @@ export default function Button({ cta, isPrimary, isDark, isTransparent }) {
             </a>
         );
     }
-    return (
-        <button type="button" className={finalStyles}>
-            Learn More
-        </button>
-    );
+    return null;
 }
 
 Button.defaultProps = {
     isPrimary: false,
     isDark: false,
-    cta: '',
+    cta: {},
     isTransparent: false,
 };
 

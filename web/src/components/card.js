@@ -50,7 +50,7 @@ export default function Card({
 }
 
 Card.defaultProps = {
-    cta: '',
+    cta: {},
     isRight: false,
     isPrimary: false,
     isDark: false,
