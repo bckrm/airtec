@@ -5,10 +5,12 @@ import { Link } from 'gatsby';
 
 export default function NewsCard({ data, pathname }) {
     const {
-        newsTitle,
-        description,
-        heroImage,
-        slug: { current },
+        node: {
+            newsTitle,
+            description,
+            heroImage,
+            slug: { current },
+        },
     } = data;
 
     const imageData = getImage(heroImage.asset);

@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Hero from '../components/hero';
-import ServiceFleetSection from '../components/serviceFleetSection';
+// import ServiceFleetSection from '../components/serviceFleetSection';
+import NewsSection from '../components/newsSection';
 
 // Todo: will need to update the "fleet" query as this page will query news items, not fleet or service items.
 
@@ -31,25 +32,20 @@ export const query = graphql`
                 }
             }
         }
-
-        fleet: allSanityFleet {
+        news: allSanityNewsItem {
             edges {
                 node {
-                    description
-                    id
                     heroImage {
                         asset {
-                            gatsbyImageData(
-                                width: 350
-                                placeholder: BLURRED
-                                formats: [AUTO, WEBP, AVIF]
-                            )
+                            gatsbyImageData
                         }
                     }
+                    newsTitle
+                    newsSubTitle
+                    description
                     slug {
                         current
                     }
-                    title
                 }
             }
         }
@@ -58,7 +54,7 @@ export const query = graphql`
 
 export default function NewsPage({ data, location }) {
     const {
-        fleet: { edges },
+        news: { edges },
         sanityNewsPage: { heroImage, pageTitle, seo },
     } = data;
 
@@ -72,7 +68,7 @@ export default function NewsPage({ data, location }) {
                 image={heroImage.asset.url}
             />
             <Hero image={heroImage} title={pageTitle} />
-            <ServiceFleetSection products={edges} pathname={pathname} />
+            <NewsSection news={edges} pathname={pathname} />
         </Layout>
     );
 }
@@ -83,5 +79,6 @@ NewsPage.propTypes = {
         heroImage: PropTypes.object.isRequired,
         fleet: PropTypes.object.isRequired,
         sanityNewsPage: PropTypes.object.isRequired,
+        news: PropTypes.object.isRequired,
     }).isRequired,
 };

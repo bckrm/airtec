@@ -31,7 +31,7 @@ export default {
             title: 'Slug',
             description: 'This will be the url path for this post',
             options: {
-                source: 'title',
+                source: 'newsTitle',
                 maxLength: 96,
             },
         },

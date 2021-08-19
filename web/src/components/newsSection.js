@@ -12,7 +12,7 @@ export default function NewsSection({ pathname, news }) {
                         <NewsCard
                             data={item}
                             pathname={pathname}
-                            key={item.node.id}
+                            key={item.id}
                         />
                     );
                 })}
