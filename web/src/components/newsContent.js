@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import BlockText from './block-content/blockText';
 
 export default function NewsContent({ data }) {
-    const { newsBody, newsSubTitle, newsTitle } = data;
+    const { _rawNewsBody, newsSubTitle, newsTitle } = data;
     return (
         <section className="container my-24 xl:w-1/2">
             <h2 className="text-3xl font-bold text-brand-1 my-1">
@@ -13,7 +13,7 @@ export default function NewsContent({ data }) {
                 {newsSubTitle}
             </h3>
             <p className="leading-relaxed prose">
-                <BlockText blocks={newsBody} />
+                <BlockText blocks={_rawNewsBody} />
             </p>
         </section>
     );
