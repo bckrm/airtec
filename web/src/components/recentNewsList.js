@@ -56,7 +56,13 @@ export default function RecentNewsList({ news }) {
                     ]}
                 >
                     {news.map((newsItem) => {
-                        return <NewsCard key={newsItem.id} data={newsItem} />;
+                        return (
+                            <NewsCard
+                                key={newsItem.id}
+                                data={newsItem}
+                                pathname="news"
+                            />
+                        );
                     })}
                 </Carousel>
             </div>

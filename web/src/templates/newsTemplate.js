@@ -14,7 +14,6 @@ export default function NewsTemplate({ data }) {
     } = data;
 
     const { heroImage, newsTitle } = newsItem;
-    console.log(edges);
 
     return (
         <Layout>

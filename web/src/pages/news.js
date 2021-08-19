@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Hero from '../components/hero';
-// import ServiceFleetSection from '../components/serviceFleetSection';
 import NewsSection from '../components/newsSection';
 
 // Todo: will need to update the "fleet" query as this page will query news items, not fleet or service items.

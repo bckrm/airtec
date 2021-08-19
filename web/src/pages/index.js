@@ -8,33 +8,6 @@ import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
 
-export default function IndexPage({ data }) {
-    const {
-        sanityIndexPage: {
-            heroImage,
-            heroHeading,
-            subHero,
-            visionSection,
-            whatWeDoSection,
-            seo,
-        },
-        allSanityNewsItem: { edges },
-    } = data;
-
-    console.log(edges);
-
-    return (
-        <Layout>
-            <Seo title={seo.pageTitle} description={seo.pageDescription} />
-            <Hero image={heroImage} title={heroHeading} />
-            <BgImagewithCard data={subHero} />
-            <BgImagewithCard data={visionSection} />
-            <BgImagewithCard data={whatWeDoSection} />
-            <NewsList news={edges} />
-        </Layout>
-    );
-}
-
 export const query = graphql`
     query IndexQuery {
         allSanityNewsItem {
@@ -133,7 +106,35 @@ export const query = graphql`
     }
 `;
 
+export default function IndexPage({ data, location }) {
+    const {
+        sanityIndexPage: {
+            heroImage,
+            heroHeading,
+            subHero,
+            visionSection,
+            whatWeDoSection,
+            seo,
+        },
+        allSanityNewsItem: { edges },
+    } = data;
+
+    const { pathname } = location;
+
+    return (
+        <Layout>
+            <Seo title={seo.pageTitle} description={seo.pageDescription} />
+            <Hero image={heroImage} title={heroHeading} />
+            <BgImagewithCard data={subHero} />
+            <BgImagewithCard data={visionSection} />
+            <BgImagewithCard data={whatWeDoSection} />
+            <NewsList news={edges} pathname={pathname} />
+        </Layout>
+    );
+}
+
 IndexPage.propTypes = {
+    location: PropTypes.object.isRequired,
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         subHero: PropTypes.object.isRequired,
