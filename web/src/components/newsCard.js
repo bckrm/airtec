@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
-export default function NewsCard({ data, pathname }) {
+export default function NewsCard({ data }) {
     const {
         node: {
             newsTitle,
@@ -17,7 +17,7 @@ export default function NewsCard({ data, pathname }) {
 
     return (
         <Link
-            to={`${pathname}/${current}`}
+            to={`/news/${current}`}
             className="bg-white h-[34rem] mx-3 md:mr-9 transform transition focus:scale-110 md:hover:scale-110 shadow-md overflow-hidden w-80"
         >
             <GatsbyImage
@@ -35,5 +35,4 @@ export default function NewsCard({ data, pathname }) {
 
 NewsCard.propTypes = {
     data: PropTypes.object.isRequired,
-    pathname: PropTypes.string.isRequired,
 };

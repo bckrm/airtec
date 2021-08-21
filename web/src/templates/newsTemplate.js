@@ -7,19 +7,20 @@ import Hero from '../components/hero';
 import NewsContent from '../components/newsContent';
 import RecentNewsList from '../components/recentNewsList';
 
-export default function NewsTemplate({ data }) {
+export default function NewsTemplate({ data, location }) {
     const {
         newsItem,
         news: { edges },
     } = data;
 
     const { heroImage, newsTitle } = newsItem;
+    const { pathname } = location;
 
     return (
         <Layout>
             <Hero image={heroImage} title={newsTitle} />
             <NewsContent data={newsItem} />
-            <RecentNewsList news={edges} />
+            <RecentNewsList news={edges} pathname={pathname} />
         </Layout>
     );
 }
@@ -58,6 +59,7 @@ export const query = graphql`
 `;
 
 NewsTemplate.propTypes = {
+    location: PropTypes.object.isRequired,
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         newsItem: PropTypes.object.isRequired,
