@@ -12,9 +12,9 @@ export default function NewsContent({ data }) {
             <h3 className="font-light leadership-accent mb-12 text-brand-4">
                 {newsSubTitle}
             </h3>
-            <p className="leading-relaxed prose">
+            <div className="leading-relaxed prose">
                 <BlockText blocks={_rawNewsBody} />
-            </p>
+            </div>
         </section>
     );
 }

@@ -12,7 +12,7 @@ import MoreButton from './moreButton';
 
 const Carousel = loadable(() => import('./carouselWrapper'));
 
-export default function RecentNewsList({ news, pathname }) {
+export default function RecentNewsList({ news }) {
     const forward = 'More ❯';
     const back = '❮ Back';
 
@@ -56,13 +56,7 @@ export default function RecentNewsList({ news, pathname }) {
                     ]}
                 >
                     {news.map((newsItem) => {
-                        return (
-                            <NewsCard
-                                key={newsItem.id}
-                                data={newsItem}
-                                pathname={pathname}
-                            />
-                        );
+                        return <NewsCard key={newsItem.id} data={newsItem} />;
                     })}
                 </Carousel>
             </div>
@@ -72,5 +66,4 @@ export default function RecentNewsList({ news, pathname }) {
 
 RecentNewsList.propTypes = {
     news: PropTypes.array.isRequired,
-    pathname: PropTypes.string.isRequired,
 };

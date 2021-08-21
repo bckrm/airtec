@@ -106,7 +106,7 @@ export const query = graphql`
     }
 `;
 
-export default function IndexPage({ data, location }) {
+export default function IndexPage({ data }) {
     const {
         sanityIndexPage: {
             heroImage,
@@ -119,8 +119,6 @@ export default function IndexPage({ data, location }) {
         allSanityNewsItem: { edges },
     } = data;
 
-    const { pathname } = location;
-
     return (
         <Layout>
             <Seo title={seo.pageTitle} description={seo.pageDescription} />
@@ -128,13 +126,12 @@ export default function IndexPage({ data, location }) {
             <BgImagewithCard data={subHero} />
             <BgImagewithCard data={visionSection} />
             <BgImagewithCard data={whatWeDoSection} />
-            <NewsList news={edges} pathname={pathname} />
+            <NewsList news={edges} />
         </Layout>
     );
 }
 
 IndexPage.propTypes = {
-    location: PropTypes.object.isRequired,
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         subHero: PropTypes.object.isRequired,

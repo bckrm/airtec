@@ -7,8 +7,6 @@ import Seo from '../components/seo';
 import Hero from '../components/hero';
 import NewsSection from '../components/newsSection';
 
-// Todo: will need to update the "fleet" query as this page will query news items, not fleet or service items.
-
 export const query = graphql`
     query NewsPageQuery {
         sanityNewsPage {
@@ -51,13 +49,11 @@ export const query = graphql`
     }
 `;
 
-export default function NewsPage({ data, location }) {
+export default function NewsPage({ data }) {
     const {
         news: { edges },
         sanityNewsPage: { heroImage, pageTitle, seo },
     } = data;
-
-    const { pathname } = location;
 
     return (
         <Layout>
@@ -67,13 +63,12 @@ export default function NewsPage({ data, location }) {
                 image={heroImage.asset.url}
             />
             <Hero image={heroImage} title={pageTitle} />
-            <NewsSection news={edges} pathname={pathname} />
+            <NewsSection news={edges} />
         </Layout>
     );
 }
 
 NewsPage.propTypes = {
-    location: PropTypes.object.isRequired,
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
         fleet: PropTypes.object.isRequired,
