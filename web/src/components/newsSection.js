@@ -10,9 +10,9 @@ export default function NewsSection({ pathname, news }) {
                 {news.map((item) => {
                     return (
                         <NewsCard
-                            data={item}
+                            data={item.node}
                             pathname={pathname}
-                            key={item.id}
+                            key={item.node.id}
                         />
                     );
                 })}

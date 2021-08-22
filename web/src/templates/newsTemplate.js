@@ -14,13 +14,20 @@ export default function NewsTemplate({ data, location }) {
     } = data;
 
     const { heroImage, newsTitle } = newsItem;
+
     const { pathname } = location;
+
+    const posts = edges.map((item) => item.node);
+
+    const filteredPosts = posts.filter((item) => item.id !== newsItem.id);
+
+    console.log(filteredPosts);
 
     return (
         <Layout>
             <Hero image={heroImage} title={newsTitle} />
             <NewsContent data={newsItem} />
-            <RecentNewsList news={edges} pathname={pathname} />
+            <RecentNewsList news={filteredPosts} pathname={pathname} />
         </Layout>
     );
 }
@@ -47,6 +54,7 @@ export const query = graphql`
                         }
                     }
                     newsTitle
+                    id
                     newsSubTitle
                     description
                     slug {
