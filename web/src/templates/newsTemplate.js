@@ -21,8 +21,6 @@ export default function NewsTemplate({ data, location }) {
 
     const filteredPosts = posts.filter((item) => item.id !== newsItem.id);
 
-    console.log(filteredPosts);
-
     return (
         <Layout>
             <Hero image={heroImage} title={newsTitle} />
