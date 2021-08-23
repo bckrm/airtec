@@ -17,6 +17,7 @@ export default function Careers({ data }) {
             jobsAtAirtec,
             seo,
         },
+        allSanityIconGridItem: { edges },
     } = data;
 
     return (
@@ -28,7 +29,7 @@ export default function Careers({ data }) {
             />
             <Hero image={heroImage} title={pageTitle} />
             <ImageWithText data={generalSellingPoints} />
-            <IconGrid />
+            <IconGrid icons={edges} />
             <ImageWithText data={jobsAtAirtec} isLeft />
             <h2 className="font-bold text-4xl text-center text-brand-1 my-20">
                 Mission Driven. Future Focused.
@@ -39,6 +40,18 @@ export default function Careers({ data }) {
 
 export const query = graphql`
     query CareersQuery {
+        allSanityIconGridItem {
+            edges {
+                node {
+                    text
+                    icon {
+                        asset {
+                            gatsbyImageData
+                        }
+                    }
+                }
+            }
+        }
         sanityCareerPage {
             heroImage {
                 asset {
@@ -98,5 +111,6 @@ Careers.propTypes = {
         heroImage: PropTypes.object.isRequired,
         plane: PropTypes.object.isRequired,
         sanityCareerPage: PropTypes.object.isRequired,
+        allSanityIconGridItem: PropTypes.object.isRequired,
     }).isRequired,
 };
