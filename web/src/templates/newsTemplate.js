@@ -19,8 +19,6 @@ export default function NewsTemplate({ data }) {
         .map((post) => post.node)
         .filter((post) => post.id !== newsItem.id);
 
-    // const filteredPosts = posts.filter((item) => item.id !== newsItem.id);
-
     return (
         <Layout>
             <Hero image={heroImage} title={newsTitle} />
