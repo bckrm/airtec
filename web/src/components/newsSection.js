@@ -8,7 +8,8 @@ export default function NewsSection({ news }) {
         <section className="container my-14">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 place-items-center gap-9">
                 {news.map((item) => {
-                    return <NewsCard data={item.node} key={item.node.id} />;
+                    const { node } = item;
+                    return <NewsCard data={node} key={node.id} />;
                 })}
             </div>
         </section>
