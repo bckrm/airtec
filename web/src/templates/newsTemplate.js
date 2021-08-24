@@ -13,17 +13,17 @@ export default function NewsTemplate({ data }) {
         news: { edges },
     } = data;
 
-    const { heroImage, newsTitle } = newsItem;
+    const { heroImage, newsTitle, id } = newsItem;
 
-    const posts = edges
+    const filteredPosts = edges
         .map((post) => post.node)
-        .filter((post) => post.id !== newsItem.id);
+        .filter((post) => post.id !== id);
 
     return (
         <Layout>
             <Hero image={heroImage} title={newsTitle} />
             <NewsContent data={newsItem} />
-            <RecentNewsList news={posts} />
+            <RecentNewsList news={filteredPosts} />
         </Layout>
     );
 }

@@ -13,6 +13,8 @@ export default function NewsCard({ data }) {
 
     const imageData = getImage(heroImage.asset);
 
+    console.log(data);
+
     return (
         <Link
             to={`/news/${current}`}
