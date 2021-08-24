@@ -8,82 +8,25 @@ import Hero from '../components/hero';
 import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
 
-export default function IndexPage({ data }) {
-    const {
-        sanityIndexPage: {
-            heroImage,
-            heroHeading,
-            subHero,
-            visionSection,
-            whatWeDoSection,
-            seo,
-        },
-    } = data;
-
-    const news = [
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description: 'Nam convallis arcu a quam tristique placerat.',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt.',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-        {
-            image: heroImage,
-            title: 'Title of the thing',
-            description:
-                'Nam convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt. am convallis arcu a quam tristique placerat. Maecenas egestas, nibh et ultricies tristique, purus magna sodales nisi, sit amet efficitur justo massa accumsan augue. Proin condimentum dolor elementum augue fermentum pretium. Phasellus consequat diam vel ante placerat fermentum sit amet vitae velit. Quisque vel ante ac erat accumsan tincidunt',
-        },
-    ];
-
-    return (
-        <Layout>
-            <Seo title={seo.pageTitle} description={seo.pageDescription} />
-            <Hero image={heroImage} title={heroHeading} />
-            <BgImagewithCard data={subHero} />
-            <BgImagewithCard data={visionSection} />
-            <BgImagewithCard data={whatWeDoSection} />
-            <NewsList news={news} />
-        </Layout>
-    );
-}
-
 export const query = graphql`
     query IndexQuery {
+        allSanityNewsItem {
+            edges {
+                node {
+                    heroImage {
+                        asset {
+                            gatsbyImageData
+                        }
+                    }
+                    newsTitle
+                    newsSubTitle
+                    description
+                    slug {
+                        current
+                    }
+                }
+            }
+        }
         sanityIndexPage {
             heroImage {
                 asset {
@@ -163,6 +106,31 @@ export const query = graphql`
     }
 `;
 
+export default function IndexPage({ data }) {
+    const {
+        sanityIndexPage: {
+            heroImage,
+            heroHeading,
+            subHero,
+            visionSection,
+            whatWeDoSection,
+            seo,
+        },
+        allSanityNewsItem: { edges },
+    } = data;
+
+    return (
+        <Layout>
+            <Seo title={seo.pageTitle} description={seo.pageDescription} />
+            <Hero image={heroImage} title={heroHeading} />
+            <BgImagewithCard data={subHero} />
+            <BgImagewithCard data={visionSection} />
+            <BgImagewithCard data={whatWeDoSection} />
+            <NewsList news={edges} />
+        </Layout>
+    );
+}
+
 IndexPage.propTypes = {
     data: PropTypes.shape({
         heroImage: PropTypes.object.isRequired,
@@ -170,5 +138,6 @@ IndexPage.propTypes = {
         vision: PropTypes.object.isRequired,
         whatWeDoSection: PropTypes.object.isRequired,
         sanityIndexPage: PropTypes.object.isRequired,
+        allSanityNewsItem: PropTypes.object.isRequired,
     }).isRequired,
 };
