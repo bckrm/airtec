@@ -7,12 +7,12 @@
         position: relative;
     }
     .heading-accent:after {
+        bottom: 25px;
         content: '';
         height: 5px;
         width: 50px;
         background-color: #acc9e8;
         position: absolute;
-        top: 70%;
         left: 15px;
     }
     .h1-heading-accent {
