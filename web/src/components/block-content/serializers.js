@@ -1,10 +1,12 @@
 import Image from './image';
 import Table from './table';
+import PdfFile from './pdfFile';
 
 const serializers = {
     types: {
-        table: Table,
         mainImage: Image,
+        pdfFile: PdfFile,
+        table: Table,
     },
 };
 

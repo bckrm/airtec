@@ -32,6 +32,7 @@ import aboutPortableText from './objects/aboutPortableText';
 import bodyPortableText from './objects/bodyPortableText';
 import cta from './objects/cta';
 import mainImage from './objects/mainImage';
+import pdf from './objects/pdf';
 import seo from './objects/seo';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -66,6 +67,7 @@ export default createSchema({
         aboutPortableText,
         bodyPortableText,
         cta,
+        pdf,
         mainImage,
         seo,
     ]),
