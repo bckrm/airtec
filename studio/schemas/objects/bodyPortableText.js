@@ -58,5 +58,8 @@ export default {
         {
             type: 'table',
         },
+        {
+            type: 'pdfFile',
+        },
     ],
 };
