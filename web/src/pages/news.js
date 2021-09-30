@@ -8,6 +8,27 @@ import Hero from '../components/hero';
 import NewsSection from '../components/newsSection';
 
 export const query = graphql`
+    fragment SanityImage on SanityMainImage {
+        crop {
+            _key
+            _type
+            top
+            bottom
+            left
+            right
+        }
+        hotspot {
+            _key
+            _type
+            x
+            y
+            height
+            width
+        }
+        asset {
+            _id
+        }
+    }
     query NewsPageQuery {
         sanityNewsPage {
             heroImage {
@@ -22,20 +43,12 @@ export const query = graphql`
                 pageDescription
             }
         }
-        heroImage: file(relativePath: { regex: "/hero/" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
+
         news: allSanityNewsItem {
             edges {
                 node {
                     heroImage {
-                        asset {
-                            gatsbyImageData
-                        }
+                        ...SanityImage
                     }
                     newsTitle
                     newsSubTitle
@@ -70,8 +83,6 @@ export default function NewsPage({ data }) {
 
 NewsPage.propTypes = {
     data: PropTypes.shape({
-        heroImage: PropTypes.object.isRequired,
-        fleet: PropTypes.object.isRequired,
         sanityNewsPage: PropTypes.object.isRequired,
         news: PropTypes.object.isRequired,
     }).isRequired,

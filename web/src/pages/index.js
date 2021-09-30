@@ -9,14 +9,33 @@ import BgImagewithCard from '../components/bgImagewithCard';
 import NewsList from '../components/newsList';
 
 export const query = graphql`
+    fragment SanityImage on SanityMainImage {
+        crop {
+            _key
+            _type
+            top
+            bottom
+            left
+            right
+        }
+        hotspot {
+            _key
+            _type
+            x
+            y
+            height
+            width
+        }
+        asset {
+            _id
+        }
+    }
     query IndexQuery {
         allSanityNewsItem {
             edges {
                 node {
                     heroImage {
-                        asset {
-                            gatsbyImageData
-                        }
+                        ...SanityImage
                     }
                     newsTitle
                     newsSubTitle

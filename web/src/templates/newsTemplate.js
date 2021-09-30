@@ -27,6 +27,27 @@ export default function NewsTemplate({ data }) {
 }
 
 export const query = graphql`
+    fragment SanityImage on SanityMainImage {
+        crop {
+            _key
+            _type
+            top
+            bottom
+            left
+            right
+        }
+        hotspot {
+            _key
+            _type
+            x
+            y
+            height
+            width
+        }
+        asset {
+            _id
+        }
+    }
     query NewsTemplateQuery($id: String!) {
         newsItem: sanityNewsItem(id: { eq: $id }) {
             heroImage {
@@ -43,9 +64,7 @@ export const query = graphql`
             edges {
                 node {
                     heroImage {
-                        asset {
-                            gatsbyImageData
-                        }
+                        ...SanityImage
                     }
                     newsTitle
                     id
