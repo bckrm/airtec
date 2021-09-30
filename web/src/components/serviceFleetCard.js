@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
+import { imageUrlFor, buildImageObj } from '../helpers/sanityImageHelper';
 
 export default function ServiceFleetCard({ data, pathname }) {
     const {
@@ -13,16 +13,19 @@ export default function ServiceFleetCard({ data, pathname }) {
         },
     } = data;
 
-    const imageData = getImage(heroImage.asset);
-
     return (
         <Link
             to={`${pathname}/${current}`}
             className="bg-white h-[34rem] transform transition focus:scale-110 md:hover:scale-110 shadow-2xl w-80"
         >
-            <GatsbyImage
-                className="rounded-bl-[2.5rem]"
-                image={imageData}
+            <img
+                className="w-full rounded-bl-[2.5rem]"
+                src={imageUrlFor(buildImageObj(heroImage))
+                    .width(400)
+                    .height(Math.floor((9 / 16) * 400))
+                    .fit('fill')
+                    .auto('format')
+                    .url()}
                 alt=""
             />
             <h3 className="heading-accent font-bold mt-4 pb-10 px-4 text-brand-1 text-ts-h4">
