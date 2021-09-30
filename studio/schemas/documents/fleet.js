@@ -21,7 +21,7 @@ export default {
         {
             name: 'heroImage',
             title: 'Hero Image',
-            type: 'image',
+            type: 'mainImage',
             validation: (Rule) => Rule.required(),
         },
         {
@@ -43,4 +43,10 @@ export default {
             type: 'bodyPortableText',
         },
     ],
+    preview: {
+        select: {
+            title: 'title',
+            media: 'heroImage',
+        },
+    },
 };
