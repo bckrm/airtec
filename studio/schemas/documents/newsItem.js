@@ -2,17 +2,12 @@ export default {
     name: 'newsItem',
     title: 'News Item',
     type: 'document',
-    __experimental_actions: [
-        'create',
-        'update',
-        // 'delete',
-        'publish',
-    ],
+    __experimental_actions: ['create', 'update', 'delete', 'publish'],
     fields: [
         {
             name: 'heroImage',
             title: 'Hero Image',
-            type: 'image',
+            type: 'mainImage',
             validation: (Rule) => Rule.required(),
         },
         {
@@ -85,4 +80,10 @@ export default {
             ],
         },
     ],
+    preview: {
+        select: {
+            title: 'newsTitle',
+            media: 'heroImage',
+        },
+    },
 };
