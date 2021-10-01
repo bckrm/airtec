@@ -15,7 +15,7 @@ export default function MainNav({ navItems }) {
                         >
                             {item.name}
                         </Link>
-                        <ul className="absolute">
+                        <ul className="absolute left-8">
                             {item.subnav
                                 ? item.subnav.map((subitem) => {
                                       return (

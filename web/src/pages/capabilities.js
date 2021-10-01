@@ -125,9 +125,12 @@ export const query = graphql`
             }
         }
         allSanityCertification {
-            nodes {
-                title
-                description
+            edges {
+                node {
+                    description
+                    id
+                    title
+                }
             }
         }
     }
@@ -145,8 +148,10 @@ export default function CapabilitiesPage({ data }) {
             gsaSchedule,
             seo,
         },
-        allSanityCertification: { nodes },
+        allSanityCertification: { edges: certifications },
     } = data;
+
+    const hasCertifications = certifications.length > 0;
 
     return (
         <Layout>
@@ -159,7 +164,9 @@ export default function CapabilitiesPage({ data }) {
             <ImageWithText data={capabilitiesAndServices} />
             <BgImagewithCard data={services} hasButton isSecondaryDark />
             <BgImagewithCard data={fleet} isRight hasButton isSecondaryDark />
-            <CertificationSection certifications={nodes} />
+            {hasCertifications && (
+                <CertificationSection certifications={certifications} />
+            )}
             <BgImagewithCard data={safety} />
             <BgImagewithCard data={repairStation} />
             <ImageWithText anchorId="contracts" data={gsaSchedule} />
