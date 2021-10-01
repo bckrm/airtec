@@ -1,62 +1,78 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 
 import MainNav from './navigation/mainNav';
 import Logo from './svgs/Logo';
 import MobileNav from './navigation/mobileNav';
 
-const nav = [
-    {
-        name: 'about',
-        link: '/about',
-        subnav: [
-            {
-                sublink: 'History',
-                subnav: '/about#history',
-            },
-            {
-                sublink: 'Leadership',
-                subnav: '/about/#leadership',
-            },
-        ],
-    },
-    {
-        name: 'capabilities',
-        link: '/capabilities',
-        subnav: [
-            {
-                sublink: 'Services',
-                subnav: '/services',
-            },
-            {
-                sublink: 'Fleet',
-                subnav: '/fleet',
-            },
-            {
-                sublink: 'Certifications',
-                subnav: '/capabilities/#certifications',
-            },
-            {
-                sublink: 'Contracts',
-                subnav: '/capabilities/#contracts',
-            },
-        ],
-    },
-    {
-        name: 'news',
-        link: '/news',
-    },
-    {
-        name: 'careers',
-        link: '/careers',
-    },
-    {
-        name: 'contact',
-        link: '/contact',
-    },
-];
-
 export default function Header() {
+    const data = useStaticQuery(graphql`
+        query HeaderQuery {
+            certifications: allSanityCertification {
+                edges {
+                    node {
+                        title
+                    }
+                }
+            }
+        }
+    `);
+
+    const nav = [
+        {
+            name: 'about',
+            link: '/about',
+            subnav: [
+                {
+                    sublink: 'History',
+                    subnav: '/about#history',
+                },
+                {
+                    sublink: 'Leadership',
+                    subnav: '/about/#leadership',
+                },
+            ],
+        },
+        {
+            name: 'capabilities',
+            link: '/capabilities',
+            subnav: [
+                {
+                    sublink: 'Services',
+                    subnav: '/services',
+                },
+                {
+                    sublink: 'Fleet',
+                    subnav: '/fleet',
+                },
+
+                {
+                    sublink: 'Contracts',
+                    subnav: '/capabilities/#contracts',
+                },
+            ],
+        },
+        {
+            name: 'news',
+            link: '/news',
+        },
+        {
+            name: 'careers',
+            link: '/careers',
+        },
+        {
+            name: 'contact',
+            link: '/contact',
+        },
+    ];
+
+    // add certifications hash if certfications exist
+    if (data.certifications.edges.length > 0) {
+        nav[1].subnav.push({
+            sublink: 'Certifications',
+            subnav: '/capabilities/#certifications',
+        });
+    }
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 

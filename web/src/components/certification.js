@@ -5,10 +5,10 @@ export default function Certification({ data }) {
     const { description, title } = data;
 
     return (
-        <div className="odd:bg-white odd:bg-opacity-10 p-4 text-2xl">
+        <li className="odd:bg-white odd:bg-opacity-10 p-4 text-2xl">
             <h3 className="font-bold">{title}</h3>
             <p>{description}</p>
-        </div>
+        </li>
     );
 }
 
