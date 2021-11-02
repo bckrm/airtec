@@ -31,7 +31,7 @@ export const query = graphql`
         }
     }
     query IndexQuery {
-        allSanityNewsItem {
+        allSanityNewsItem(sort: { order: DESC, fields: publishDate }) {
             edges {
                 node {
                     heroImage {

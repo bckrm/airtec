@@ -60,7 +60,7 @@ export const query = graphql`
             newsSubTitle
             _rawNewsBody(resolveReferences: { maxDepth: 10 })
         }
-        news: allSanityNewsItem {
+        news: allSanityNewsItem(sort: { order: DESC, fields: publishDate }) {
             edges {
                 node {
                     heroImage {
