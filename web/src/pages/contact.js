@@ -10,7 +10,7 @@ import LogoSection from '../components/logoSection';
 
 export default function Contact({ data }) {
     const {
-        sanityContactPage: { heroImage, pageTitle, seo },
+        sanityContactPage: { heroImage, pageTitle, seo, _rawContactInfo },
         kieyos,
         priority,
     } = data;
@@ -31,7 +31,7 @@ export default function Contact({ data }) {
                 image={heroImage.asset.url}
             />
             <Hero image={heroImage} title={pageTitle} />
-            <ContactSection />
+            <ContactSection data={_rawContactInfo} />
             <LogoSection images={images} />
         </Layout>
     );
@@ -50,6 +50,7 @@ export const query = graphql`
                     url
                 }
             }
+            _rawContactInfo(resolveReferences: { maxDepth: 10 })
             pageTitle
             seo {
                 pageTitle

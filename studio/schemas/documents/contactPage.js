@@ -21,6 +21,11 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
+            name: 'contactInfo',
+            title: 'Contact Info',
+            type: 'bodyPortableText',
+        },
+        {
             name: 'seo',
             title: 'SEO',
             type: 'seo',
