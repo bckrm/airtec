@@ -8,7 +8,6 @@ import HistoryItem from './historyItem';
 const Carousel = loadable(() => import('./carouselWrapper'));
 
 export default function History({ years }) {
-    const [activeTab, setActiveTab] = useState(years[0].node.id);
     const [shouldHaveCarouselNav, setshouldHaveCarouselNav] = useState(false);
 
     const resizeHandler = () => {
@@ -32,6 +31,8 @@ export default function History({ years }) {
 
         return 0;
     });
+
+    const [activeTab, setActiveTab] = useState(sortedYears[0].node.id);
 
     useEffect(() => {
         resizeHandler();
