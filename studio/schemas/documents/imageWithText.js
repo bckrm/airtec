@@ -11,8 +11,7 @@ export default {
         {
             name: 'info',
             title: 'Info',
-            type: 'array',
-            of: [{ type: 'block' }],
+            type: 'bodyPortableText',
         },
         {
             name: 'image',
