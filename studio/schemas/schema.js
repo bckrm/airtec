@@ -7,8 +7,6 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // documents
 import aboutPage from './documents/aboutPage';
-import aboutSection from './documents/aboutSection';
-import backgroundImgwithCard from './documents/backgroundImgwithCard';
 import capabilitiesPage from './documents/capabilitiesPage';
 import careerPage from './documents/careerPage';
 import certification from './documents/certification';
@@ -18,10 +16,9 @@ import fleetPage from './documents/fleetPage';
 import historyYear from './documents/historyYear';
 import iconGridItem from './documents/iconGridItem';
 import iconText from './documents/iconText';
-import imageWithText from './documents/imageWithText';
 import indexPage from './documents/indexPage';
 import leaderCard from './documents/leaderCard';
-import leadershipSection from './documents/leadershipSection';
+import leadershipSection from './objects/leadershipSection';
 import newsItem from './documents/newsItem';
 import newsPage from './documents/newsPage';
 import service from './documents/service';
@@ -29,8 +26,11 @@ import servicePage from './documents/servicePage';
 
 // Object types
 import aboutPortableText from './objects/aboutPortableText';
+import aboutSection from './objects/aboutSection';
+import backgroundImgwithCard from './objects/backgroundImgwithCard';
 import bodyPortableText from './objects/bodyPortableText';
 import cta from './objects/cta';
+import imageWithText from './objects/imageWithText';
 import mainImage from './objects/mainImage';
 import pdf from './objects/pdf';
 import seo from './objects/seo';
@@ -44,8 +44,6 @@ export default createSchema({
     types: schemaTypes.concat([
         // documents
         aboutPage,
-        aboutSection,
-        backgroundImgwithCard,
         capabilitiesPage,
         careerPage,
         certification,
@@ -55,18 +53,20 @@ export default createSchema({
         historyYear,
         iconGridItem,
         iconText,
-        imageWithText,
         indexPage,
         leaderCard,
-        leadershipSection,
         newsItem,
         newsPage,
         service,
         servicePage,
         // objects
         aboutPortableText,
+        aboutSection,
+        backgroundImgwithCard,
         bodyPortableText,
         cta,
+        imageWithText,
+        leadershipSection,
         pdf,
         mainImage,
         seo,
