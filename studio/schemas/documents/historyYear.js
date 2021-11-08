@@ -1,6 +1,6 @@
 export default {
     name: 'historyYear',
-    title: 'History Year',
+    title: 'History Item',
     type: 'document',
     fields: [
         {

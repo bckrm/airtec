@@ -1,6 +1,6 @@
 export default {
     name: 'iconGridItem',
-    title: 'Icon Grid Item',
+    title: 'Career Page Benefit Icons',
     type: 'document',
     fields: [
         {
