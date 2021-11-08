@@ -1,7 +1,7 @@
 export default {
     name: 'leadershipSection',
     title: 'Leadership Section',
-    type: 'document',
+    type: 'object',
     fields: [
         {
             name: 'leadership',

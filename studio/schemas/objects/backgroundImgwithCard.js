@@ -1,7 +1,7 @@
 export default {
     name: 'backgroundImgwithCard',
     title: 'Background Image With Card',
-    type: 'document',
+    type: 'object',
     fields: [
         {
             name: 'heading',
