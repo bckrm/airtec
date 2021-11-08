@@ -1,6 +1,6 @@
 export default {
     name: 'iconText',
-    title: 'Icon Text',
+    title: 'About Page Bulleted Services',
     type: 'document',
     fields: [
         {

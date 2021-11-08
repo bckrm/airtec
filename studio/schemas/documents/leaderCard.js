@@ -1,6 +1,6 @@
 export default {
     name: 'leaderCard',
-    title: 'Leader Card',
+    title: 'Team Members',
     type: 'document',
     fields: [
         {
@@ -24,4 +24,10 @@ export default {
             type: 'url',
         },
     ],
+    preview: {
+        select: {
+            title: 'name',
+            media: 'image', // Use the userPortait image field as thumbnail
+        },
+    },
 };
