@@ -70,7 +70,7 @@ export const query = graphql`
             }
             generalSellingPoints {
                 heading
-                _rawInfo
+                _rawInfo(resolveReferences: { maxDepth: 10 })
                 image {
                     asset {
                         gatsbyImageData
