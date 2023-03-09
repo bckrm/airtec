@@ -6,23 +6,12 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Hero from '../components/hero';
 import ContactSection from '../components/contactSection';
-import LogoSection from '../components/logoSection';
 
 export default function Contact({ data }) {
     const {
         sanityContactPage: { heroImage, pageTitle, seo, _rawContactInfo },
-        kieyos,
-        priority,
     } = data;
 
-    const images = [
-        {
-            image: priority,
-        },
-        {
-            image: kieyos,
-        },
-    ];
     return (
         <Layout>
             <Seo
@@ -32,7 +21,6 @@ export default function Contact({ data }) {
             />
             <Hero image={heroImage} title={pageTitle} />
             <ContactSection data={_rawContactInfo} />
-            <LogoSection images={images} />
         </Layout>
     );
 }
