@@ -34,12 +34,12 @@ export default {
         },
         {
             name: 'bodyLeftColumn',
-            title: 'Body Left Column',
+            title: 'Body Column Left',
             type: 'bodyPortableText',
         },
         {
             name: 'bodyRightColumn',
-            title: 'Body Right Column',
+            title: 'Body Column Right',
             type: 'bodyPortableText',
         },
     ],
