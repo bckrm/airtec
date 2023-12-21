@@ -29,6 +29,7 @@ export default {
                 source: 'newsTitle',
                 maxLength: 96,
             },
+            validation: (Rule) => Rule.required(),
         },
         {
             name: 'publishDate',

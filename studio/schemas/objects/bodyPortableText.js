@@ -39,7 +39,7 @@ export default {
                         title: 'URL',
                         fields: [
                             {
-                                title: 'URL',
+                                title: 'URLs',
                                 name: 'href',
                                 type: 'url',
                             },
