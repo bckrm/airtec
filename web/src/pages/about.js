@@ -69,7 +69,7 @@ export const query = graphql`
                     title
                     image {
                         asset {
-                            gatsbyImageData
+                            gatsbyImageData(width: 500)
                         }
                     }
                     linkedinURL
